@@ -1,0 +1,7 @@
+@use "../../styles/partials/mixins" as *;
+
+.about {
+  &__text {
+    @include mobile-section-header;
+  }
+}

@@ -1,0 +1,127 @@
+import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import "./NavBar.scss";
+import Navigation from "../Navigation/Navigation";
+import logo from "../../assets/images/logo.jpg";
+export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
+  const { height } = useDimensions(containerRef);
+
+  return (
+    <>
+      <img src={logo} alt="logo" className="logo" />
+      <div className="nav-bar">
+        <motion.nav
+          initial={false}
+          animate={isOpen ? "open" : "closed"}
+          custom={height}
+          ref={containerRef}
+          className="nav">
+          <motion.div className="background" variants={sidebarVariants} />
+          <Navigation />
+          <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+        </motion.nav>
+      </div>
+    </>
+  );
+}
+
+// const itemVariants = {
+//   open: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       y: { stiffness: 1000, velocity: -100 },
+//     },
+//   },
+//   closed: {
+//     y: 50,
+//     opacity: 0,
+//     transition: {
+//       y: { stiffness: 1000 },
+//     },
+//   },
+// };
+
+// const MenuItem = ({ itemName }) => {
+//   return (
+//     <motion.li
+//       className="list-item"
+//       variants={itemVariants}
+//       whileHover={{ scale: 1.1 }}
+//       whileTap={{ scale: 0.95 }}>
+//       <div className="text-placeholder">{itemName}</div>
+//     </motion.li>
+//   );
+// };
+
+const sidebarVariants = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 100}px at 20rem 3.5rem)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: "circle(30px at 20rem 3.5rem)",
+    transition: {
+      delay: 0.2,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
+
+const Path = (props) => (
+  <motion.path
+    fill="transparent"
+    strokeWidth="3"
+    stroke="hsl(0, 0%, 18%)"
+    strokeLinecap="round"
+    {...props}
+  />
+);
+
+const MenuToggle = ({ toggle }) => (
+  <button className="toggle-container" onClick={toggle}>
+    <svg width="23" height="23" viewBox="0 0 23 23">
+      <Path
+        variants={{
+          closed: { d: "M 2 2.5 L 20 2.5" },
+          open: { d: "M 3 16.5 L 17 2.5" },
+        }}
+      />
+      <Path
+        d="M 2 9.423 L 20 9.423"
+        variants={{
+          closed: { opacity: 1 },
+          open: { opacity: 0 },
+        }}
+        transition={{ duration: 0.1 }}
+      />
+      <Path
+        variants={{
+          closed: { d: "M 2 16.346 L 20 16.346" },
+          open: { d: "M 3 2.5 L 17 16.346" },
+        }}
+      />
+    </svg>
+  </button>
+);
+
+const useDimensions = (ref) => {
+  const dimensions = useRef({ width: 0, height: 0 });
+
+  useEffect(() => {
+    if (ref.current) {
+      dimensions.current.width = ref.current.offsetWidth;
+      dimensions.current.height = ref.current.offsetHeight;
+    }
+  }, [ref]);
+
+  return dimensions.current;
+};

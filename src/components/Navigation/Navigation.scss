@@ -1,0 +1,22 @@
+@use "../../styles/partials/mixins" as *;
+.list {
+  position: relative;
+  @include flex(column, center, center);
+  width: 100%;
+  text-align: center;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+
+  top: 50%;
+
+  height: 100vh;
+}
+
+.text-placeholder {
+  @include mobile-section-header;
+  border-radius: 0.3125rem;
+  width: 12.5rem;
+  height: 2.5rem;
+  flex: 1;
+}
