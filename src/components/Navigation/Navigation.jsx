@@ -1,4 +1,4 @@
-import { path } from "motion/react-client";
+import MenuItem from "../MenuItem/MenuItem";
 import "./Navigation.scss";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -12,7 +12,7 @@ const navVariants = {
 };
 
 const items = [
-  { name: "About Me", path: "/" },
+  { name: "About Me", path: "/about" },
   { name: "Projects", path: "/projects" },
   { name: "Garden", path: "/garden" },
   {
@@ -37,21 +37,17 @@ const itemVariants = {
     },
   },
 };
-function Navigation() {
+function Navigation({ isOpen }) {
   return (
-    <motion.ul className="list" variants={navVariants}>
+    <motion.ul
+      initial="closed"
+      className="list"
+      variants={navVariants}
+      animate={isOpen ? "open" : "closed"}>
       {items.map(({ name, path }) => (
-        // <MenuItem itemName={itemName} key={itemName}>
-        <motion.li
-          key={name}
-          className="list-item"
-          variants={itemVariants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}>
-          <Link to={path} className="text-placeholder">
-            {name}
-          </Link>{" "}
-        </motion.li>
+        // <motion.li key={name} variants={itemVariants}>
+        <MenuItem itemName={name} path={path} key={name} />
+        // </motion.li>
       ))}
     </motion.ul>
   );

@@ -1,0 +1,11 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+.text-placeholder {
+  @include mobile-section-header;
+color:  $primary-black;
+  border-radius: 0.3125rem;
+  width: 12.5rem;
+  height: 2.5rem;
+  flex: 1;
+  text-decoration: none;
+}

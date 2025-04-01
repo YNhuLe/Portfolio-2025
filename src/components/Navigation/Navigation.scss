@@ -1,22 +1,19 @@
 @use "../../styles/partials/mixins" as *;
 .list {
-  position: relative;
+  // position: relative;
+  position:fixed;
+
   @include flex(column, center, center);
   width: 100%;
   text-align: center;
   padding-left: 0;
   list-style: none;
   margin: 0;
-
+// height: 1rem;
   top: 50%;
-
-  height: 100vh;
+    // background-color: rgb(119, 119, 230);
+  // height: 100vh;
+  left: 0;
+  top: 1rem;
 }
 
-.text-placeholder {
-  @include mobile-section-header;
-  border-radius: 0.3125rem;
-  width: 12.5rem;
-  height: 2.5rem;
-  flex: 1;
-}

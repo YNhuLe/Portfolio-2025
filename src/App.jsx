@@ -10,17 +10,24 @@ import {
 import Menu from "./components/Menu/Menu";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Navigation from "./components/Navigation/Navigation";
+import Project from "./components/Project/Project";
+import Garden from "./components/Garden/Garden";
+import Contact from "./components/Contact/Contact";
+import Home from "./pages/Home/Home";
+
 function App() {
   return (
     <>
       <Router>
-        <Navigation />
+        {/* <Navigation />
+         */}
+        <NavBar />
         <Routes>
-          {/* <Menu /> */}
-          {/* <NavBar /> */}
-          <Route path="/" element={<NavBar />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
-          {/* <AboutMe /> */}
+          <Route path="/projects" element={<Project />} />
+          <Route path="/garden" element={<Garden />} />
+          <Route path="/contact" element={<Home />} />
         </Routes>
       </Router>
     </>
