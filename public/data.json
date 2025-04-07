@@ -1,0 +1,45 @@
+[
+  {
+    "id": "1",
+    "width": "30",
+    "title": "Zodiac Wander",
+    "concept": "This is the project about the zodiac concept",
+    "gitUrl": "https://github.com/YNhuLe/Pair-Programming"
+  },
+
+  {
+    "id": "2",
+    "width": "18",
+    "title": "Instock",
+    "concept": "This is the project about the zodiac concept",
+    "gitUrl": "https://github.com/YNhuLe/team2-instock-server"
+  },
+  {
+    "id": "3",
+    "width": "22",
+    "title": "Tralli",
+    "concept": "This is the project about the zodiac concept",
+    "gitUrl": "https://github.com/YNhuLe/TinDog-Start-master"
+  },
+  {
+    "id": "4",
+    "width": "15",
+    "title": "Blogs-Life",
+    "concept": "This is the project about the zodiac concept",
+    "gitUrl": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs"
+  },
+  {
+    "id": "5",
+    "width": "26",
+    "title": "Microsoft-ToDo-AI",
+    "concept": "This is the project about the zodiac concept",
+    "gitUrl": "https://github.com/YNhuLe/Industry-Project-Team3-Server"
+  },
+  {
+    "id": "6",
+    "width": "23",
+    "title": "Snaps",
+    "concept": "This is the project about the zodiac concept",
+    "gitUrl": "https://github.com/YNhuLe/jenny-le-snaps"
+  }
+]

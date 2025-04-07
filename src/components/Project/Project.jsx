@@ -1,7 +1,27 @@
+import axios from "axios";
+import MasonryLayout from "../MasonryLayout/MasonryLayout";
 import "./Project.scss";
-
+import { useEffect, useState } from "react";
 function Project() {
-  return <div className="project">Project</div>;
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await axios.get("/data.json");
+        setItems(result.data);
+      } catch (error) {
+        console.error(`Unable to fetch data : ${error}`);
+      }
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <div className="project" id="projects">
+      <MasonryLayout items={items} />
+    </div>
+  );
 }
 
 export default Project;

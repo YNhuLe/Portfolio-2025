@@ -1,8 +1,7 @@
 import "./MenuItem.scss";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import scrollToSection from "../../utils/scrollToSection.js";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
+
 const itemVariants = {
   open: {
     y: 0,
@@ -19,11 +18,19 @@ const itemVariants = {
     },
   },
 };
-function MenuItem({ itemName, path }) {
-  const navigate = useNavigate();
-  const handleClick = (e) => {
-    e.preventDefault(); // Prevents immediate route change
-    scrollToSection(itemName.toLowerCase(), navigate); // Scroll & update URL
+function MenuItem({ itemName, id, onClose }) {
+  // const navigate = useNavigate();
+  // const handleClick = (e) => {
+  //   scrollToSection(itemName.toLowerCase(), navigate);
+  // };
+  //   const closeMenu = () =>{
+  // isOpen(false);
+  //}
+
+  const closeMenu = () => {
+    if (onClose) {
+      onClose();
+    }
   };
   return (
     <motion.li
@@ -31,7 +38,14 @@ function MenuItem({ itemName, path }) {
       variants={itemVariants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
-      <Link to={path} className="text-placeholder" onClick={handleClick}>
+      <Link
+        to={id}
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={500}
+        className="text-placeholder"
+        onClick={closeMenu}>
         {itemName}
       </Link>
     </motion.li>

@@ -1,7 +1,9 @@
+import { useState } from "react";
 import MenuItem from "../MenuItem/MenuItem";
 import "./Navigation.scss";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 const navVariants = {
   open: {
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -12,12 +14,12 @@ const navVariants = {
 };
 
 const items = [
-  { name: "About Me", path: "/about" },
-  { name: "Projects", path: "/projects" },
-  { name: "Garden", path: "/garden" },
+  { name: "About Me", id: "about" },
+  { name: "Projects", id: "projects" },
+  { name: "Garden", id: "garden" },
   {
     name: "Contact",
-    path: "/contact",
+    id: "contact",
   },
 ];
 
@@ -37,16 +39,18 @@ const itemVariants = {
     },
   },
 };
-function Navigation({ isOpen }) {
+function Navigation({ onClose, isOpen }) {
+  const [click, setClick] = useState(false);
+  const closeMenu = () => setClick(false);
   return (
     <motion.ul
       initial="closed"
       className="list"
       variants={navVariants}
       animate={isOpen ? "open" : "closed"}>
-      {items.map(({ name, path }) => (
+      {items.map(({ name, id }) => (
         // <motion.li key={name} variants={itemVariants}>
-        <MenuItem itemName={name} path={path} key={name} />
+        <MenuItem itemName={name} id={id} key={name} onClose={onClose} />
         // </motion.li>
       ))}
     </motion.ul>

@@ -19,7 +19,7 @@ export default function NavBar() {
           ref={containerRef}
           className="nav">
           <motion.div className="background" variants={sidebarVariants} />
-          <Navigation isOpen={isOpen} />
+          <Navigation onClose={() => setIsOpen(isOpen)} isOpen={isOpen} />
           <MenuToggle toggle={() => setIsOpen(!isOpen)} />
         </motion.nav>
       </div>
@@ -29,7 +29,7 @@ export default function NavBar() {
 
 const sidebarVariants = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 100}px at 20rem 3.5rem)`,
+    clipPath: `circle(${height * 2 + 10}rem at 12rem 3.5rem)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -37,7 +37,7 @@ const sidebarVariants = {
     },
   }),
   closed: {
-    clipPath: "circle(30px at 20rem 3.5rem)",
+    clipPath: "circle(1.5rem at 16.5rem 3.5rem)",
     transition: {
       delay: 0.2,
       type: "spring",

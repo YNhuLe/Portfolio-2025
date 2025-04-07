@@ -1,13 +1,6 @@
 import NavBar from "./components/NavBar/NavBar";
 import "./App.scss";
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import Menu from "./components/Menu/Menu";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Navigation from "./components/Navigation/Navigation";
 import Project from "./components/Project/Project";
@@ -18,9 +11,8 @@ import Home from "./pages/Home/Home";
 function App() {
   return (
     <>
-      <Router>
-        {/* <Navigation />
-         */}
+      {/* <Router>
+       
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,7 +21,12 @@ function App() {
           <Route path="/garden" element={<Garden />} />
           <Route path="/contact" element={<Home />} />
         </Routes>
-      </Router>
+      </Router> */}
+      <NavBar />
+      <AboutMe />
+      <Project />
+      <Garden />
+      <Contact />
     </>
   );
 }
