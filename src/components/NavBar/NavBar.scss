@@ -41,9 +41,18 @@
   bottom: 0;
   width: 100%;
 }
-
+.body__container::before{
+    content: "";
+  position:absolute;
+  inset: 0;
+  background-image: url("../../assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  // filter: blur(.5rem);
+  // opacity: .8;
+  z-index: -5;
+}
 .toggle-container {
-  background-color: red;
   outline: none;
   border: none;
   -webkit-user-select: none;

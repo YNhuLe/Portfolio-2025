@@ -18,20 +18,7 @@ const itemVariants = {
     },
   },
 };
-function MenuItem({ itemName, id, onClose }) {
-  // const navigate = useNavigate();
-  // const handleClick = (e) => {
-  //   scrollToSection(itemName.toLowerCase(), navigate);
-  // };
-  //   const closeMenu = () =>{
-  // isOpen(false);
-  //}
-
-  const closeMenu = () => {
-    if (onClose) {
-      onClose();
-    }
-  };
+function MenuItem({ itemName, id, onClose, onClick }) {
   return (
     <motion.li
       className="list-item"
@@ -44,8 +31,8 @@ function MenuItem({ itemName, id, onClose }) {
         smooth={true}
         offset={-100}
         duration={500}
-        className="text-placeholder"
-        onClick={closeMenu}>
+        onClick={onClick}
+        className="text-placeholder">
         {itemName}
       </Link>
     </motion.li>

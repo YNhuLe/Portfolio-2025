@@ -23,25 +23,13 @@ const items = [
   },
 ];
 
-const itemVariants = {
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -100 },
-    },
-  },
-  closed: {
-    y: 50,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-    },
-  },
-};
 function Navigation({ onClose, isOpen }) {
-  const [click, setClick] = useState(false);
-  const closeMenu = () => setClick(false);
+  const closeMenu = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
+  if (!isOpen) return null;
   return (
     <motion.ul
       initial="closed"
@@ -49,9 +37,13 @@ function Navigation({ onClose, isOpen }) {
       variants={navVariants}
       animate={isOpen ? "open" : "closed"}>
       {items.map(({ name, id }) => (
-        // <motion.li key={name} variants={itemVariants}>
-        <MenuItem itemName={name} id={id} key={name} onClose={onClose} />
-        // </motion.li>
+        <MenuItem
+          itemName={name}
+          id={id}
+          key={name}
+          onClose={onClose}
+          onClick={closeMenu}
+        />
       ))}
     </motion.ul>
   );

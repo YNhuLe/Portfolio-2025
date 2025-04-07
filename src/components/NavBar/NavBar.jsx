@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import "./NavBar.scss";
 import Navigation from "../Navigation/Navigation";
 import logo from "../../assets/images/logo.jpg";
+import { AnimatePresence } from "framer-motion";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
   return (
-    <>
+    <div className="body__container">
       <img src={logo} alt="logo" className="logo" />
       <div className="nav-bar">
         <motion.nav
@@ -19,11 +20,13 @@ export default function NavBar() {
           ref={containerRef}
           className="nav">
           <motion.div className="background" variants={sidebarVariants} />
-          <Navigation onClose={() => setIsOpen(isOpen)} isOpen={isOpen} />
+          <AnimatePresence>
+            <Navigation onClose={() => setIsOpen(false)} isOpen={isOpen} />
+          </AnimatePresence>
           <MenuToggle toggle={() => setIsOpen(!isOpen)} />
         </motion.nav>
       </div>
-    </>
+    </div>
   );
 }
 
