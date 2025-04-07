@@ -6,26 +6,77 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  background-color: black;
+  // background-color: rgb(230, 21, 21);
 }
 
 .masonry__item {
   flex-grow: 1;
-  min-width: 10rem;
+  min-width: 8rem;
   width: auto;
   break-inside: avoid;
-  background: rgba(140, 204, 212, 0.2);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(194, 208, 211, 0.2);
+  box-shadow: 0 4px 10px rgba(165, 155, 155, 0.1);
   backdrop-filter: blur(10px);
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 0.7rem;
-  transition: transform 0.3s ease-in-out;
+  margin-bottom: 3rem;
+  // transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
 }
 
-.masonry__item:hover {
-  transform: scale(1.1);
+.masonry__item:hover .project__img  {
+  // transform: scale(1.1);
+  top: -5rem;
   //   z-index: 10;
+}
+
+.project__img{
+       width: 80%;
+    height: 80%;
+    border-radius: 1rem;
+    position: absolute;
+    top: -2.5rem;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: initial;
+    left: 1.5rem;
+  box-shadow: 1px 1px 10px 3px #ccc;
+    transition: top 0.5s ease-in-out;
+}
+.project__img:hover{
+
+}
+.project__title{
+  position: absolute;
+  @include mobile-section-header;
+  text-transform: uppercase;
+  color:white ;
+  bottom: 2rem;
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.masonry__item:hover .project__title{
+  transform: translateY(40px);
+    opacity: 0;
+}
+.project__concept{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    // transform: translateY(-150px);
+    position: absolute;
+    bottom: 6.5rem;
+    color: white;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    @include mobile-body-copy;
+}
+.masonry__item:hover .project__concept{
+transform: translateY(5.5rem);
+opacity: 1;
 }
 @include tablet {
   .masonry__layout {

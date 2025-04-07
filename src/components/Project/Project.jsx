@@ -19,6 +19,7 @@ function Project() {
 
   return (
     <div className="project" id="projects">
+      <p className="project__section">My Works</p>
       <MasonryLayout items={items} />
     </div>
   );

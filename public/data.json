@@ -4,42 +4,48 @@
     "width": "30",
     "title": "Zodiac Wander",
     "concept": "This is the project about the zodiac concept",
-    "gitUrl": "https://github.com/YNhuLe/Pair-Programming"
+    "gitUrl": "https://github.com/YNhuLe/Pair-Programming",
+    "img_url": "/images/snaps.png"
   },
 
   {
     "id": "2",
     "width": "18",
     "title": "Instock",
-    "concept": "This is the project about the zodiac concept",
-    "gitUrl": "https://github.com/YNhuLe/team2-instock-server"
+    "concept": "The InStock group project is a responsive full-stack inventory management system that helps businesses track stock levels, warehouses, and product data efficiently. 📦✨",
+    "gitUrl": "https://github.com/YNhuLe/team2-instock-server",
+    "img_url": "/images/instock.png"
   },
   {
     "id": "3",
     "width": "22",
     "title": "Tralli",
     "concept": "This is the project about the zodiac concept",
-    "gitUrl": "https://github.com/YNhuLe/TinDog-Start-master"
+    "gitUrl": "https://github.com/YNhuLe/TinDog-Start-master",
+    "img_url": "/images/snaps.png"
   },
   {
     "id": "4",
     "width": "15",
     "title": "Blogs-Life",
     "concept": "This is the project about the zodiac concept",
-    "gitUrl": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs"
+    "gitUrl": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs",
+    "img_url": "/images/snaps.png"
   },
   {
     "id": "5",
     "width": "26",
     "title": "Microsoft-ToDo-AI",
     "concept": "This is the project about the zodiac concept",
-    "gitUrl": "https://github.com/YNhuLe/Industry-Project-Team3-Server"
+    "gitUrl": "https://github.com/YNhuLe/Industry-Project-Team3-Server",
+    "img_url": "/images/snaps.png"
   },
   {
     "id": "6",
     "width": "23",
     "title": "Snaps",
-    "concept": "This is the project about the zodiac concept",
-    "gitUrl": "https://github.com/YNhuLe/jenny-le-snaps"
+    "concept": "A responsive full-stack photography-sharing platform where photographers can showcase their favorite neighborhood shots in their unique style. 📸✨",
+    "gitUrl": "https://github.com/YNhuLe/jenny-le-snaps",
+    "img_url": "/images/snaps.png"
   }
 ]

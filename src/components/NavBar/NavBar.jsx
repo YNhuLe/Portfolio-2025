@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./NavBar.scss";
 import Navigation from "../Navigation/Navigation";
-import logo from "../../assets/images/logo.jpg";
+import logo from "/images/logo.jpg";
 import { AnimatePresence } from "framer-motion";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);

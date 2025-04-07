@@ -1,7 +1,20 @@
 @use "../../styles/partials/mixins" as *;
 
-.about {
+.about {margin: 1rem;
+  margin-bottom: 5rem;
+      text-align: center;
+      color: rgb(255, 255, 255);
+        &__title{
+    @include mobile-page-header;
+
+
+  }
   &__text {
     @include mobile-section-header;
+
+  }
+
+    &__para{
+    @include mobile-body-copy;
   }
 }

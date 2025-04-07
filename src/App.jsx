@@ -10,7 +10,7 @@ import Home from "./pages/Home/Home";
 
 function App() {
   return (
-    <>
+    <section className="app__container">
       {/* <Router>
        
         <NavBar />
@@ -27,7 +27,7 @@ function App() {
       <Project />
       <Garden />
       <Contact />
-    </>
+    </section>
   );
 }
 

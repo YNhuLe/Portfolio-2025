@@ -1,6 +1,10 @@
-
+@use "../../styles/partials/mixins" as *;
 .project{
     width: 100%;
-    height: 45rem;
+    height: 225vh;
 
+    &__section{
+        color: white;
+            @include mobile-section-header;
+    }
 }
