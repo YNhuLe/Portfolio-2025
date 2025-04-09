@@ -11,7 +11,9 @@ export default function NavBar() {
 
   return (
     <div className="body__container">
-      <img src={logo} alt="logo" className="logo" />
+      <a href="./" className="logo__link">
+        <img src={logo} alt="logo" className="logo" />
+      </a>
       <div className="nav-bar">
         <motion.nav
           initial={false}

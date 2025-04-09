@@ -4,5 +4,9 @@
 
 .contact{
     height: 30rem;
-
+&__text{
+      @include mobile-section-header;
+        color:$primary-white ;
+        text-align: center;
+}
 }

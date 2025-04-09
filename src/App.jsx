@@ -20,7 +20,7 @@ function App() {
         <AboutMe />
         <Project />
         <TechStackSection />
-        {/* <Garden /> */}
+
         <Contact />
       </section>
     </>

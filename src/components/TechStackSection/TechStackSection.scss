@@ -1,4 +1,23 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 .tech {
+  &__title{
+    text-align: center;
+    @include mobile-section-header;
+    color: $primary-white;
+  }
+
+  &__section{
+
+ 
   height: 100vh;
-  background-color: rgba(30, 29, 31, 0.7);
+  background-color: rgba(30, 29, 31, 0.7); }
 }
+
+
+@include tablet {
+ .tech {
+  &__title{
+
+  }
+}}

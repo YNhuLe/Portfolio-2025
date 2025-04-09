@@ -36,23 +36,15 @@
 
 .background {
   background-color: rgba(169, 164, 175, 0.7);
-  position: absolute;
+  // position: absolute;
+  position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   bottom: 0;
   width: 100%;
 }
-// .body__container::before{
-//     content: "";
-//   position:absolute;
-//   inset: 0;
-//   background-image: url("../../assets/images/background.jpg");
-//   background-size: cover;
-//   background-position: center;
-//   // filter: blur(.5rem);
-//   // opacity: .8;
-//   z-index: -5;
-// }
+
 .toggle-container {
   outline: none;
   border: none;

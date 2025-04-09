@@ -30,7 +30,7 @@ function TechIcon({ logos }) {
   });
   return (
     <mesh ref={meshRef} position={position} castShadow receiveShadow>
-      <boxGeometry args={[1, 1, 1]} />
+      <boxGeometry args={[0.5, 0.5, 0.5]} />
 
       <meshStandardMaterial map={texture} transparent />
     </mesh>
