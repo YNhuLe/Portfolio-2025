@@ -1,4 +1,6 @@
 import "./MenuItem.scss";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const itemVariants = {
   open: {
@@ -16,14 +18,23 @@ const itemVariants = {
     },
   },
 };
-function MenuItem({ itemName }) {
+function MenuItem({ itemName, id, onClose, onClick }) {
   return (
     <motion.li
       className="list-item"
       variants={itemVariants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}>
-      <div className="text-placeholder">{itemName}</div>
+      <Link
+        to={id}
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={500}
+        onClick={onClick}
+        className="text-placeholder">
+        {itemName}
+      </Link>
     </motion.li>
   );
 }

@@ -2,14 +2,15 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./NavBar.scss";
 import Navigation from "../Navigation/Navigation";
-import logo from "../../assets/images/logo.jpg";
+import logo from "/images/logo.jpg";
+import { AnimatePresence } from "framer-motion";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
   return (
-    <>
+    <div className="body__container">
       <img src={logo} alt="logo" className="logo" />
       <div className="nav-bar">
         <motion.nav
@@ -19,46 +20,19 @@ export default function NavBar() {
           ref={containerRef}
           className="nav">
           <motion.div className="background" variants={sidebarVariants} />
-          <Navigation />
+          <AnimatePresence>
+            <Navigation onClose={() => setIsOpen(false)} isOpen={isOpen} />
+          </AnimatePresence>
           <MenuToggle toggle={() => setIsOpen(!isOpen)} />
         </motion.nav>
       </div>
-    </>
+    </div>
   );
 }
 
-// const itemVariants = {
-//   open: {
-//     y: 0,
-//     opacity: 1,
-//     transition: {
-//       y: { stiffness: 1000, velocity: -100 },
-//     },
-//   },
-//   closed: {
-//     y: 50,
-//     opacity: 0,
-//     transition: {
-//       y: { stiffness: 1000 },
-//     },
-//   },
-// };
-
-// const MenuItem = ({ itemName }) => {
-//   return (
-//     <motion.li
-//       className="list-item"
-//       variants={itemVariants}
-//       whileHover={{ scale: 1.1 }}
-//       whileTap={{ scale: 0.95 }}>
-//       <div className="text-placeholder">{itemName}</div>
-//     </motion.li>
-//   );
-// };
-
 const sidebarVariants = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 100}px at 20rem 3.5rem)`,
+    clipPath: `circle(${height * 2 + 10}rem at 12rem 3.5rem)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -66,7 +40,7 @@ const sidebarVariants = {
     },
   }),
   closed: {
-    clipPath: "circle(30px at 20rem 3.5rem)",
+    clipPath: "circle(1.5rem at 16.5rem 3.5rem)",
     transition: {
       delay: 0.2,
       type: "spring",

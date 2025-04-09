@@ -1,0 +1,119 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+.masonry__layout {
+  column-gap: 0.5rem;
+  column-count: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  // background-color: rgb(230, 21, 21);
+}
+
+.masonry__item {
+  flex-grow: 1;
+  min-width: 8rem;
+  width: auto;
+  break-inside: avoid;
+  // background: rgba(194, 208, 211, 0.1);
+  box-shadow: 0 .25rem .625rem rgba(165, 155, 155, 0.1);
+  backdrop-filter: blur(.625rem);
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 0.7rem;
+  margin-bottom: 3rem;
+  // transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    //  background: linear-gradient(135deg,    rgba(182, 105, 28, 0.3),
+    // rgba(184, 199, 131, 0.3));
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.07) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.04) 0%,
+      transparent 40%
+    ),
+    linear-gradient(135deg, rgba(15, 12, 41, 0.8), rgba(48, 43, 99, 0.6), rgba(36, 36, 62, 0.6));
+}
+.masonry__item:hover{
+    background: hsla(0, 1%, 34%, 0.2);
+}
+.masonry__item:hover .project__img  {
+  // transform: scale(1.1);
+  top: -5rem;
+  //   z-index: 10;
+}
+
+.project__img{
+       width: 80%;
+    height: 80%;
+    border-radius: 1rem;
+    position: absolute;
+    top: -2.5rem;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: initial;
+    left: 1.5rem;
+  box-shadow: .0625rem .0625rem .625rem .1875rem $card-shadow;
+    transition: top 0.5s ease-in-out;
+}
+.project__img:hover{
+
+}
+.project__title{
+  position: absolute;
+  @include mobile-section-header;
+  text-transform: uppercase;
+  color:$primary-white ;
+  bottom: 2rem;
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.masonry__item:hover .project__title{
+  transform: translateY(40px);
+    opacity: 0;
+}
+.project__concept{
+      @include mobile-body-copy;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 .2875rem;
+    // transform: translateY(-150px);
+    position: absolute;
+    bottom: 6.5rem;
+    color: $primary-white;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+text-align: center;
+
+}
+  .github-icon {
+    color:$primary-white; 
+    transition: color 0.3s ease;
+  }
+.project__link:hover .github-icon{
+  color:$primary-black;
+}
+.masonry__item:hover .project__concept{
+transform: translateY(5.5rem);
+opacity: 1;
+}
+@include tablet {
+  .masonry__layout {
+    column-count: 2;
+
+    margin: 1.5rem;
+  }
+}
+
+@include desktop {
+  .masonry__layout {
+    column-count: 3;
+    // background-color: rgb(131, 218, 153);
+  }
+}
