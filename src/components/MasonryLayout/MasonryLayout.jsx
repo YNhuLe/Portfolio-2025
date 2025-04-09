@@ -19,7 +19,7 @@ function MasonryLayout({ items }) {
           <div className="project__concept">
             <p className="project__text"> {item.concept}</p>
             <a href={item.gitUrl} className="project__link">
-              <FaGithub className="github-icon" size={24} color="#ffff" />
+              <FaGithub className="github-icon" size={24} />
             </a>
           </div>
         </div>

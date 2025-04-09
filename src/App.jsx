@@ -7,27 +7,23 @@ import Project from "./components/Project/Project";
 import Garden from "./components/Garden/Garden";
 import Contact from "./components/Contact/Contact";
 import Home from "./pages/Home/Home";
+import GalaxyParticles from "./components/GalaxyParticles/GalaxyParticles";
+import TechStackSection from "./components/TechStackSection/TechStackSection";
 
 function App() {
   return (
-    <section className="app__container">
-      {/* <Router>
-       
+    <>
+      {/* <GalaxyParticles /> */}
+      <section className="app__container">
+        <GalaxyParticles />
         <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutMe />} />
-          <Route path="/projects" element={<Project />} />
-          <Route path="/garden" element={<Garden />} />
-          <Route path="/contact" element={<Home />} />
-        </Routes>
-      </Router> */}
-      <NavBar />
-      <AboutMe />
-      <Project />
-      <Garden />
-      <Contact />
-    </section>
+        <AboutMe />
+        <Project />
+        <TechStackSection />
+        {/* <Garden /> */}
+        <Contact />
+      </section>
+    </>
   );
 }
 
