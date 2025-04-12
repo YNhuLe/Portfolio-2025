@@ -28,13 +28,14 @@
 
 &__form{
     min-height: 55vh;
-background-color:   hsla(0, 0%, 4%, 0.4);
+background-color:   hsla(0, 0%, 4%, 0.9);
       color:$primary-white ;
       @include mobile-body-copy;
       @include flex(column,center , center);
       margin: 2rem 1rem;
       row-gap: 1.5rem;
       padding: 1rem;
+      border-radius: .7rem;
 &-title{
 @include mobile-subheader-header;
 }
@@ -46,6 +47,7 @@ background-color:   hsla(0, 0%, 4%, 0.4);
    border-radius: .5rem;
     padding: 1rem;
     background-color:  hsla(0, 0%, 7%, 0.2);
+    color: $primary-white;
 }
 &-property textarea{
         padding:4rem 2rem;

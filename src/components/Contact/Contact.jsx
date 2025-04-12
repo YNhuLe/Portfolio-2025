@@ -2,6 +2,9 @@ import { useState, useRef } from "react";
 import errors from "../../assets/icons/error-24px.svg";
 import "./Contact.scss";
 import validator from "validator";
+import { motion } from "framer-motion";
+import { Canvas } from "@react-three/fiber";
+import EarthCanvas from "../Earth/Earth";
 function Contact() {
   const formRef = useRef();
   const [name, setName] = useState("");
@@ -38,6 +41,7 @@ function Contact() {
     };
     setError(newError);
     if (newError.name || newError.email || newError.message) return;
+    handleReset();
   };
 
   const handleReset = () => {
@@ -53,7 +57,7 @@ function Contact() {
   return (
     <div className="contact">
       <h2 className="contact__text">Get In Touch</h2>
-
+      <EarthCanvas />
       <form onSubmit={handleSendEmail} ref={formRef} className="contact__form">
         <h3 className="contact__form-title">Contact.</h3>
         <div className="contact__form-property">

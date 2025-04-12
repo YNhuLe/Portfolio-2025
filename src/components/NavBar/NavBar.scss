@@ -35,7 +35,7 @@
 }
 
 .background {
-  background-color: rgba(169, 164, 175, 0.7);
+  background-color: rgba(231, 219, 245, 0.7);
   // position: absolute;
   position: fixed;
   z-index: 3;
@@ -48,13 +48,13 @@
 .toggle-container {
   outline: none;
   border: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
+
   cursor: pointer;
+  right: 1rem;
   position: absolute;
   top: 2.125rem;
-  right: 14.125rem;
-  left: 15rem;
+  // right: 14.125rem;
+  // left: 15rem;
   width: 3.125rem;
   height: 3.125rem;
   border-radius: 50%;
@@ -97,3 +97,14 @@
 }
 
 
+.nav_div{
+   background-color: red;
+}
+
+@include tablet {
+
+}
+
+@include desktop{
+
+}
