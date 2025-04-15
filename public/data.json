@@ -5,14 +5,14 @@
     "title": "Zodiac Wander",
     "concept": "This is the project about the zodiac concept",
     "gitUrl": "https://github.com/YNhuLe/Pair-Programming",
-    "img_url": "/images/snaps.png"
+    "img_url": "/images/zodiac.png"
   },
 
   {
     "id": "2",
     "width": "18",
     "title": "Instock",
-    "concept": "The InStock group project is a responsive full-stack inventory management system that helps businesses track stock levels, warehouses, and product data efficiently. 📦✨",
+    "concept": "The InStock group project is a responsive full-stack inventory management system that helps businesses track stock levels, warehouses, and product data efficiently.",
     "gitUrl": "https://github.com/YNhuLe/team2-instock-server",
     "img_url": "/images/instock.png"
   },
@@ -30,15 +30,15 @@
     "title": "Blogs-Life",
     "concept": "This is the project about the zodiac concept",
     "gitUrl": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs",
-    "img_url": "/images/snaps.png"
+    "img_url": "/images/blogs.png"
   },
   {
     "id": "5",
     "width": "26",
-    "title": "Microsoft-ToDo-AI",
-    "concept": "This is the project about the zodiac concept",
+    "title": "TaskBloom",
+    "concept": "TaskBloom is a smart to-do app that combines the simplicity of Microsoft To Do with AI-powered task breakdowns. Just enter a task, and the AI suggests actionable subtasks to help you stay focused and productive.",
     "gitUrl": "https://github.com/YNhuLe/Industry-Project-Team3-Server",
-    "img_url": "/images/snaps.png"
+    "img_url": "/images/taskbloom.png"
   },
   {
     "id": "6",

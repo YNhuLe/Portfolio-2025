@@ -15,9 +15,9 @@ function TechIcon({ logos }) {
   const meshRef = useRef();
   const [rotationDirection, setRotationDirection] = useState(null);
   useEffect(() => {
-    const randomRotationSpeed = Math.random() * 0.01 + 0.002; // Random rotation speed
+    const randomRotationSpeed = Math.random() * 0.01 + 0.002;
     const randomAxis =
-      Math.random() < 0.5 ? "x" : Math.random() < 0.5 ? "y" : "z"; // Random axis (x, y, or z)
+      Math.random() < 0.5 ? "x" : Math.random() < 0.5 ? "y" : "z";
     setRotationDirection({ axis: randomAxis, speed: randomRotationSpeed });
   }, []);
 
@@ -30,7 +30,7 @@ function TechIcon({ logos }) {
   });
   return (
     <mesh ref={meshRef} position={position} castShadow receiveShadow>
-      <boxGeometry args={[0.5, 0.5, 0.5]} />
+      <boxGeometry args={[0.55, 0.55, 0.55]} />
 
       <meshStandardMaterial map={texture} transparent />
     </mesh>

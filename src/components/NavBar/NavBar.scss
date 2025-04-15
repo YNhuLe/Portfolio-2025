@@ -1,5 +1,19 @@
 @use "../../styles/partials/mixins" as *;
 
+.body__container{
+  background-color:  rgba(98, 96, 100, 0.7);
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+
+}
 .container {
   position: relative;
   display: flex;
@@ -14,7 +28,7 @@
   overflow: hidden;
 }
 .logo {
-  margin-top: 1rem;
+
     width: 3rem;
   height: 3rem;
   display: flex;
@@ -24,18 +38,20 @@
   justify-content: center;
   align-items: center;
   margin-left: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  position: fixed;
+
   z-index: 999;
+}
+.menu-icon path{
+   stroke: #e6d8d5;
+  fill: none; 
 }
 .nav-bar {
   @include flex(row, center, center);
-  height: 100vh;
+  height: 5rem;
 }
 
 .background {
-  background-color: rgba(231, 219, 245, 0.7);
+  background-color:rgba(43, 41, 44, 0.9);
   // position: absolute;
   position: fixed;
   z-index: 3;
@@ -52,7 +68,7 @@
   cursor: pointer;
   right: 1rem;
   position: absolute;
-  top: 2.125rem;
+  top: 1.125rem;
   // right: 14.125rem;
   // left: 15rem;
   width: 3.125rem;
@@ -102,9 +118,14 @@
 }
 
 @include tablet {
-
+.nav-bar{
+  height: 8rem;
+}
 }
 
 @include desktop{
 
+  .nav-bar{
+  height: 12rem;
+}
 }

@@ -15,7 +15,7 @@ function App() {
     <>
       {/* <GalaxyParticles /> */}
       <section className="app__container">
-        {/* <GalaxyParticles /> */}
+        <GalaxyParticles />
         <NavBar />
         {/* <Spline scene="https://prod.spline.design/MqO0PTXrHJuavZi8/scene.splinecode" /> */}
         <AboutMe />

@@ -57,72 +57,96 @@ function Contact() {
   return (
     <div className="contact">
       <h2 className="contact__text">Get In Touch</h2>
-      <EarthCanvas />
-      <form onSubmit={handleSendEmail} ref={formRef} className="contact__form">
-        <h3 className="contact__form-title">Contact.</h3>
-        <div className="contact__form-property">
-          <label htmlFor="name">Your Name</label>
-          <input
-            type="text"
-            value={name}
-            name="name"
-            onChange={handleChangeName}
-            placeholder="What is your good name?"
-            className={`contact__form-input ${error.name ? "invalid" : ""}`}
-          />
-          <div className={error.name ? "error__state" : ""}>
-            {error.name && (
-              <>
-                <img src={errors} alt="error-icon" className="error__icon" />
-                <p className="error__message">This field is required</p>
-              </>
-            )}
-          </div>
+      <div className="contact__wrapper">
+        <div className="contact__earth">
+          <EarthCanvas />
         </div>
+        <form
+          onSubmit={handleSendEmail}
+          ref={formRef}
+          className="contact__form">
+          <h3 className="contact__form-title">Contact.</h3>
+          <div className="contact__form-property">
+            <label htmlFor="name">Your Name</label>
+            <input
+              type="text"
+              value={name}
+              name="name"
+              onChange={handleChangeName}
+              placeholder="What is your good name?"
+              className={`contact__form-input ${error.name ? "invalid" : ""}`}
+            />
+            <div className={error.name ? "error__state" : ""}>
+              {error.name && (
+                <>
+                  <img
+                    src={errors}
+                    alt="error-icon"
+                    className="error__icon"
+                    loading="lazy"
+                  />
+                  <p className="error__message">This field is required</p>
+                </>
+              )}
+            </div>
+          </div>
 
-        <div className="contact__form-property">
-          <label htmlFor="name">Your Email</label>
-          <input
-            type="text"
-            value={email}
-            name="email"
-            onChange={handleChangeEmail}
-            placeholder="What is your good email?"
-            className={`contact__form-input ${error.email ? "invalid" : ""}`}
-          />
-          <div className={error.email ? "error__state" : ""}>
-            {error.email && (
-              <>
-                <img src={errors} alt="error-icon" className="error__icon" />
-                <p className="error__message">This field is required</p>
-              </>
-            )}
+          <div className="contact__form-property">
+            <label htmlFor="name">Your Email</label>
+            <input
+              type="text"
+              value={email}
+              name="email"
+              onChange={handleChangeEmail}
+              placeholder="What is your good email?"
+              className={`contact__form-input ${error.email ? "invalid" : ""}`}
+            />
+            <div className={error.email ? "error__state" : ""}>
+              {error.email && (
+                <>
+                  <img
+                    src={errors}
+                    alt="error-icon"
+                    className="error__icon"
+                    loading="lazy"
+                  />
+                  <p className="error__message">This field is required</p>
+                </>
+              )}
+            </div>
           </div>
-        </div>
 
-        <div className="contact__form-property">
-          <label htmlFor="name">Your Message</label>
-          <textarea
-            type="text"
-            value={message}
-            name="message"
-            onChange={handleChangeMessage}
-            placeholder="What is your good message?"
-            className={`contact__form-input ${error.message ? "invalid" : ""}`}
-          />
-          <div className={error.message ? "error__state" : ""}>
-            {error.message && (
-              <>
-                <img src={errors} alt="error-icon" className="error__icon" />
-                <p className="error__message">This field is required</p>
-              </>
-            )}
+          <div className="contact__form-property">
+            <label htmlFor="name">Your Message</label>
+            <textarea
+              type="text"
+              value={message}
+              name="message"
+              onChange={handleChangeMessage}
+              placeholder="What is your good message?"
+              className={`contact__form-input ${
+                error.message ? "invalid" : ""
+              }`}
+            />
+            <div className={error.message ? "error__state" : ""}>
+              {error.message && (
+                <>
+                  <img
+                    src={errors}
+                    alt="error-icon"
+                    className="error__icon"
+                    loading="lazy"
+                  />
+                  <p className="error__message">This field is required</p>
+                </>
+              )}
+            </div>
           </div>
-        </div>
-        <button type="submit" className="contact__button">
-          {loading ? "Sending... " : "Send"}
-        </button>
-      </form>
+          <button type="submit" className="contact__button">
+            {loading ? "Sending... " : "Send"}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

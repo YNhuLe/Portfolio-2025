@@ -4,7 +4,7 @@ function MasonryLayout({ items }) {
   return (
     <div className="masonry__layout">
       {items.map((item) => (
-        <div
+        <article
           key={item.id}
           className="masonry__item"
           style={{ height: `17rem`, width: `${item.width}rem` }}>
@@ -13,6 +13,7 @@ function MasonryLayout({ items }) {
               src={item.img_url}
               alt="project-image"
               className="project__img"
+              loading="lazy"
             />
           </div>
           <h2 className="project__title">{item.title}</h2>
@@ -22,7 +23,7 @@ function MasonryLayout({ items }) {
               <FaGithub className="github-icon" size={24} />
             </a>
           </div>
-        </div>
+        </article>
       ))}
     </div>
   );

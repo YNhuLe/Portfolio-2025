@@ -19,7 +19,7 @@ function Project() {
 
   return (
     <div className="project" id="projects">
-      <p className="project__section">My Works</p>
+      <p className="project__section">My Projects</p>
       <MasonryLayout items={items} />
     </div>
   );

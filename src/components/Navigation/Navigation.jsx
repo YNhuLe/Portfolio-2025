@@ -16,7 +16,7 @@ const navVariants = {
 const items = [
   { name: "About Me", id: "about" },
   { name: "Projects", id: "projects" },
-  { name: "Garden", id: "tech" },
+  { name: "Technologies", id: "tech" },
   {
     name: "Contact",
     id: "contact",

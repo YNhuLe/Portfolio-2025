@@ -12,7 +12,7 @@ export default function NavBar() {
   return (
     <div className="body__container">
       <a href="./" className="logo__link">
-        <img src={logo} alt="logo" className="logo" />
+        <img src={logo} alt="logo" className="logo" loading="lazy" />
       </a>
       <div className="nav-bar">
         <motion.nav
@@ -68,7 +68,12 @@ const Path = (props) => (
 
 const MenuToggle = ({ toggle }) => (
   <button className="toggle-container" onClick={toggle}>
-    <svg width="23" height="23" viewBox="0 0 23 23">
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 23 23"
+      fill="none"
+      className="menu-icon">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },

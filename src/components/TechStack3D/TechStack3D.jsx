@@ -33,9 +33,9 @@ const logos = [
 ];
 
 function randomPosition() {
-  const randomX = (Math.random() - 0.5) * 5;
-  const randomY = (Math.random() - 0.5) * 5;
-  const randomZ = (Math.random() - 0.5) * 5;
+  const randomX = (Math.random() - 0.5) * 4;
+  const randomY = (Math.random() - 0.5) * 4;
+  const randomZ = (Math.random() - 0.5) * 4;
 
   return [randomX, randomY, randomZ];
 }
