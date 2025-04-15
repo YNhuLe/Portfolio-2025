@@ -5,6 +5,7 @@ import validator from "validator";
 import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import EarthCanvas from "../Earth/Earth";
+import emailjs from "@emailjs/browser";
 function Contact() {
   const formRef = useRef();
   const [name, setName] = useState("");
@@ -40,10 +41,32 @@ function Contact() {
       message: message.trim() ? "" : "Message field is required!",
     };
     setError(newError);
-    if (newError.name || newError.email || newError.message) return;
-    handleReset();
-  };
+    if (newError.name || newError.email || newError.message) {
+      setLoading(false);
+      return;
+    }
 
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+          handleReset();
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert("Something went wrong. Please try again!");
+        }
+      );
+  };
   const handleReset = () => {
     setName("");
     setEmail("");
@@ -71,7 +94,7 @@ function Contact() {
             <input
               type="text"
               value={name}
-              name="name"
+              name="from_name"
               onChange={handleChangeName}
               placeholder="What is your good name?"
               className={`contact__form-input ${error.name ? "invalid" : ""}`}
@@ -96,7 +119,7 @@ function Contact() {
             <input
               type="text"
               value={email}
-              name="email"
+              name="from_email"
               onChange={handleChangeEmail}
               placeholder="What is your good email?"
               className={`contact__form-input ${error.email ? "invalid" : ""}`}
@@ -121,7 +144,7 @@ function Contact() {
             <textarea
               type="text"
               value={message}
-              name="message"
+              name="from_message"
               onChange={handleChangeMessage}
               placeholder="What is your good message?"
               className={`contact__form-input ${
@@ -142,7 +165,7 @@ function Contact() {
               )}
             </div>
           </div>
-          <button type="submit" className="contact__button">
+          <button type="submit" className="contact__button" disabled={loading}>
             {loading ? "Sending... " : "Send"}
           </button>
         </form>

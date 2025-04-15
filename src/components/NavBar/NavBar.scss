@@ -1,7 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .body__container{
-  background-color:  rgba(98, 96, 100, 0.7);
+    background-color:rgba(43, 41, 44, 0.9);
     position: fixed;
   top: 0;
   left: 0;
@@ -23,7 +23,6 @@
   width: 31.25rem;
   max-width: 100%;
   height: 25rem;
-  // background-color: var(--accent);
   border-radius: 1.25rem;
   overflow: hidden;
 }
@@ -52,7 +51,6 @@
 
 .background {
   background-color:rgba(43, 41, 44, 0.9);
-  // position: absolute;
   position: fixed;
   z-index: 3;
   top: 0;
@@ -69,8 +67,6 @@
   right: 1rem;
   position: absolute;
   top: 1.125rem;
-  // right: 14.125rem;
-  // left: 15rem;
   width: 3.125rem;
   height: 3.125rem;
   border-radius: 50%;
@@ -113,14 +109,10 @@
 }
 
 
-.nav_div{
-   background-color: red;
-}
+
 
 @include tablet {
-.nav-bar{
-  height: 8rem;
-}
+
 }
 
 @include desktop{
@@ -128,4 +120,10 @@
   .nav-bar{
   height: 12rem;
 }
+.logo {
+
+    width: 4rem;
+  height: 4rem;
+}
+
 }

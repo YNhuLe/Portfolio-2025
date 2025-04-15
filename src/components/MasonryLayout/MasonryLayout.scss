@@ -7,17 +7,19 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   // background-color: rgb(230, 21, 21);
+  margin-top: 5rem;
 }
 
 .masonry__item {
   flex-grow: 1;
   min-width: 8rem;
   width: auto;
+  height: fit-content;
   break-inside: avoid;
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 0.7rem;
-
+min-height: 15rem;
   margin: 1rem ;
 margin-bottom: 2rem;
     display: flex;
@@ -30,7 +32,7 @@ margin-bottom: 2rem;
   border-radius: 20px;
   padding: 2rem;
   color: #fff;
-  max-width: 300px;
+  // max-width: 300px;
   text-align: center;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }

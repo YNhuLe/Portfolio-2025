@@ -3,7 +3,7 @@
     "id": "1",
     "width": "30",
     "title": "Zodiac Wander",
-    "concept": "This is the project about the zodiac concept",
+    "concept": "Welcome to Zodiac Wander — a place where the stars meet your story. Discover your zodiac sign, explore personality traits, connect with your birth flower, and share your thoughts with others. It’s more than astrology — it’s a blooming journey through the cosmos.",
     "gitUrl": "https://github.com/YNhuLe/Pair-Programming",
     "img_url": "/images/zodiac.png"
   },
@@ -20,15 +20,15 @@
     "id": "3",
     "width": "22",
     "title": "Tralli",
-    "concept": "This is the project about the zodiac concept",
+    "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🛠️💥",
     "gitUrl": "https://github.com/YNhuLe/TinDog-Start-master",
-    "img_url": "/images/snaps.png"
+    "img_url": "/images/tralli.png"
   },
   {
     "id": "4",
     "width": "15",
     "title": "Blogs-Life",
-    "concept": "This is the project about the zodiac concept",
+    "concept": "Welcome to Blogs-Life — a chill space to share your thoughts, ideas, and stories. From tech to daily vibes, whatever’s on your mind, this is your place to be heard. 💬✨",
     "gitUrl": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs",
     "img_url": "/images/blogs.png"
   },

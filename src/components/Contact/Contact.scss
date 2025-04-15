@@ -48,6 +48,7 @@ background-color:   hsla(244, 76%, 8%, 0.9);
       row-gap: 1.5rem;
       padding: 1rem;
       border-radius: .7rem;
+     border: .0625rem solid rgba(255, 255, 255, 0.2);
 &-title{
 @include mobile-subheader-header;
 font-size: 1.5rem;
