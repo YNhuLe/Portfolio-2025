@@ -6,8 +6,8 @@ function MasonryLayout({ items }) {
       {items.map((item) => (
         <article
           key={item.id}
-          className="masonry__item"
-          style={{ height: `17rem`, width: `${item.width}rem` }}>
+          className={`masonry__item masonry__item--${item.size}`}
+          style={{ width: `${item.width}rem` }}>
           <div className="img__project">
             <img
               src={item.img_url}

@@ -1,8 +1,11 @@
 import "./AboutMe.scss";
-
+import headshot from "/images/headshot.png";
 function AboutMe() {
   return (
     <section className="about">
+      <div className="headshot">
+        <img src={headshot} alt="headhot_img" className="headshot__img" />
+      </div>
       <h1 className="about__title">Jenny Le</h1>
       <h2 className="about__text">Aspiring Full-Stack Software Developer</h2>
       <p className="about__para">

@@ -30,6 +30,7 @@ const logos = [
   { name: "BOOSTRAP", url: "/logos/bootstrap.png", position: randomPosition() },
   { name: "GIT", url: "/logos/git.png", position: randomPosition() },
   { name: "JAVA", url: "/logos/java.png", position: randomPosition() },
+  { name: "CANVA", url: "/logos/canva.png", position: randomPosition() },
 ];
 
 function randomPosition() {

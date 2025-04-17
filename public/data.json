@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "width": "30",
+    "width": "20",
     "title": "Zodiac Wander",
     "concept": "Welcome to Zodiac Wander — a place where the stars meet your story. Discover your zodiac sign, explore personality traits, connect with your birth flower, and share your thoughts with others. It’s more than astrology — it’s a blooming journey through the cosmos.",
     "gitUrl": "https://github.com/YNhuLe/Pair-Programming",
@@ -10,7 +10,7 @@
 
   {
     "id": "2",
-    "width": "18",
+    "width": "20",
     "title": "Instock",
     "concept": "The InStock group project is a responsive full-stack inventory management system that helps businesses track stock levels, warehouses, and product data efficiently.",
     "gitUrl": "https://github.com/YNhuLe/team2-instock-server",
@@ -18,7 +18,7 @@
   },
   {
     "id": "3",
-    "width": "22",
+    "width": "27",
     "title": "Tralli",
     "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🛠️💥",
     "gitUrl": "https://github.com/YNhuLe/TinDog-Start-master",
@@ -26,7 +26,7 @@
   },
   {
     "id": "4",
-    "width": "15",
+    "width": "28",
     "title": "Blogs-Life",
     "concept": "Welcome to Blogs-Life — a chill space to share your thoughts, ideas, and stories. From tech to daily vibes, whatever’s on your mind, this is your place to be heard. 💬✨",
     "gitUrl": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs",
@@ -42,7 +42,7 @@
   },
   {
     "id": "6",
-    "width": "23",
+    "width": "28",
     "title": "Snaps",
     "concept": "A responsive full-stack photography-sharing platform where photographers can showcase their favorite neighborhood shots in their unique style. 📸✨",
     "gitUrl": "https://github.com/YNhuLe/jenny-le-snaps",
