@@ -4,10 +4,12 @@ function MasonryLayout({ items }) {
   return (
     <div className="masonry__layout">
       {items.map((item) => (
+        // <div className="card__border" style={{ width: `${item.width}rem` }}>
         <article
           key={item.id}
-          className={`masonry__item masonry__item--${item.size}`}
-          style={{ width: `${item.width}rem` }}>
+          className="masonry__item"
+          // style={{ width: `${item.width}rem` }}
+        >
           <div className="img__project">
             <img
               src={item.img_url}
@@ -23,7 +25,17 @@ function MasonryLayout({ items }) {
               <FaGithub className="github-icon" size={24} />
             </a>
           </div>
+          <div className="stack">
+            <ul className="stack__list">
+              {item.stack.map((tech, index) => (
+                <li className="stack__item" key={index}>
+                  #{tech}
+                </li>
+              ))}
+            </ul>
+          </div>
         </article>
+        // </div>
       ))}
     </div>
   );

@@ -96,7 +96,7 @@ function Contact() {
               value={name}
               name="from_name"
               onChange={handleChangeName}
-              placeholder="What is your good name?"
+              placeholder="What's your good name?"
               className={`contact__form-input ${error.name ? "invalid" : ""}`}
             />
             <div className={error.name ? "error__state" : ""}>
@@ -121,7 +121,7 @@ function Contact() {
               value={email}
               name="from_email"
               onChange={handleChangeEmail}
-              placeholder="What is your good email?"
+              placeholder="What's your good email?"
               className={`contact__form-input ${error.email ? "invalid" : ""}`}
             />
             <div className={error.email ? "error__state" : ""}>
@@ -146,7 +146,7 @@ function Contact() {
               value={message}
               name="from_message"
               onChange={handleChangeMessage}
-              placeholder="What is your good message?"
+              placeholder="What you want to say?"
               className={`contact__form-input ${
                 error.message ? "invalid" : ""
               }`}

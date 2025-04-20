@@ -1,5 +1,5 @@
 @use "../../styles/partials/mixins" as *;
-
+@use "../../styles/partials/variables" as *;
 .body__container{
     background-color:rgba(43, 41, 44, 0.9);
     position: fixed;
@@ -41,7 +41,7 @@
   z-index: 999;
 }
 .menu-icon path{
-   stroke: #e6d8d5;
+   stroke: $primary-white;
   fill: none; 
 }
 .nav-bar {
@@ -112,13 +112,15 @@
 
 
 @include tablet {
-
+.list{
+  gap: 3rem;
+}
 }
 
 @include desktop{
 
   .nav-bar{
-  height: 12rem;
+  height: 6rem;
 }
 .logo {
 
@@ -127,3 +129,4 @@
 }
 
 }
+

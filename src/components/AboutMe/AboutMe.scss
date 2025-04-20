@@ -7,11 +7,11 @@
       margin-top: 10rem;
         &__title{
     @include mobile-page-header;
-
+font-weight: 400;
 
   }
   &__text {
-    @include mobile-section-header;
+    @include mobile-subheader-header;
 
   }
 
@@ -35,4 +35,18 @@
       height: 6rem;
       border-radius: 50%;
     }
+  }
+    @include tablet {
+.about{
+  &__title{
+    @include tablet-desktop-wordmark-regular;
+  }
+
+  &__text{
+    @include tablet-desktop-body-copy-medium;
+  }
+  &__para{
+    @include tablet-desktop-body-copy-light;
+  }
 }
+    }

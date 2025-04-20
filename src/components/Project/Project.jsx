@@ -4,7 +4,7 @@ import "./Project.scss";
 import { useEffect, useState } from "react";
 function Project() {
   const [items, setItems] = useState([]);
-
+console.log("Items: ", items);
   useEffect(() => {
     const fetchData = async () => {
       try {

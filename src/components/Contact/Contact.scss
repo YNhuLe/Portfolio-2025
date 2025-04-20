@@ -58,6 +58,7 @@ font-size: 1.5rem;
     row-gap: .5rem;
 }
 &-property input, textarea{
+    text-align: left;
    border-radius: .5rem;
     padding: 1rem;
     background-color:  hsla(0, 0%, 7%, 0.2);
@@ -79,21 +80,48 @@ font-size: 1.5rem;
 .contact
 
 {
+    margin-top: 8rem;
+    &__text{
+        @include tablet-desktop-title-normal;
+    }
 
     &__earth{
         @include flex(row, center, center)
     }
+    &__form-title{
+        font-size: 3.5rem;
+    }
+    &__form{
+        @include tablet-desktop-body-copy-medium;
+margin-left: 5rem;
+margin-right: 5rem;
+&-property input, textarea{
+width: 25rem;
 }
+
+&-property {
+    row-gap: 1.5rem;
+}
+    }
+    &__button{
+            padding: 1.25rem 3rem;
+            font-size: 1.5rem;
+    }
+}
+.contact__form-input::placeholder{
+
+         font-size: .95rem;
+     text-align: left;
+         width: 100%;
+ 
+}
+
 }
 
 @include desktop {
 .contact
 
 {
-
-    // &__earth{
-    //     @include flex(row, center, center)
-    // }
 &__form{
         width: 100%;
 }

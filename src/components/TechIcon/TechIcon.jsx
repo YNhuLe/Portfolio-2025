@@ -5,7 +5,6 @@ import { useRef, useEffect, useState } from "react";
 
 function TechIcon({ logos }) {
   const { url, position } = logos;
-  console.log("IMages: ", logos);
   if (!url) {
     console.error("Missing image URL for TechIcon at position", position);
     return null;
@@ -21,7 +20,6 @@ function TechIcon({ logos }) {
     setRotationDirection({ axis: randomAxis, speed: randomRotationSpeed });
   }, []);
 
-  // Rotate the icon in the random direction
   useFrame(() => {
     if (rotationDirection && meshRef.current) {
       meshRef.current.rotation[rotationDirection.axis] +=

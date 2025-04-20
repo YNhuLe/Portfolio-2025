@@ -9,3 +9,12 @@ color:  $primary-white;
   flex: 1;
   text-decoration: none;
 }
+
+
+@include tablet {
+.text-placeholder {
+@include tablet-desktop-heading-medium;
+font-weight: 600;
+gap: 2rem;
+}
+}

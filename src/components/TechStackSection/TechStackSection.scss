@@ -29,7 +29,8 @@ overflow: hidden;
 @include tablet {
  .tech {
   &__title{
-
+@include tablet-desktop-title-normal;
+margin-top: 8rem;
   }
 }}
 
