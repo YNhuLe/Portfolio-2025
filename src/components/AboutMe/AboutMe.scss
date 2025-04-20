@@ -4,13 +4,14 @@
   margin-bottom: 5rem;
       text-align: center;
       color: $primary-white;
+      margin-top: 10rem;
         &__title{
     @include mobile-page-header;
-
+font-weight: 400;
 
   }
   &__text {
-    @include mobile-section-header;
+    @include mobile-subheader-header;
 
   }
 
@@ -18,3 +19,34 @@
     @include mobile-body-copy;
   }
 }
+
+.headshot{
+  position: relative;
+    display: flex
+;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &__img{
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+    }
+  }
+    @include tablet {
+.about{
+  &__title{
+    @include tablet-desktop-wordmark-regular;
+  }
+
+  &__text{
+    @include tablet-desktop-body-copy-medium;
+  }
+  &__para{
+    @include tablet-desktop-body-copy-light;
+  }
+}
+    }

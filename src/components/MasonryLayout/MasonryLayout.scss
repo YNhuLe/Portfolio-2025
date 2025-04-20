@@ -1,119 +1,207 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 .masonry__layout {
-  column-gap: 0.5rem;
   column-count: 1;
-
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  // background-color: rgb(230, 21, 21);
+  margin-top: 5rem;
 }
 
 .masonry__item {
+  position: relative;
+  @include flex(column, flex-start, center);
   flex-grow: 1;
   min-width: 8rem;
   width: auto;
   break-inside: avoid;
-  // background: rgba(194, 208, 211, 0.1);
-  box-shadow: 0 .25rem .625rem rgba(165, 155, 155, 0.1);
-  backdrop-filter: blur(.625rem);
-  padding: 1rem;
   box-sizing: border-box;
-  border-radius: 0.7rem;
-  margin-bottom: 3rem;
-  // transition: transform 0.3s ease-in-out;
-    display: flex;
-    justify-content: center;
-    //  background: linear-gradient(135deg,    rgba(182, 105, 28, 0.3),
-    // rgba(184, 199, 131, 0.3));
-  background: radial-gradient(
-      circle at 20% 20%,
-      rgba(255, 255, 255, 0.07) 0%,
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(255, 255, 255, 0.04) 0%,
-      transparent 40%
-    ),
-    linear-gradient(135deg, rgba(15, 12, 41, 0.8), rgba(48, 43, 99, 0.6), rgba(36, 36, 62, 0.6));
+  height: clamp(22rem, 60vw, 28rem);
+  width: clamp(25rem , 100vw, 25rem);
+  margin: 1rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(0.625rem);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgb(33 27 80 / 45%);
+  border: 1px solid rgba(31, 11, 11, 0.2);
+  color: $primary-white;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 1.25rem;
 }
-.masonry__item:hover{
-    background: hsla(0, 1%, 34%, 0.2);
-}
-.masonry__item:hover .project__img  {
-  // transform: scale(1.1);
-  top: -5rem;
-  //   z-index: 10;
+.img__project {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include flex(row, center, center);
 }
 
-.project__img{
-       width: 80%;
-    height: 80%;
-    border-radius: 1rem;
-    position: absolute;
-    top: -2.5rem;
-    margin: 0 auto;
-    object-fit: cover;
-    object-position: initial;
-    left: 1.5rem;
-  box-shadow: .0625rem .0625rem .625rem .1875rem $card-shadow;
-    transition: top 0.5s ease-in-out;
+.masonry__item:hover {
+  background: rgb(33 27 80 / 25%);
 }
-.project__img:hover{
+article:hover {
+  background: rgb(33 27 80 / 25%);
+}
+.masonry__item:hover .project__img {
+  top: -10rem;
+  transform: scale3d(1.5px, 1.5px, 1.5px);
+}
 
+.project__img {
+  width: 100%;
+
+  object-fit: contain;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  padding: 1rem;
+  padding-bottom: 4rem;
+
+  transition: top 0.5s ease-in-out;
 }
-.project__title{
+.project__img:hover {
+}
+.project__title {
   position: absolute;
   @include mobile-section-header;
   text-transform: uppercase;
-  color:$primary-white ;
-  bottom: 2rem;
-      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  color: $primary-white;
+  bottom: 0.35rem;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  margin: 3rem 0;
 }
 
-.masonry__item:hover .project__title{
-  transform: translateY(40px);
-    opacity: 0;
+.masonry__item:hover .project__title {
+  transform: translateY(3rem);
+  opacity: 0;
 }
-.project__concept{
-      @include mobile-body-copy;
-      display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 .2875rem;
-    // transform: translateY(-150px);
-    position: absolute;
-    bottom: 6.5rem;
-    color: $primary-white;
-    opacity: 0;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-text-align: center;
+.project__concept {
+  @include mobile-body-copy;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.2875rem;
+  position: absolute;
+  bottom: 8rem;
+  color: $primary-white;
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  text-align: center;
+  background-color: rgb(9 9 9 / 35%);
+}
+.github-icon {
+  color: $primary-white;
+  transition: color 0.3s ease;
+}
+.project__link:hover .github-icon {
+  color: $primary-black;
+}
+.masonry__item:hover .project__concept {
+  transform: translateY(5.5rem);
+  opacity: 1;
+}
 
+.stack{
+@include mobile-footer-copy;
+&__list{
+   
+@include flex(row, center, center);
+
+ 
+    flex-wrap: wrap;
+padding-left: 0;;
+    width: 100%;
+    list-style: none;
+    gap: .25rem;
 }
-  .github-icon {
-    color:$primary-white; 
-    transition: color 0.3s ease;
-  }
-.project__link:hover .github-icon{
-  color:$primary-black;
+&__item:nth-child(1), &__item:nth-child(4),&__item:nth-child(7){
+  color:  #3580f1;
+  
 }
-.masonry__item:hover .project__concept{
-transform: translateY(5.5rem);
-opacity: 1;
+&__item:nth-child(2), &__item:nth-child(5){
+  color:  #338a11;
+  
+}
+&__item:nth-child(3), &__item:nth-child(6), &__item:nth-child(8){
+  color: rgb(209, 19, 146);
+}
 }
 @include tablet {
+  .project{
+    &__title {
+    @include tablet-desktop-heading-medium;
+        margin: 4.5rem 0;
+  }
+
+&__concept{
+  @include tablet-desktop-body-copy-medium;
+
+}}
   .masonry__layout {
     column-count: 2;
-
-    margin: 1.5rem;
+    margin: 5rem;
+    margin-top: 10rem;
   }
+  .stack{
+    &__list{
+      @include tablet-desktop-label-medium ;
+    }
+  }
+  .masonry__item{
+    padding: 1rem;
+        height: clamp(22rem, 60vw, 33rem);
+                width: clamp(22rem, 100vw, 31rem)
+        // background-color:  rgba(93, 98, 177, 0.25); 
+  }
+  
+  .card__border {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
+  padding: .1px; // This controls the border thickness
+  border-radius: 20px;
+}
+.img__project {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include flex(row, center, center);
+}
+
 }
 
 @include desktop {
+  .img__project {
+  position: relative;
+  max-width: fit-content;
+  max-height:fit-content;
+  @include flex(row, center, center);
+}
   .masonry__layout {
     column-count: 3;
-    // background-color: rgb(131, 218, 153);
+    margin-top: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+  }
+  .project__img {
+    width: clamp(22rem, 60vw, 38rem);
+    height: clamp(22rem, 60vw, 25rem);
+max-width: 100%;
+position: relative;
+  }
+  .masonry__item {
+    margin-bottom: 5rem;
+           height: clamp(22rem, 60vw, 38rem);
+            width:  clamp(30rem, 60vw, 31.5rem);
+                    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
+    
   }
 }

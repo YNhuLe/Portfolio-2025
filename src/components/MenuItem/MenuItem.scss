@@ -2,10 +2,19 @@
 @use "../../styles/partials/variables" as *;
 .text-placeholder {
   @include mobile-section-header;
-color:  $primary-black;
+color:  $primary-white;
   border-radius: 0.3125rem;
   width: 12.5rem;
   height: 2.5rem;
   flex: 1;
   text-decoration: none;
+}
+
+
+@include tablet {
+.text-placeholder {
+@include tablet-desktop-heading-medium;
+font-weight: 600;
+gap: 2rem;
+}
 }

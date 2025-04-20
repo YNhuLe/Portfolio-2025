@@ -4,7 +4,7 @@ import "./Project.scss";
 import { useEffect, useState } from "react";
 function Project() {
   const [items, setItems] = useState([]);
-
+console.log("Items: ", items);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -19,7 +19,7 @@ function Project() {
 
   return (
     <div className="project" id="projects">
-      <p className="project__section">My Works</p>
+      <p className="project__section">My Projects</p>
       <MasonryLayout items={items} />
     </div>
   );

@@ -11,7 +11,9 @@ export default function NavBar() {
 
   return (
     <div className="body__container">
-      <img src={logo} alt="logo" className="logo" />
+      <a href="./" className="logo__link">
+        <img src={logo} alt="logo" className="logo" loading="lazy" />
+      </a>
       <div className="nav-bar">
         <motion.nav
           initial={false}
@@ -19,11 +21,13 @@ export default function NavBar() {
           custom={height}
           ref={containerRef}
           className="nav">
-          <motion.div className="background" variants={sidebarVariants} />
-          <AnimatePresence>
-            <Navigation onClose={() => setIsOpen(false)} isOpen={isOpen} />
-          </AnimatePresence>
-          <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+          <div className="nav_div">
+            <motion.div className="background" variants={sidebarVariants} />
+            <AnimatePresence>
+              <Navigation onClose={() => setIsOpen(false)} isOpen={isOpen} />
+            </AnimatePresence>
+            <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+          </div>
         </motion.nav>
       </div>
     </div>
@@ -33,6 +37,7 @@ export default function NavBar() {
 const sidebarVariants = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 10}rem at 12rem 3.5rem)`,
+    // clipPath: `circle(8vw at 82vw 2.5vh)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -40,7 +45,8 @@ const sidebarVariants = {
     },
   }),
   closed: {
-    clipPath: "circle(1.5rem at 16.5rem 3.5rem)",
+    clipPath: "circle(.1rem at 16.5rem 3.5rem)",
+    // clipPath: `circle(8vw at 82vw 2.5vh)`,
     transition: {
       delay: 0.2,
       type: "spring",
@@ -62,7 +68,12 @@ const Path = (props) => (
 
 const MenuToggle = ({ toggle }) => (
   <button className="toggle-container" onClick={toggle}>
-    <svg width="23" height="23" viewBox="0 0 23 23">
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 23 23"
+      fill="none"
+      className="menu-icon">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },
