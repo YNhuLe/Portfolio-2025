@@ -14,38 +14,59 @@ const navVariants = {
 };
 
 const items = [
-  { name: "About Me", id: "about" },
+  { name: "About", id: "about" },
   { name: "Projects", id: "projects" },
-  { name: "Technologies", id: "tech" },
+  { name: "Stacks", id: "tech" },
   {
     name: "Contact",
     id: "contact",
   },
 ];
 
-function Navigation({ onClose, isOpen }) {
+function Navigation({ onClose, isOpen, isMobile }) {
   const closeMenu = () => {
     if (onClose) {
       onClose();
     }
   };
-  if (!isOpen) return null;
+
+  if (isMobile) {
+    if (!isOpen) return null;
+
+    return (
+      <motion.ul
+        initial="closed"
+        className="list"
+        variants={navVariants}
+        animate={isOpen ? "open" : "closed"}>
+        {items.map(({ name, id }) => (
+          <MenuItem
+            itemName={name}
+            id={id}
+            key={name}
+            onClose={onClose}
+            onClick={closeMenu}
+          />
+        ))}
+      </motion.ul>
+    );
+  }
+
   return (
-    <motion.ul
-      initial="closed"
-      className="list"
-      variants={navVariants}
-      animate={isOpen ? "open" : "closed"}>
+    <div className="nav__list">
       {items.map(({ name, id }) => (
-        <MenuItem
-          itemName={name}
-          id={id}
-          key={name}
-          onClose={onClose}
-          onClick={closeMenu}
-        />
+        <Link
+          key={id}
+          to={id}
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className="text-placeholder desktop-link">
+          {name}
+        </Link>
       ))}
-    </motion.ul>
+    </div>
   );
 }
 

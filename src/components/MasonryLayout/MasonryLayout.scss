@@ -186,12 +186,17 @@ padding-left: 0;;
     margin-right: 5rem;
 
   }
-  .project__img {
+  .project{
+    &__img {
     width: clamp(22rem, 60vw, 38rem);
     height: clamp(22rem, 60vw, 25rem);
 max-width: 100%;
 position: relative;
   }
+
+&__concept{
+  bottom: 12rem;
+}}
   .masonry__item {
     margin-bottom: 5rem;
            height: clamp(22rem, 60vw, 38rem);
@@ -203,5 +208,8 @@ position: relative;
         align-content: center;
         flex-wrap: nowrap;
     
+  }
+  .stack{
+    margin-top: 2rem;
   }
 }

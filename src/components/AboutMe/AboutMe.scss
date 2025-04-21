@@ -22,12 +22,8 @@ font-weight: 400;
 
 .headshot{
   position: relative;
-    display: flex
-;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+  @include flex(row, center, center);
+
     width: 100%;
 
     &__img{
@@ -49,4 +45,28 @@ font-weight: 400;
     @include tablet-desktop-body-copy-light;
   }
 }
+    }
+
+    @include desktop{
+
+
+      .about{
+        margin-left: 5rem;
+        margin-right: 5rem;
+  &__title{
+    @include tablet-desktop-title-italic ;
+  }
+
+&__text{
+  @include tablet-desktop-title-normal;
+}
+&__para{
+  @include tablet-desktop-body-copy-medium;
+}
+}
+.headshot__img{
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
     }

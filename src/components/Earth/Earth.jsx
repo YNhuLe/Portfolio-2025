@@ -27,18 +27,14 @@ const Earth = () => {
   }, []);
 
   const scale = useMemo(() => {
-    if (windowWidth < 768) return 5.5;
-    else if (windowWidth < 1024) return 6.5;
-    return 9;
+    if (windowWidth < 768) return 8.5;
+    else if (windowWidth < 1280) return 12.5;
+    // else if (windowWidth < 2560) return 9.5;
+    return 13;
   }, [windowWidth]);
   const earth = useGLTF("/planet/scene.gltf");
   return (
-    <primitive
-      object={earth.scene}
-      scale={scale}
-      position-y={-0.5}
-      rotation-y={0}
-    />
+    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
   );
 };
 
@@ -47,9 +43,16 @@ const EarthCanvas = () => {
     <Canvas
       style={{
         width: "100%",
-        height: "60vh",
-        maxWidth: "30rem",
-        justifyContent: "center",
+        height: "100%",
+        //   width: "50rem",
+        //   // maxWidth: "40rem",
+        //   // width: "100%",
+        //   height: "calc(100vh - 10rem)",
+        //   // maxHeight: "100%",
+        //   maxWidth: "100%",
+        //   margin: "auto",
+        //   justifyContent: "center",
+        //   border: "2px solid red",
       }}
       shadows
       frameloop="demand"
@@ -59,7 +62,7 @@ const EarthCanvas = () => {
         fov: 45,
         near: 0.1,
         far: 200,
-        position: [-4, 3, 25],
+        position: [-4, 3, 6],
       }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

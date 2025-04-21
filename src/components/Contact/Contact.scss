@@ -81,20 +81,30 @@ font-size: 1.5rem;
 
 {
     margin-top: 8rem;
+
+    &__wrapper{
+        @include flex(column, center, center);
+    }
     &__text{
         @include tablet-desktop-title-normal;
     }
 
     &__earth{
-        @include flex(row, center, center)
+        @include flex(row, center, center);
+          width: 100%;
+  height: 100vh;
+  max-width: 40rem;
+  margin: auto;
     }
     &__form-title{
         font-size: 3.5rem;
     }
     &__form{
         @include tablet-desktop-body-copy-medium;
-margin-left: 5rem;
-margin-right: 5rem;
+        width: calc(100vw - 16rem);
+// margin-left: 5rem;
+// margin-right: 5rem;
+margin-top: 5rem;
 &-property input, textarea{
 width: 25rem;
 }
@@ -123,9 +133,13 @@ width: 25rem;
 
 {
 &__form{
-        width: 100%;
+        // width: 100%;
+            // width: calc(100vw - 40rem);
+            max-width: 55rem;
+            margin-left: 5rem;
 }
     &__wrapper{
-    @include flex(row-reverse, center, center)
+    @include flex(row-reverse, center, center);
+
 }
 }}

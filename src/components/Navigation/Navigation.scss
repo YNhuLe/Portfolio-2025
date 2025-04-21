@@ -1,4 +1,5 @@
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 .list {
   // position: relative;
   position:absolute;
@@ -13,22 +14,41 @@ z-index : 999;
 position: fixed;
 
   top: 0;
-  // background-color: rgba(199, 219, 156, 0.5);
 
   height: 100vh;
   left: 0;
 
 }
 
+.desktop-link{
+  color: rgba(241, 242, 245, 0.5);
+}
 
-.list::before{
-  // content: "";
-  // position:absolute;
-  // inset: 0;
-  // background-image: url("../../assets/images/background.jpg");
-  // background-size: cover;
-  // background-position: center;
-  // // filter: blur(.5rem);
-  // opacity: .8;
-  // z-index: -5;
+@include tablet{
+.nav__list{
+  @include flex(row, center, center);
+  gap: .2rem;
+  margin-right: 2rem;
+  width: 30rem;
+}
+  .desktop-link{
+  cursor: pointer;
+   @include tablet-desktop-body-copy-medium;
+
+  }
+}
+@include desktop{
+ 
+  .desktop-link{
+  
+   @include tablet-desktop-body-copy-medium;
+          font-size: 1.5rem;
+          transition: color .3s ease-in;
+  }
+   .desktop-link:hover{
+color:$primary-white
+   }
+  .nav__list{
+      margin-right: 5rem;
+  }
 }
