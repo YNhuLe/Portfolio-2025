@@ -1,14 +1,13 @@
 @use "../../styles/partials/mixins" as *;
-.footer{
-  @include flex(row, flex-end,center);
-  gap:1.5rem;
+.footer {
+  @include flex(row, flex-end, center);
+  gap: 1.5rem;
   margin-bottom: 2rem;
   margin-right: 5rem;
   &_icon {
-  width: 2rem;
-  height: 2rem;
-}
-
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 @include tablet {

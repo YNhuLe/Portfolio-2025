@@ -24,17 +24,8 @@
     "title": "Tralli",
     "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🛠️💥",
     "gitUrl": "https://github.com/YNhuLe/TinDog-Start-master",
-    "img_url": "/images/tralli.png",
-    "stack": [
-      "express",
-      "react",
-      "scss",
-      "git",
-      "jira",
-      "figma",
-      "firebase",
-      "restapi"
-    ]
+    "img_url": "/images/tralli2.png",
+    "stack": ["express", "react", "scss", "git", "firebase", "restapi"]
   },
   {
     "id": "4",
@@ -58,8 +49,7 @@
       "scss",
       "git",
       "jira",
-      "figma",
-      "gemini",
+      "gemini-api",
       "restapi"
     ]
   },
@@ -69,7 +59,7 @@
     "title": "Snaps",
     "concept": "A responsive full-stack photography-sharing platform where photographers can showcase their favorite neighborhood shots in their unique style. 📸✨",
     "gitUrl": "https://github.com/YNhuLe/jenny-le-snaps",
-    "img_url": "/images/snaps.png",
+    "img_url": "/images/snaps2.png",
     "stack": ["react", "express", "scss", "git", "restapi"]
   }
 ]
