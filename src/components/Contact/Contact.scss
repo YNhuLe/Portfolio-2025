@@ -102,8 +102,8 @@ font-size: 1.5rem;
     &__form{
         @include tablet-desktop-body-copy-medium;
         width: calc(100vw - 16rem);
-// margin-left: 5rem;
-// margin-right: 5rem;
+padding-top: 5rem;
+padding-bottom: 5rem;
 margin-top: 5rem;
 &-property input, textarea{
 width: 25rem;

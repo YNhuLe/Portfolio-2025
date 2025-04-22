@@ -2,8 +2,7 @@ import { useState, useRef } from "react";
 import errors from "../../assets/icons/error-24px.svg";
 import "./Contact.scss";
 import validator from "validator";
-import { motion } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
+import ContactModal from "../ContactModal/ContactModal";
 import EarthCanvas from "../Earth/Earth";
 import emailjs from "@emailjs/browser";
 function Contact() {
@@ -12,6 +11,11 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [modalData, setModalData] = useState({
+    show: false,
+    name: "",
+    text: "",
+  });
   const [error, setError] = useState({
     name: "",
     email: "",
@@ -57,13 +61,23 @@ function Contact() {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+
+          setModalData({
+            show: true,
+            name: name,
+            text: "Thank you. I will get back to you as soon as possible.",
+          });
           handleReset();
+          // console.log("Contact");
         },
         (error) => {
           setLoading(false);
+          setModalData({
+            show: true,
+            name: name,
+            text: "Something went wrong. Please try again!",
+          });
           console.log(error);
-          alert("Something went wrong. Please try again!");
         }
       );
   };
@@ -169,6 +183,11 @@ function Contact() {
             {loading ? "Sending... " : "Send"}
           </button>
         </form>
+        <ContactModal
+          show={modalData.show}
+          onHide={() => setModalData({ ...modalData, show: false })}
+          response={{ name: modalData.name, text: modalData.text }}
+        />
       </div>
     </div>
   );

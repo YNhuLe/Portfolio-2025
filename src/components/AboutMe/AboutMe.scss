@@ -59,6 +59,7 @@ font-weight: 400;
 
 &__text{
   @include tablet-desktop-title-normal;
+  margin-bottom: 2rem;
 }
 &__para{
   @include tablet-desktop-body-copy-medium;
