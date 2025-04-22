@@ -1,0 +1,25 @@
+@use "../../styles/partials/mixins" as *;
+.footer {
+  @include flex(row, flex-end, center);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  margin-right: 5rem;
+  &_icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@include tablet {
+  .footer_icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@include desktop {
+  .footer_icon {
+    width: 5rem;
+    height: 5rem;
+  }
+}

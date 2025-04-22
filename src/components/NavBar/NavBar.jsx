@@ -8,13 +8,22 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  return (
-    <div className="body__container">
-      <a href="./" className="logo__link">
-        <img src={logo} alt="logo" className="logo" loading="lazy" />
-      </a>
-      <div className="nav-bar">
+useEffect(() => {
+  const handleScreenSize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+  window.addEventListener("resize", handleScreenSize);
+  return () => window.removeEventListener("resize", handleScreenSize);
+}, []);
+return (
+  <div className="body__container">
+    <a href="./" className="logo__link">
+      <img src={logo} alt="logo" className="logo" loading="lazy" />
+    </a>
+    <div className="nav-bar">
+      {isMobile ? (
         <motion.nav
           initial={false}
           animate={isOpen ? "open" : "closed"}
@@ -24,14 +33,21 @@ export default function NavBar() {
           <div className="nav_div">
             <motion.div className="background" variants={sidebarVariants} />
             <AnimatePresence>
-              <Navigation onClose={() => setIsOpen(false)} isOpen={isOpen} />
+              <Navigation
+                onClose={() => setIsOpen(false)}
+                isOpen={isOpen}
+                isMobile={true}
+              />
             </AnimatePresence>
             <MenuToggle toggle={() => setIsOpen(!isOpen)} />
           </div>
         </motion.nav>
-      </div>
+      ) : (
+        <Navigation isMobile={false} />
+      )}
     </div>
-  );
+  </div>
+);
 }
 
 const sidebarVariants = {

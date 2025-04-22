@@ -1,73 +1,70 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
+.contact {
+  height: 100%;
+  margin-top: 5rem;
+  &__text {
+    @include mobile-section-header;
+    color: $primary-white;
 
-.contact{
-    height: 100%;
-margin-top: 5rem;
-&__text{
-      @include mobile-section-header;
-        color:$primary-white ;
- 
-        text-align: center;
-      
-}
-&__wrapper{
-// background: url("/images/background.jpg") no-repeat center center fixed;
-// background-color: #413d3d;
-background-size: cover;
-}
+    text-align: center;
+  }
+  &__wrapper {
+    background-size: cover;
+  }
 
-&__earth{
+  &__earth {
     width: 100%;
     height: 50vh;
-}
-&__button{
+  }
+  &__button {
     padding: 0.5rem 2rem;
-    border-radius: .7rem;
+    border-radius: 0.7rem;
     background-color: hsla(0, 0%, 7%, 0.2);
     cursor: pointer;
     @include mobile-body-copy;
-    color: $primary-white ;
-   transition: transform .3s ease-in-out;
-}
-
-&__button:hover{
-     background-color: hsla(0, 3%, 31%, 0.5);
-    transform:scale3d(1.0625, 1.0625, 1.0625   );
-}
-
-&__form{
-
-    min-height: 55vh;
-background-color:   hsla(244, 76%, 8%, 0.9);
-      color:$primary-white ;
-      @include mobile-body-copy;
-      @include flex(column,center , center);
-      margin: 2rem 1rem;
-      row-gap: 1.5rem;
-      padding: 1rem;
-      border-radius: .7rem;
-     border: .0625rem solid rgba(255, 255, 255, 0.2);
-&-title{
-@include mobile-subheader-header;
-font-size: 1.5rem;
-}
-&-property{
-    @include flex(column, flex-start, flex-start);
-    row-gap: .5rem;
-}
-&-property input, textarea{
-    text-align: left;
-   border-radius: .5rem;
-    padding: 1rem;
-    background-color:  hsla(0, 0%, 7%, 0.2);
     color: $primary-white;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__button:hover {
+    background-color: hsla(0, 3%, 31%, 0.5);
+    transform: scale3d(1.0625, 1.0625, 1.0625);
+  }
+
+  &__form {
+    min-height: 55vh;
+    background-color: hsla(244, 76%, 8%, 0.9);
+    color: $primary-white;
+    @include mobile-body-copy;
+    @include flex(column, center, center);
+    margin: 2rem 1rem;
+    row-gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+    &-title {
+      @include mobile-subheader-header;
+      font-size: 1.5rem;
+    }
+    &-property {
+      @include flex(column, flex-start, flex-start);
+      row-gap: 0.5rem;
+    }
+    &-property input,
+    textarea {
+      text-align: left;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      background-color: hsla(0, 0%, 7%, 0.2);
+      color: $primary-white;
+    }
+    &-property textarea {
+      padding: 4rem 2rem;
+    }
+  }
 }
-&-property textarea{
-        padding:4rem 2rem;
-}
-}}
 
 .error__state {
   color: red;
@@ -75,57 +72,62 @@ font-size: 1.5rem;
   font-size: 0.7rem;
 }
 
-
 @include tablet {
-.contact
-
-{
+  .contact {
     margin-top: 8rem;
-    &__text{
-        @include tablet-desktop-title-normal;
+
+    &__wrapper {
+      @include flex(column, center, center);
+    }
+    &__text {
+      @include tablet-desktop-title-normal;
     }
 
-    &__earth{
-        @include flex(row, center, center)
+    &__earth {
+      @include flex(row, center, center);
+      width: 100%;
+      height: 100vh;
+      max-width: 40rem;
+      margin: auto;
     }
-    &__form-title{
-        font-size: 3.5rem;
+    &__form-title {
+      font-size: 3.5rem;
     }
-    &__form{
-        @include tablet-desktop-body-copy-medium;
-margin-left: 5rem;
-margin-right: 5rem;
-&-property input, textarea{
-width: 25rem;
-}
+    &__form {
+      @include tablet-desktop-body-copy-medium;
+      width: calc(100vw - 16rem);
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      margin-top: 5rem;
+      &-property input,
+      textarea {
+        width: 25rem;
+      }
 
-&-property {
-    row-gap: 1.5rem;
-}
+      &-property {
+        row-gap: 1.5rem;
+      }
     }
-    &__button{
-            padding: 1.25rem 3rem;
-            font-size: 1.5rem;
+    &__button {
+      padding: 1.25rem 3rem;
+      font-size: 1.5rem;
     }
-}
-.contact__form-input::placeholder{
-
-         font-size: .95rem;
-     text-align: left;
-         width: 100%;
- 
-}
-
+  }
+  .contact__form-input::placeholder {
+    font-size: 0.95rem;
+    text-align: left;
+    width: 100%;
+  }
 }
 
 @include desktop {
-.contact
-
-{
-&__form{
-        width: 100%;
+  .contact {
+    &__form {
+      max-width: 55rem;
+      margin-left: 5rem;
+    }
+    &__wrapper {
+      @include flex(row-reverse, center, center);
+    }
+  }
 }
-    &__wrapper{
-    @include flex(row-reverse, center, center)
-}
-}}

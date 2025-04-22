@@ -19,6 +19,7 @@ const itemVariants = {
   },
 };
 function MenuItem({ itemName, id, onClose, onClick }) {
+   console.log("menu: ", itemName);
   return (
     <motion.li
       className="list-item"

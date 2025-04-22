@@ -1,0 +1,5 @@
+@use "../../styles/partials/variables" as *;
+.my-modal .modal-content {
+  background-color: hsla(244, 76%, 8%, 0.9);
+  color: $primary-white;
+}

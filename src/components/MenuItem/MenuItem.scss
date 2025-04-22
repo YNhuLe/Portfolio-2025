@@ -18,3 +18,9 @@ font-weight: 600;
 gap: 2rem;
 }
 }
+
+@include desktop{
+  // .list-item{
+  //   @include flex(row, center, center);
+  // }
+}
