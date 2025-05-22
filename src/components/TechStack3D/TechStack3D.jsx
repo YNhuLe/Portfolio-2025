@@ -31,6 +31,13 @@ const logos = [
   { name: "GIT", url: "/logos/git.png", position: randomPosition() },
   { name: "JAVA", url: "/logos/java.png", position: randomPosition() },
   { name: "CANVA", url: "/logos/canva.png", position: randomPosition() },
+  { name: "AWS", url: "/logos/aws.png", position: randomPosition() },
+  { name: "TAILWIND", url: "/logos/tailwind.png", position: randomPosition() },
+  {
+    name: "TYPESCRIPT",
+    url: "/logos/typescript.png",
+    position: randomPosition(),
+  },
 ];
 
 function randomPosition() {

@@ -1,5 +1,5 @@
 import "./MasonryLayout.scss";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 function MasonryLayout({ items }) {
   return (
     <div className="masonry__layout">
@@ -21,9 +21,14 @@ function MasonryLayout({ items }) {
           <h2 className="project__title">{item.title}</h2>
           <div className="project__concept">
             <p className="project__text"> {item.concept}</p>
-            <a href={item.gitUrl} className="project__link">
-              <FaGithub className="github-icon" size={24} />
-            </a>
+            <div className="link">
+              <a href={item.gitUrl} className="project__link">
+                <FaGithub className="github-icon" size={24} />
+              </a>
+              <a href={item.link} className="project__link">
+                <FaGlobe className="globe-icon" size={24} />
+              </a>
+            </div>
           </div>
           <div className="stack">
             <ul className="stack__list">

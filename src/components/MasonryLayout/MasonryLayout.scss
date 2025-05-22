@@ -96,14 +96,17 @@ article:hover {
   color: $primary-white;
   transition: color 0.3s ease;
 }
-.project__link:hover .github-icon {
+.project__link:hover .github-icon .globe-icon{
   color: $primary-black;
 }
 .masonry__item:hover .project__concept {
   transform: translateY(5.5rem);
   opacity: 1;
 }
-
+.link{
+  @include flex(row, center, center);
+  gap: .5rem;
+}
 .stack {
   @include mobile-footer-copy;
   &__list {
@@ -151,6 +154,9 @@ article:hover {
     &__list {
       @include tablet-desktop-label-medium;
     }
+  }
+  .link{
+    gap: 1rem;
   }
   .masonry__item {
     padding: 1rem;
