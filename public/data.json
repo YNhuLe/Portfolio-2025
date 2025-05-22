@@ -12,11 +12,12 @@
   {
     "id": "2",
     "width": "20",
-    "title": "Instock",
-    "concept": "The InStock group project is a responsive full-stack inventory management system that helps businesses track stock levels, warehouses, and product data efficiently.",
-    "gitUrl": "https://github.com/YNhuLe/team2-instock-server",
-    "img_url": "/images/instock.png",
-    "stack": ["react", "express", "scss", "git", "jira", "restapi"]
+    "title": "Evererdant",
+    "concept": "Eververdant is a mobile-first web app that connects plant lovers to buy, sell, and share leafy tips with a thriving green-thumbed community.",
+    "gitUrl": "https://github.com/YNhuLe/Flower_Love",
+    "img_url": "/images/evererdant.png",
+    "link": "https://main.d36o1v1jm7mlqn.amplifyapp.com/",
+    "stack": ["react", "express", "typesript", "tailwind", "AWS"]
   },
   {
     "id": "3",
