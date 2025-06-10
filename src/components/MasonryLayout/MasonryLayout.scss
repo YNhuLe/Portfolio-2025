@@ -6,18 +6,23 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 5rem;
+  overflow: hidden;
+
 }
 
 .masonry__item {
   position: relative;
-  @include flex(column, flex-start, center);
+  overflow: hidden;
+  // position: relative;
+  @include flex(column, center, center);
   flex-grow: 1;
-  min-width: 8rem;
+
   width: auto;
   break-inside: avoid;
   box-sizing: border-box;
-  height: clamp(22rem, 60vw, 28rem);
-  width: clamp(25rem, 100vw, 25rem);
+  height: clamp(27rem, 60vw, 28rem);
+  width: clamp(17rem, 60vw, 25rem);
+  // width: 100%;
   margin: 1rem;
   margin-bottom: 2rem;
   backdrop-filter: blur(0.625rem);
@@ -36,32 +41,45 @@
   @include flex(row, center, center);
 }
 
-.masonry__item:hover {
-  background: rgb(33 27 80 / 25%);
+// .masonry__item:hover {
+//   background: rgb(33 27 80 / 25%);
+// }
+// article:hover {
+//   background: rgb(33 27 80 / 25%);
+// }
+.arrow-icon{
+  position: absolute;
+  top:1rem;
+  right:1.5rem;
+  z-index: 100;
+  color: rgb(71, 68, 68);
 }
-article:hover {
-  background: rgb(33 27 80 / 25%);
+.arrow-icon:hover{
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  transform: scale3d(1.2, 1.2, 1.2); 
 }
-.masonry__item:hover .project__img {
-  top: -10rem;
-  transform: scale3d(1.5px, 1.5px, 1.5px);
-}
+// .masonry__item:hover .project__img {
+//   top: -10rem;
+//   transform: scale3d(1.5px, 1.5px, 1.5px);
+// }
 
 .project__img {
-  width: 100%;
 
-  object-fit: contain;
+  // object-fit: contain;
   top: 0;
   left: 0;
-  height: 100%;
+
   position: absolute;
 
-  height: -webkit-fill-available;
-  width: -webkit-fill-available;
+  // height: -webkit-fill-available;
+  // width: -webkit-fill-available;
+  width: 100%;
+  height: calc(100% - 10.5rem);
+  // height: 20rem;
   padding: 1rem;
-  padding-bottom: 4rem;
 
-  transition: top 0.5s ease-in-out;
+  // transition: top 0.5s ease-in-out;
+  border-radius:2rem;
 }
 
 .project__title {
@@ -69,52 +87,63 @@ article:hover {
   @include mobile-section-header;
   text-transform: uppercase;
   color: $primary-white;
-  bottom: 0.35rem;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-  margin: 3rem 0;
+  // bottom: 0.35rem;
+  // transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  // margin: 3rem 0;
+  font-size: 1.1rem;
+  bottom: 11rem;
+  left: 1rem;
+  font-weight: bold;
+margin-bottom: 0
 }
 
-.masonry__item:hover .project__title {
-  transform: translateY(3rem);
-  opacity: 0;
-}
+// .masonry__item:hover .project__title {
+//   transform: translateY(3rem);
+//   opacity: 0;
+// }
 .project__concept {
   @include mobile-body-copy;
+  font-size: .85rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 0.2875rem;
   position: absolute;
-  bottom: 8rem;
-  color: $primary-white;
-  opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  text-align: center;
-  background-color: rgb(9 9 9 / 35%);
+  bottom: 2rem;
+  color: $card-shadow;
+  margin-left: 1rem;
+  // margin-top: 1rem;
+  // opacity: 0;
+  // transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  text-align: left;
+  // background-color: rgb(9 9 9 / 35%);
 }
 .github-icon {
   color: $primary-white;
   transition: color 0.3s ease;
 }
+
 .project__link:hover .github-icon .globe-icon{
   color: $primary-black;
 }
-.masonry__item:hover .project__concept {
-  transform: translateY(5.5rem);
-  opacity: 1;
-}
+// .masonry__item:hover .project__concept {
+//   transform: translateY(5.5rem);
+//   opacity: 1;
+// }
 .link{
-  @include flex(row, center, center);
+  width: 100%;
+  @include flex(row, flex-start, center);
   gap: .5rem;
 }
 .stack {
+  width: 100%;
   @include mobile-footer-copy;
   &__list {
-    @include flex(row, center, center);
+    @include flex(row, flex-start, center);
 
     flex-wrap: wrap;
-    padding-left: 0;
-    width: 100%;
+    padding-left: 1rem;
+    // width: 100%;
     list-style: none;
     gap: 0.25rem;
   }

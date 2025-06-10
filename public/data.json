@@ -3,10 +3,10 @@
     "id": "1",
     "width": "20",
     "title": "Zodiac Wander",
-    "concept": "Welcome to Zodiac Wander — a place where the stars meet your story. Discover your zodiac sign, explore personality traits, connect with your birth flower, and share your thoughts with others. It’s more than astrology — it’s a blooming journey through the cosmos.",
+    "concept": "Zodiac Wander — where stars meet your story. Discover your zodiac sign, connect with your birth flower, explore traits, and share thoughts with others on a cosmic journey.",
     "gitUrl": "https://github.com/YNhuLe/Pair-Programming",
     "img_url": "/images/zodiac.png",
-    "stack": ["react", "express", "scss", "git", "restapi"]
+    "stack": ["react", "express", "scss", "restapi"]
   },
 
   {
@@ -17,7 +17,7 @@
     "gitUrl": "https://github.com/YNhuLe/Flower_Love",
     "img_url": "/images/evererdant.png",
     "link": "https://main.d36o1v1jm7mlqn.amplifyapp.com/",
-    "stack": ["react", "express", "typesript", "tailwind", "AWS"]
+    "stack": ["react", "typesript", "tailwind", "AWS"]
   },
   {
     "id": "3",
@@ -26,13 +26,13 @@
     "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🛠️💥",
     "gitUrl": "https://github.com/YNhuLe/TinDog-Start-master",
     "img_url": "/images/tralli2.png",
-    "stack": ["express", "react", "scss", "git", "firebase", "restapi"]
+    "stack": ["express", "react", "scss", "firebase", "restapi"]
   },
   {
     "id": "4",
-    "width": "28",
+    "width": "30",
     "title": "Blogs-Life",
-    "concept": "Welcome to Blogs-Life — a chill space to share your thoughts, ideas, and stories. From tech to daily vibes, whatever’s on your mind, this is your place to be heard. 💬✨",
+    "concept": "Blogs-Life — a chill space to share your thoughts, ideas, and stories. From tech to daily vibes, whatever’s on your mind, this is your place to be heard. 💬✨",
     "gitUrl": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs",
     "img_url": "/images/blogs.png",
     "stack": ["python", "flask", "postgres", "restapi"]
@@ -41,26 +41,18 @@
     "id": "5",
     "width": "26",
     "title": "TaskBloom",
-    "concept": "TaskBloom is a smart to-do app that combines the simplicity of Microsoft To Do with AI-powered task breakdowns. Just enter a task, and the AI suggests actionable subtasks to help you stay focused and productive.",
+    "concept": "TaskBloom is a smart to-do app that uses AI to break tasks into actionable subtasks — helping you stay organized, focused, and productive.",
     "gitUrl": "https://github.com/YNhuLe/Industry-Project-Team3-Server",
     "img_url": "/images/taskbloom.png",
-    "stack": [
-      "react",
-      "express",
-      "scss",
-      "git",
-      "jira",
-      "gemini-api",
-      "restapi"
-    ]
+    "stack": ["react", "express", "scss", "gemini-api", "restapi"]
   },
   {
     "id": "6",
     "width": "28",
     "title": "Snaps",
-    "concept": "A responsive full-stack photography-sharing platform where photographers can showcase their favorite neighborhood shots in their unique style. 📸✨",
+    "concept": "A responsive full-stack platform where photographers share neighborhood shots in their unique style, connect, explore stories, and celebrate creativity. 📸✨",
     "gitUrl": "https://github.com/YNhuLe/jenny-le-snaps",
     "img_url": "/images/snaps2.png",
-    "stack": ["react", "express", "scss", "git", "restapi"]
+    "stack": ["react", "express", "scss", "restapi"]
   }
 ]
