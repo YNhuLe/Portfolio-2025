@@ -8,7 +8,7 @@ import Garden from "./components/Garden/Garden";
 import Contact from "./components/Contact/Contact";
 import Home from "./pages/Home/Home";
 import GalaxyParticles from "./components/GalaxyParticles/GalaxyParticles";
-import TechStackSection from "./components/TechStackSection/TechStackSection";
+import TechStack from "./components/TechStack/TechStack";
 import Footer from "./components/Footer/Footer";
 function App() {
   return (
@@ -19,7 +19,8 @@ function App() {
         <NavBar />
         <AboutMe />
         <Project />
-        <TechStackSection />
+        {/* <TechStackSection /> */}
+        <TechStack />
 
         <Contact />
         <Footer />
