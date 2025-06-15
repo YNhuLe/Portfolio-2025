@@ -1,5 +1,11 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.stack-icon{
+  width: 100%;
+  height: 12rem;
+  // background-color: aqua;
+}
 .tech {
   min-height: 35rem;
   &__title{
