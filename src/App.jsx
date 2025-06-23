@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home";
 import GalaxyParticles from "./components/GalaxyParticles/GalaxyParticles";
 import TechStackSection from "./components/TechStackSection/TechStackSection";
 import Footer from "./components/Footer/Footer";
+import DetailsPage from "./pages/DetailsPage/DetailsPage";
 function App() {
   return (
     <>
@@ -19,9 +20,10 @@ function App() {
         <NavBar />
         <AboutMe />
         <Project />
+        {/* <Home /> */}
         {/* <TechStackSection /> */}
         <TechStackSection />
-
+        <DetailsPage />
         <Contact />
         <Footer />
       </section>

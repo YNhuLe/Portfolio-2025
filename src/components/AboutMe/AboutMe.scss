@@ -21,6 +21,7 @@
 
 .headshot {
   position: relative;
+  margin-bottom: 1rem;
   @include flex(row, center, center);
 
   width: 100%;
@@ -30,6 +31,7 @@
     height: 6rem;
     border-radius: 50%;
   }
+
 }
 @include tablet {
   .about {

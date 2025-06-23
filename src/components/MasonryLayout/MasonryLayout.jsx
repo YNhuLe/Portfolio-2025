@@ -19,14 +19,6 @@ function MasonryLayout({ items }) {
               <a href="/project-details" className="arrow-icon">
                 <FaExternalLinkAlt size={20} />
               </a>
-              {/* <div className="link">
-              <a href={item.gitUrl} className="project__link">
-                <FaGithub className="github-icon" size={24} />
-              </a>
-              <a href={item.link} className="project__link">
-                <FaGlobe className="globe-icon" size={24} />
-              </a>
-            </div> */}
               <img
                 src={item.img_url}
                 alt="project-image"
