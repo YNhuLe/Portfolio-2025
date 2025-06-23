@@ -4,7 +4,7 @@ import { OrbitControls, Float, Html } from "@react-three/drei";
 import TechStack3D from "../TechStack3D/TechStack3D";
 import TechStack from "../TechStack/TechStack";
 const frontendLogos = [
-  { name: "React", url: "/logos/react.png" },
+  { name: "REACT", url: "/logos/react.png" },
   { name: "JS", url: "/logos/js.png" },
   { name: "HTML", url: "/logos/html.png" },
   { name: "CSS", url: "/logos/css.png" },
@@ -15,15 +15,16 @@ const frontendLogos = [
 ];
 
 const backendLogos = [
-  { name: "Node.js", url: "/logos/node.png" },
-  { name: "Express", url: "/logos/express.png" },
-  { name: "Firebase", url: "/logos/firebase.png" },
-  { name: "Python", url: "/logos/python.png" },
+  { name: "NODE.JS", url: "/logos/node.png" },
+  { name: "EXPRESS", url: "/logos/express.png" },
+  { name: "FIREBASE", url: "/logos/firebase.png" },
+  { name: "PYTHON", url: "/logos/python.png" },
 ];
 const databaseLogos = [
-  { name: "mySQL", url: "/logos/mysql.png" },
+  { name: "MYSQL", url: "/logos/mysql.png" },
   { name: "SQL", url: "/logos/sql.png" },
   { name: "PostgresSQL", url: "/logos/postgres.png" },
+  { name: "FIREBASE", url: "/logos/firebase.png" },
 ];
 const devOpsLogos = [
   { name: "GIT", url: "/logos/git.png" },
@@ -31,11 +32,12 @@ const devOpsLogos = [
   { name: "JENKIN", url: "/logos/jenkin.png" },
   { name: "DOCKER", url: "/logos/docker.png" },
   { name: "AWS", url: "/logos/aws.png" },
+  { name: "POSTMAN", url: "/logos/postman1.png" },
 ];
-// const designLogos = [
-//   { name: "Figma", url: "/logos/figma.png" },
-//   { name: "CANVA", url: "/logos/canva.png" },
-// ];
+const designLogos = [
+  { name: "FIGMA", url: "/logos/figma.png" },
+  { name: "CANVA", url: "/logos/canva.png" },
+];
 
 function TechStackSection() {
   return (
@@ -77,6 +79,11 @@ function TechStackSection() {
       <div className="devops">
         <h1 className="stack__title">DevOps:</h1>
         <TechStack logos={devOpsLogos} />
+      </div>
+
+      <div className="design">
+        <h1 className="stack__title">Design tech:</h1>
+        <TechStack logos={designLogos} />
       </div>
     </section>
   );

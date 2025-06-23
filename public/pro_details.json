@@ -1,0 +1,99 @@
+[
+  {
+    "id": "1",
+    "title": "Zodiac Wander",
+    "concept": "Zodiac Wander — where stars meet your story. Discover your zodiac sign, connect with your birth flower, explore traits, and share thoughts with others on a cosmic journey.",
+    "tech_stack": ["React", "Express", "SCSS", "REST API"],
+    "img_url": "/images/zodiac.png",
+    "git_url": "https://github.com/YNhuLe/Pair-Programming",
+    "solution": "",
+    "outcome": "",
+    "key_learnings": [],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
+  },
+  {
+    "id": "2",
+    "title": "Evererdant",
+    "concept": "Eververdant is a mobile-first web app that connects plant lovers to buy, sell, and share leafy tips with a thriving green-thumbed community.",
+    "tech_stack": ["React", "TypeScript", "Tailwind", "AWS"],
+    "img_url": "/images/evererdant.png",
+    "git_url": "https://github.com/YNhuLe/Flower_Love",
+    "live_url": "https://main.d36o1v1jm7mlqn.amplifyapp.com/",
+    "solution": "",
+    "outcome": "",
+    "key_learnings": [],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
+  },
+  {
+    "id": "3",
+    "title": "Tralli",
+    "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🛠️💥",
+    "tech_stack": ["Express", "React", "SCSS", "Firebase", "REST API"],
+    "img_url": "/images/tralli2.png",
+    "git_url": "https://github.com/YNhuLe/TinDog-Start-master",
+    "solution": "",
+    "outcome": "",
+    "key_learnings": [],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
+  },
+  {
+    "id": "4",
+    "title": "Blogs-Life",
+    "concept": "Blogs-Life — a chill space to share your thoughts, ideas, and stories. From tech to daily vibes, whatever’s on your mind, this is your place to be heard. 💬✨",
+    "tech_stack": ["Python", "Flask", "PostgreSQL", "REST API"],
+    "img_url": "/images/blogs.png",
+    "git_url": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs",
+    "solution": "",
+    "outcome": "",
+    "key_learnings": [],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
+  },
+  {
+    "id": "5",
+    "title": "TaskBloom",
+    "concept": "TaskBloom is a smart to-do app that uses AI to break tasks into actionable subtasks — helping you stay organized, focused, and productive.",
+    "tech_stack": ["React", "Express", "SCSS", "Gemini API", "REST API"],
+    "img_url": "/images/taskbloom.png",
+    "git_url": "https://github.com/YNhuLe/Industry-Project-Team3-Server",
+    "solution": "",
+    "outcome": "",
+    "key_learnings": [],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
+  },
+  {
+    "id": "6",
+    "title": "Snaps",
+    "concept": "A responsive full-stack platform where photographers share neighborhood shots in their unique style, connect, explore stories, and celebrate creativity. 📸✨",
+    "tech_stack": ["React", "Express", "SCSS", "REST API"],
+    "img_url": "/images/snaps2.png",
+    "git_url": "https://github.com/YNhuLe/jenny-le-snaps",
+    "solution": "",
+    "outcome": "",
+    "key_learnings": [],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
+  }
+]

@@ -7,8 +7,8 @@ function TechStack({ logos }) {
     <div className="hive">
       {logos?.map((logo, index) => (
         <div className="hex" key={index}>
-          <img src={logo.url} alt={logo.name} />
-          <span>{logo.name}</span>
+          <img src={logo.url} alt={logo.name} className="hex-logo" />
+          <span className="hex-title">{logo.name}</span>
         </div>
       ))}
     </div>

@@ -112,6 +112,18 @@
   }
 }
 
+@mixin desktop-xxl{
+  @media (min-width: $desktop-breakpoint-xxl) {
+    @content;
+  }
+}
+
+@mixin desktop-ultra{
+   @media ( min-width: $desktop-breakpoint-ultra){
+    @content;
+   }
+}
+
 //flex
 @mixin flex($direction, $justify, $align) {
   display: flex;
