@@ -1,58 +1,164 @@
 [
   {
     "id": "1",
-    "width": "20",
     "title": "Zodiac Wander",
+    "slug": "zodiac-web",
     "concept": "Zodiac Wander — where stars meet your story. Discover your zodiac sign, connect with your birth flower, explore traits, and share thoughts with others on a cosmic journey.",
-    "gitUrl": "https://github.com/YNhuLe/Pair-Programming",
+    "tech_stack": ["React", "Express", "SCSS", "REST API"],
     "img_url": "/images/zodiac.png",
-    "stack": ["react", "express", "scss", "restapi"]
+    "git_url": "https://github.com/YNhuLe/Pair-Programming",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releasesChallenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      }
+    ],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
   },
-
   {
     "id": "2",
-    "width": "20",
     "title": "Evererdant",
+    "slug": "evererdant-web",
     "concept": "Eververdant is a mobile-first web app that connects plant lovers to buy, sell, and share leafy tips with a thriving green-thumbed community.",
-    "gitUrl": "https://github.com/YNhuLe/Flower_Love",
+    "tech_stack": ["React", "TypeScript", "Tailwind", "AWS"],
     "img_url": "/images/evererdant.png",
-    "link": "https://main.d36o1v1jm7mlqn.amplifyapp.com/",
-    "stack": ["react", "typesript", "tailwind", "AWS"]
+    "git_url": "https://github.com/YNhuLe/Flower_Love",
+    "live_url": "https://main.d36o1v1jm7mlqn.amplifyapp.com/",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releasesChallenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      }
+    ],
+
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
   },
   {
     "id": "3",
-    "width": "27",
     "title": "Tralli",
+    "slug": "tralli-web",
     "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🛠️💥",
-    "gitUrl": "https://github.com/YNhuLe/TinDog-Start-master",
+    "tech_stack": ["Express", "React", "SCSS", "Firebase", "REST API"],
     "img_url": "/images/tralli2.png",
-    "stack": ["express", "react", "scss", "firebase", "restapi"]
+    "git_url": "https://github.com/YNhuLe/TinDog-Start-master",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releasesChallenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      }
+    ],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
   },
   {
     "id": "4",
-    "width": "30",
     "title": "Blogs-Life",
+    "slug": "bloglife-web",
     "concept": "Blogs-Life — a chill space to share your thoughts, ideas, and stories. From tech to daily vibes, whatever’s on your mind, this is your place to be heard. 💬✨",
-    "gitUrl": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs",
+    "tech_stack": ["Python", "Flask", "PostgreSQL", "REST API"],
     "img_url": "/images/blogs.png",
-    "stack": ["python", "flask", "postgres", "restapi"]
+    "git_url": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releasesChallenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      }
+    ],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
   },
   {
     "id": "5",
-    "width": "26",
     "title": "TaskBloom",
+    "slug": "taskbloom-web",
     "concept": "TaskBloom is a smart to-do app that uses AI to break tasks into actionable subtasks — helping you stay organized, focused, and productive.",
-    "gitUrl": "https://github.com/YNhuLe/Industry-Project-Team3-Server",
+    "tech_stack": ["React", "Express", "SCSS", "Gemini API", "REST API"],
     "img_url": "/images/taskbloom.png",
-    "stack": ["react", "express", "scss", "gemini-api", "restapi"]
-  },
-  {
-    "id": "6",
-    "width": "28",
-    "title": "Snaps",
-    "concept": "A responsive full-stack platform where photographers share neighborhood shots in their unique style, connect, explore stories, and celebrate creativity. 📸✨",
-    "gitUrl": "https://github.com/YNhuLe/jenny-le-snaps",
-    "img_url": "/images/snaps2.png",
-    "stack": ["react", "express", "scss", "restapi"]
+    "git_url": "https://github.com/YNhuLe/Industry-Project-Team3-Server",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releasesChallenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      }
+    ],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
   }
 ]
+ 
+
+
+
+
