@@ -1,0 +1,15 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.info__card{
+    margin: 1rem;
+    
+    &-img{
+    border-radius: 1rem;
+    width: 100%;
+}
+
+&-title{
+    font-weight: 700;
+}
+}

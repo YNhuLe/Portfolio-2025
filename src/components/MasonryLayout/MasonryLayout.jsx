@@ -1,7 +1,11 @@
 import Tilt from "react-parallax-tilt";
 import "./MasonryLayout.scss";
+import { Navigate, useNavigate } from "react-router-dom";
 import { FaGithub, FaGlobe, FaExternalLinkAlt } from "react-icons/fa";
 function MasonryLayout({ items }) {
+  console.log("Items: ", items);
+
+  const navigate = useNavigate();
   return (
     <div className="masonry__layout">
       {items.map((item) => (
@@ -14,9 +18,11 @@ function MasonryLayout({ items }) {
           tiltMaxAngleX={15}
           tiltMaxAngleY={15}
           key={item.id}>
-          <article className="masonry__item">
+          <article
+            className="masonry__item"
+            onClick={() => navigate(`/projects/${item.slug}`)}>
             <div className="img__project">
-              <a href="/project-details" className="arrow-icon">
+              <a href="/" className="arrow-icon">
                 <FaExternalLinkAlt size={20} />
               </a>
               <img
@@ -40,7 +46,7 @@ function MasonryLayout({ items }) {
             </div>
             <div className="stack">
               <ul className="stack__list">
-                {item.stack.map((tech, index) => (
+                {item.tech_stack.map((tech, index) => (
                   <li className="stack__item" key={index}>
                     #{tech}
                   </li>

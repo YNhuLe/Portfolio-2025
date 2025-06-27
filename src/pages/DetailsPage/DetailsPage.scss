@@ -1,2 +1,57 @@
-@use "../../styles/partials/mixins";
-@use "../../styles/partials/variables";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.pro{
+    
+    &__title {
+  margin: 1rem;
+  text-align: center;
+  @include mobile-page-header;
+    }
+    &__subtitle{
+        @include mobile-subheader-header;
+        text-align: center;
+
+    }
+
+    &__img{
+        width: calc(100% - 2rem);
+        margin: 1rem;
+        border-radius: 1rem;
+    }
+ 
+}
+
+.btn-section{
+    @include flex(column, center, center);
+    gap: .5rem;
+}
+.button{
+
+    border-radius: 1rem;
+    padding: 0.3rem 0.7rem;
+    background-color: rgb(10, 10, 10);
+    cursor: pointer;
+    color: rgb(204, 41, 41);
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+
+    &-dive{
+        color:$primary-white;
+    }
+    &-dive:hover{
+        background-color: $card-shadow;    
+          color: $primary-black;
+    }
+    &-demo{
+        color: $primary-black;
+        background-color: $card-shadow;
+    }
+    &-demo:hover{
+        color:$primary-white;
+        background-color:$primary-black;
+    }
+  }
+  .button:hover{
+    transform: scale3d(1.0625, 1.0625, 1.0625);
+  }
