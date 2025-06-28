@@ -9,7 +9,6 @@ function MasonryLayout({ items }) {
   return (
     <div className="masonry__layout">
       {items.map((item) => (
-        // <div className="card__border" style={{ width: `${item.width}rem` }}>
         <Tilt
           glareEnable={true}
           glareMaxOpacity={0.3}
@@ -20,7 +19,7 @@ function MasonryLayout({ items }) {
           key={item.id}>
           <article
             className="masonry__item"
-            onClick={() => navigate(`/projects/${item.slug}`)}>
+            onClick={() => navigate(`/${item.slug}`)}>
             <div className="img__project">
               <a href="/" className="arrow-icon">
                 <FaExternalLinkAlt size={20} />

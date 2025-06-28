@@ -1,15 +1,48 @@
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 .footer {
-  @include flex(row, flex-end, center);
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  margin-right: 5rem;
-  &_icon {
+
+margin: 3rem 1rem;
+margin-bottom: 0;
+border-top-style: outset;
+border-width: .1rem;
+border-color: $third-grey;
+&__logo{
+  width: 3rem;
+  height: 3rem;
+
+  border-radius: 50%;
+ 
+
+
+  z-index: 999;
+  margin: 3rem 0;
+
+
+}
+&_icon {
     width: 2rem;
     height: 2rem;
   }
+  &__list{
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 2rem;
+  }
+  &__title{
+    color:    $primary-white;
+  }
+}
+li>ul{
+  margin-bottom: 0;
+  padding-left: 0;
+  cursor: pointer;
+  color: $third-grey;
 }
 
+.portfolio, .projects, .connect{
+  height: fit-content;
+}
 @include tablet {
   .footer_icon {
     width: 3rem;

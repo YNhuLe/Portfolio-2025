@@ -14,30 +14,15 @@ import Contact from "../../components/Contact/Contact.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 
 function Home() {
-  // const location = useLocation();
-  // useEffect(() => {
-  //   if (location.pathname !== "/") {
-  //     scrollToSection(location.pathname.substring(1));
-  //   }
-  // }, [location]);
+
   return (
-    // <div>
-    //   <section id="about">About Me</section>
-    //   <section id="projects">Projects</section>
-    //   <section id="garden">Garden</section>
-    //   <section id="contact">Contact</section>
-    // </div>
     <>
-      {/* <GalaxyParticles /> */}
       <section className="app__container">
         <GalaxyParticles />
         <NavBar />
         <AboutMe />
         <Project />
-        {/* <Home /> */}
-        {/* <TechStackSection /> */}
         <TechStackSection />
-        {/* <DetailsPage /> */}
         <Contact />
         <Footer />
       </section>
