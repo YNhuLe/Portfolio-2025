@@ -1,57 +1,78 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.pro{
-    
-    &__title {
-  margin: 1rem;
-  text-align: center;
-  @include mobile-page-header;
-    }
-    &__subtitle{
-        @include mobile-subheader-header;
-        text-align: center;
+.pro {
+  &__details {
+    background-color: $primary-black;
+  }
 
-    }
+  &__title {
+    color: $primary-white;
+    padding-top: 8rem;
+    text-align: center;
+    @include mobile-page-header;
+  }
+  &__subtitle {
+    @include mobile-subheader-header;
+    text-align: center;
+    color: $third-grey;
+    margin: 0.5rem 1rem;
+  }
 
-    &__img{
-        width: calc(100% - 2rem);
-        margin: 1rem;
-        border-radius: 1rem;
-    }
- 
-}
-
-.btn-section{
-    @include flex(column, center, center);
-    gap: .5rem;
-}
-.button{
-
+  &__img {
+    width: calc(100% - 2rem);
+    margin: 1rem;
     border-radius: 1rem;
-    padding: 0.3rem 0.7rem;
-    background-color: rgb(10, 10, 10);
+    position: relative;
+    z-index: 1;
+  }
+}
+.galaxy{
+    position: relative;
+    z-index:1;
+}
+.galaxy-particles{
+    position: absolute; z-index: 0;
+}
+.back-icon{
+    position: absolute;
     cursor: pointer;
-    color: rgb(204, 41, 41);
-    text-decoration: none;
-    transition: transform 0.3s ease-in-out;
+    margin: 1rem;
+}
 
-    &-dive{
-        color:$primary-white;
-    }
-    &-dive:hover{
-        background-color: $card-shadow;    
-          color: $primary-black;
-    }
-    &-demo{
-        color: $primary-black;
-        background-color: $card-shadow;
-    }
-    &-demo:hover{
-        color:$primary-white;
-        background-color:$primary-black;
-    }
+.back-icon:active{
+transform: scale(.9);
+}
+.btn-section {
+  @include flex(column, center, center);
+  gap: 0.5rem;
+}
+.button {
+  font-weight: 500;
+  border-radius: 1rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+
+  &-dive {
+    color: $primary-white;
+    background-color: $secondary-black;
   }
-  .button:hover{
-    transform: scale3d(1.0625, 1.0625, 1.0625);
+  &-dive:hover {
+    background-color: $card-shadow;
+    color: $secondary-black;
   }
+  &-demo {
+    color: $secondary-black;
+    background-color: $card-shadow;
+  }
+  &-demo:hover {
+    color: $primary-white;
+    background-color: $secondary-black;
+  }
+}
+.button:hover {
+  transform: scale3d(1.0625, 1.0625, 1.0625);
+}

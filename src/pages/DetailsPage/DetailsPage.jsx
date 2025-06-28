@@ -3,7 +3,11 @@ import DetailSection from "../../components/DetailSection/DetailSection";
 import Navigation from "../../components/Navigation/Navigation";
 import { useProjectContext } from "../../context/ProjectContext";
 import { useParams } from "react-router-dom";
+import goback from "../../assets/icons/goback.png";
 import { div } from "motion/react-client";
+import Footer from "../../components/Footer/Footer";
+import NavBar from "../../components/NavBar/NavBar";
+import GalaxyParticles from "../../components/GalaxyParticles/GalaxyParticles";
 function DetailsPage() {
   const { project, loading, error } = useProjectContext();
   const { slug } = useParams();
@@ -13,20 +17,32 @@ function DetailsPage() {
   if (!pro) return <p>Project not found..</p>;
 
   return (
-    <>
-      <h1 className="pro__title">{pro.title}</h1>
-      <h2 className="pro__subtitle">A modern case stud on impact and result</h2>
-      <div className="btn-section">
-        <a className="button button-dive">Dive deeper</a>
-        <a className="button button-demo">See demo</a>
+    <section className="galaxy">
+      <div className="galaxy-particles">
+        <GalaxyParticles />
       </div>
-      <img src={pro.img_url} alt={pro.title} className="pro__img" />
-      {pro.info.map((project, index) => (
-        <div key={index}>
-          <DetailSection project={project} />
+      <a href="./" className="back-icon">
+        <img src={goback} alt="go-back icon" />
+      </a>
+      <div className="pro__details">
+        <h1 className="pro__title">{pro.title}</h1>
+        <h2 className="pro__subtitle">
+          A modern case stud on impact and result
+        </h2>
+        <div className="btn-section">
+          <a className="button button-dive">Dive deeper</a>
+          <a className="button button-demo">See demo</a>
         </div>
-      ))}
-    </>
+        <img src={pro.img_url} alt={pro.title} className="pro__img" />
+        {pro.info.map((project, index) => (
+          <div key={index}>
+            <DetailSection project={project} />
+          </div>
+        ))}
+
+        <Footer />
+      </div>{" "}
+    </section>
   );
 }
 

@@ -3,13 +3,21 @@
 
 .info__card{
     margin: 1rem;
-    
+    margin-top: 4rem;
     &-img{
     border-radius: 1rem;
     width: 100%;
-}
+    position: relative;
+    z-index: 1;
+    }
+    &-content{
+        color:  $third-grey;
+      
+    }
+
 
 &-title{
     font-weight: 700;
+    color: $primary-white;
 }
 }
