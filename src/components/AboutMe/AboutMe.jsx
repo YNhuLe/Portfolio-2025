@@ -1,8 +1,35 @@
 import "./AboutMe.scss";
 import headshot from "/images/headshot.png";
+import Tilt from "react-parallax-tilt";
+import githubIcon from "/logos/git3D.png";
+import linked from "/logos/linked.png";
 function AboutMe() {
   return (
     <section className="about">
+      <div className="about__icon">
+        <Tilt
+          glareEnable={true}
+          glareMaxOpacity={0.2}
+          scale={1.05}
+          transitionSpeed={250}
+          tiltMaxAngleX={15}
+          tiltMaxAngleY={15}>
+          <a href="https://github.com/YNhuLe">
+            <img src={githubIcon} alt="github" className="footer_icon" />
+          </a>
+        </Tilt>
+        <Tilt
+          glareEnable={true}
+          glareMaxOpacity={0.2}
+          scale={1.05}
+          transitionSpeed={250}
+          tiltMaxAngleX={15}
+          tiltMaxAngleY={15}>
+          <a href="https://www.linkedin.com/in/jennynhuyle/">
+            <img src={linked} alt="linked" className="footer_icon" />
+          </a>
+        </Tilt>
+      </div>
       <div className="headshot">
         <img src={headshot} alt="headhot_img" className="headshot__img" />
       </div>
