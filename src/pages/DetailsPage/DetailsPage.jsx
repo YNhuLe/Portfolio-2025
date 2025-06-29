@@ -30,8 +30,12 @@ function DetailsPage() {
           A modern case stud on impact and result
         </h2>
         <div className="btn-section">
-          <a className="button button-dive">Dive deeper</a>
-          <a className="button button-demo">See demo</a>
+          <a className="button button-dive" href={pro.git_url}>
+            Dive deeper
+          </a>
+          <a className="button button-demo" href={pro.live_url}>
+            See demo
+          </a>
         </div>
         <img src={pro.img_url} alt={pro.title} className="pro__img" />
         {pro.info.map((project, index) => (
@@ -41,7 +45,7 @@ function DetailsPage() {
         ))}
 
         <Footer />
-      </div>{" "}
+      </div>
     </section>
   );
 }

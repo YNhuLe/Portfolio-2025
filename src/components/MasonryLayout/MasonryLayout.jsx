@@ -22,7 +22,8 @@ function MasonryLayout({ items }) {
             onClick={() => navigate(`/${item.slug}`)}>
             <div className="img__project">
               <a href="/" className="arrow-icon">
-                <FaExternalLinkAlt size={20} />
+                <FaExternalLinkAlt size={15} />
+                <span className="arrow-details">More details</span>
               </a>
               <img
                 src={item.img_url}

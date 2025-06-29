@@ -6,6 +6,7 @@ margin: 3rem 1rem;
 margin-bottom: 0;
 border-top-style: outset;
 border-width: .1rem;
+margin-top: 10rem;
 border-color: $third-grey;
 &__logo{
   width: 3rem;
@@ -26,22 +27,45 @@ border-color: $third-grey;
   }
   &__list{
     list-style: none;
-    padding-left: 0;
     padding-bottom: 2rem;
+    &-links{
+      text-decoration: none;
+      color: $third-grey;
+      padding-left: 0;
+      cursor: pointer;
+    }
+    &-links:hover{
+      color: $primary-white;
+    }
   }
   &__title{
     color:    $primary-white;
   }
 }
 li>ul{
-  margin-bottom: 0;
-  padding-left: 0;
-  cursor: pointer;
-  color: $third-grey;
+   padding-left: 0;
 }
+li>a{
+  text-decoration: none;
+}
+
+// li>ul{
+//   margin-bottom: 0;
+//   padding-left: 0;
+//   cursor: pointer;
+//   color: $third-grey;
+// }
 
 .portfolio, .projects, .connect{
   height: fit-content;
+}
+
+.copy-right{
+  @include mobile-footer-copy;
+  color: $third-grey;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
 }
 @include tablet {
   .footer_icon {
