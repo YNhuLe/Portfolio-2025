@@ -5,7 +5,10 @@ import githubIcon from "/logos/git3D.png";
 import linked from "/logos/linked.png";
 function AboutMe() {
   return (
-    <section className="about">
+    <section className="about" id="about">
+      <div className="headshot">
+        <img src={headshot} alt="headhot_img" className="headshot__img" />
+      </div>
       <div className="about__icon">
         <Tilt
           glareEnable={true}
@@ -15,7 +18,7 @@ function AboutMe() {
           tiltMaxAngleX={15}
           tiltMaxAngleY={15}>
           <a href="https://github.com/YNhuLe">
-            <img src={githubIcon} alt="github" className="footer_icon" />
+            <img src={githubIcon} alt="github" className="header_icon" />
           </a>
         </Tilt>
         <Tilt
@@ -26,13 +29,11 @@ function AboutMe() {
           tiltMaxAngleX={15}
           tiltMaxAngleY={15}>
           <a href="https://www.linkedin.com/in/jennynhuyle/">
-            <img src={linked} alt="linked" className="footer_icon" />
+            <img src={linked} alt="linked" className="header_icon" />
           </a>
         </Tilt>
       </div>
-      <div className="headshot">
-        <img src={headshot} alt="headhot_img" className="headshot__img" />
-      </div>
+
       <h1 className="about__title">Jenny Le</h1>
       <h2 className="about__text">Full-Stack Software Developer</h2>
       <p className="about__para">

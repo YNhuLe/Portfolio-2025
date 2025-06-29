@@ -101,13 +101,23 @@ margin-bottom: 0;
 // article:hover {
 //   background: rgb(33 27 80 / 25%);
 // }
-.arrow-icon{
+.arrow{
+
+  
+&-icon{
+  @include flex(row, center, center);
+  gap:.2rem;
   position: absolute;
-  top:1rem;
+  top:.2rem;
   right:1.5rem;
   z-index: 100;
-  color: rgb(104, 100, 100);
+  color: rgb(41 38 38);
 }
+
+&-details{
+  @include mobile-body-copy;
+  font-weight: 800;
+}}
 .arrow-icon:hover{
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
   transform: scale3d(1.2, 1.2, 1.2); 

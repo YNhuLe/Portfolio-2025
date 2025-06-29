@@ -18,20 +18,50 @@ function Footer() {
       <section className="portfolio">
         <h2 className="footer__title">Portfolio</h2>
         <li className="footer__list">
-          <ul className="footer__list-links">
-            <Link to="about" smooth={true} duration={500}>
-              About
-            </Link>
+          <ul>
+            {isMainPage ? (
+              <ScrollLink
+                to="about"
+                smooth={true}
+                duration={500}
+                className="footer__list-links">
+                About
+              </ScrollLink>
+            ) : (
+              <RouterLink to="/#about" className="footer__list-links">
+                About
+              </RouterLink>
+            )}
           </ul>
-          <ul className="footer__list-links">
-            <Link to="projects" smooth={true} duration={500}>
-              Project
-            </Link>
+          <ul>
+            {isMainPage ? (
+              <ScrollLink
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="footer__list-links">
+                Project
+              </ScrollLink>
+            ) : (
+              <RouterLink to="/#projects" className="footer__list-links">
+                Project
+              </RouterLink>
+            )}
           </ul>
-          <ul className="footer__list-links">
-            <Link to="techstack" smooth={true} duration={500}>
-              Stack
-            </Link>
+          <ul>
+            {isMainPage ? (
+              <ScrollLink
+                to="techstack"
+                smooth={true}
+                duration={500}
+                className="footer__list-links">
+                Stack
+              </ScrollLink>
+            ) : (
+              <RouterLink to="/#techstack" className="footer__list-links">
+                Stack
+              </RouterLink>
+            )}
           </ul>
         </li>
       </section>

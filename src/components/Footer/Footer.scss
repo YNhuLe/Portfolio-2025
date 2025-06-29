@@ -29,19 +29,26 @@ border-color: $third-grey;
     list-style: none;
     padding-bottom: 2rem;
     &-links{
-      // text-decoration: none;
+      text-decoration: none;
       color: $third-grey;
       padding-left: 0;
       cursor: pointer;
+    }
+    &-links:hover{
+      color: $primary-white;
     }
   }
   &__title{
     color:    $primary-white;
   }
 }
+li>ul{
+   padding-left: 0;
+}
 li>a{
   text-decoration: none;
 }
+
 // li>ul{
 //   margin-bottom: 0;
 //   padding-left: 0;

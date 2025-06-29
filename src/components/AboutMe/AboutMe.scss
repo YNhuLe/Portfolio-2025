@@ -17,8 +17,16 @@
   &__para {
     @include mobile-body-copy;
   }
+  &__icon{
+    @include flex(row, center, center);
+    gap: .5rem;
+  }
 }
-
+.header_icon{
+   width: 2rem;
+   height: 2rem;
+   margin-bottom: .5rem;
+}
 .headshot {
   position: relative;
   margin-bottom: 1rem;

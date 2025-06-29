@@ -60,7 +60,9 @@ function TechStackSection() {
     //   </div>
     // </section>
 
-    <section className="techstack">
+    <section className="techstack" id="techstack">
+      <h2 className="contact__text">Tech Stack</h2>
+
       <div className="frontend">
         <h1 className="stack__title">Front-End:</h1>
         <TechStack logos={frontendLogos} />
