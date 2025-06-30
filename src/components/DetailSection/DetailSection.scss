@@ -21,3 +21,23 @@
     color: $primary-white;
 }
 }
+
+@include tablet{
+    .info__card{
+        margin-bottom: 3rem;
+        &-title{
+            @include tablet-desktop-heading-medium;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+        &-content{margin-left: 2rem;
+            @include tablet-desktop-body-copy-medium
+
+        }
+        &-img{
+            width: calc(100% - 10rem);
+margin: 3rem 5rem;
+        }
+    }
+}

@@ -3,7 +3,7 @@
     "id": "1",
     "title": "Zodiac Wander",
     "slug": "zodiac-web",
-    "concept": "Zodiac Wander — where stars meet your story. Discover your zodiac sign, connect with your birth flower, explore traits, and share thoughts with others on a cosmic journey.",
+    "concept": "Zodiac Wander - Discover your zodiac sign, connect with your birth flower, explore traits, and share thoughts with others on a cosmic journey.",
     "tech_stack": ["React", "Express", "SCSS", "REST API"],
     "img_url": "/images/zodiac.png",
     "git_url": "https://github.com/YNhuLe/Pair-Programming",
@@ -11,17 +11,17 @@
       {
         "title": "Challenges.",
         "content": "Data Structure Complexity: Zodiac content (sign traits, horoscopes, dates, compatibility, icons, comments) required a well-organized but extensible data format. A complicated .json file structure posed readability, maintenance, and scalability issues.",
-        "image": "/images/zodiac.png"
+        "image": "/images/zodiac_challenges.png"
       },
       {
         "title": "Solution & Implementations.",
-        "content": "Structured JSON Design: Created a normalized JSON structure separating static zodiac info (signs, traits, icons) from dynamic content (comments). Ensured each zodiac entry contained consistent keys and nested data in a readable format. Example keys: zodiac, date_range, element, traits, compatibility, horoscopes, comments.",
-        "image": "/images/zodiac.png"
+        "content": "Structured JSON Design: To address the complexity of handling detailed zodiac data, I implemented a JSON tree structure that allowed for logically nested and easily accessible information such as traits, compatibility, horoscopes, and user comments. This approach improved both maintainability and scalability.",
+        "image": "/images/zodiac_solution.png"
       },
       {
         "title": "Results & Impacts.",
         "content": "Scalable Structure: The clean JSON structure simplified data access and made future backend migration easier.",
-        "image": "/images/zodiac.png"
+        "image": "/images/zodiac_result.png"
       },
       {
         "title": "🚀 Future Improvements",

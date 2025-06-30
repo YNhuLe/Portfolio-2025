@@ -22,7 +22,7 @@ function DetailsPage() {
         <GalaxyParticles />
       </div>
       <a href="./" className="back-icon">
-        <img src={goback} alt="go-back icon" />
+        <img src={goback} alt="go-back icon" className="back-img" />
       </a>
       <div className="pro__details">
         <h1 className="pro__title">{pro.title}</h1>

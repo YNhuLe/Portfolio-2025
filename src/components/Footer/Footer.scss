@@ -11,15 +11,9 @@ border-color: $third-grey;
 &__logo{
   width: 3rem;
   height: 3rem;
-
   border-radius: 50%;
- 
-
-
   z-index: 999;
   margin: 3rem 0;
-
-
 }
 &_icon {
     width: 2rem;
@@ -49,12 +43,6 @@ li>a{
   text-decoration: none;
 }
 
-// li>ul{
-//   margin-bottom: 0;
-//   padding-left: 0;
-//   cursor: pointer;
-//   color: $third-grey;
-// }
 
 .portfolio, .projects, .connect{
   height: fit-content;
@@ -68,10 +56,30 @@ li>a{
   padding-bottom: 1rem;
 }
 @include tablet {
-  .footer_icon {
+  .footer{
+    @include flex(row, space-between, flex-start);
+    margin: 0 3rem;
+    margin-top: 5rem;
+    padding: 3rem;
+    &_icon {
+      margin-top: 0;
     width: 3rem;
     height: 3rem;
   }
+  &__list-links{
+    @include tablet-desktop-body-copy-light;
+   
+  }
+
+  &__section{
+    @include flex(row, flex-end, flex-end);
+    gap: 3rem;
+  }
+
+}
+ul{
+  font-size: 0rem;
+}
 }
 
 @include desktop {
