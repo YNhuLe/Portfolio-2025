@@ -10,17 +10,22 @@
     "info": [
       {
         "title": "Challenges.",
-        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releasesChallenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "content": "Data Structure Complexity: Zodiac content (sign traits, horoscopes, dates, compatibility, icons, comments) required a well-organized but extensible data format. A complicated .json file structure posed readability, maintenance, and scalability issues.",
         "image": "/images/zodiac.png"
       },
       {
         "title": "Solution & Implementations.",
-        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "content": "Structured JSON Design: Created a normalized JSON structure separating static zodiac info (signs, traits, icons) from dynamic content (comments). Ensured each zodiac entry contained consistent keys and nested data in a readable format. Example keys: zodiac, date_range, element, traits, compatibility, horoscopes, comments.",
         "image": "/images/zodiac.png"
       },
       {
         "title": "Results & Impacts.",
-        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "content": "Scalable Structure: The clean JSON structure simplified data access and made future backend migration easier.",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "🚀 Future Improvements",
+        "content": "Migrate dynamic content like comments and horoscopes to a backend (e.g., Firebase, Supabase). Support multiple languages and real-time compatibility quizzes. ",
         "image": "/images/zodiac.png"
       }
     ],
