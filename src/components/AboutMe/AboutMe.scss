@@ -52,6 +52,7 @@
     }
     &__para {
       @include tablet-desktop-body-copy-light;
+      margin: 1.5rem 3rem;
     }
   }
 }
