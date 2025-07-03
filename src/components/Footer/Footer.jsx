@@ -68,14 +68,6 @@ function Footer() {
               </ul>
             </li>
           </section>
-          {/* <section className="projects">
-        <h2 className="footer__title">Project</h2>
-        <li className="footer__list">
-          <ul>Streamline</ul>
-          <ul>QueryLens</ul>
-          <ul>OutComes</ul>
-        </li>
-      </section> */}
           <section className="connect">
             <h2 className="footer__title">Connect</h2>
             <li className="footer__list">

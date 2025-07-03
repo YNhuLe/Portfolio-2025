@@ -16,8 +16,6 @@ function Home() {
   const location = useLocation();
   useEffect(() => {
     if (location.hash) {
-      // const id = location.hash.replace("#", "");
-      // const element = document.getElementById(id);
       const element = document.querySelector(location.hash);
       if (element) {
         setTimeout(() => {

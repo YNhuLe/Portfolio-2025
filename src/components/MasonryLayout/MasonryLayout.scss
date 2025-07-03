@@ -191,10 +191,6 @@
 .project__link:hover .github-icon .globe-icon {
   color: $primary-black;
 }
-// .masonry__item:hover .project__concept {
-//   transform: translateY(5.5rem);
-//   opacity: 1;
-// }
 .link {
   width: 100%;
   @include flex(row, flex-start, center);
@@ -206,7 +202,6 @@
   &__list {
     @include flex(row, flex-start, center);
     flex-wrap: wrap;
-    // width: 100%;
     padding-left: 0;
     list-style: none;
     margin-bottom: 0;
@@ -234,7 +229,7 @@
       @include tablet-desktop-heading-medium;
 
       margin: 3rem 0;
-margin-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     &__concept {
@@ -248,7 +243,6 @@ margin-bottom: 1.5rem;
       margin-top: 10rem;
     }
     &__item {
-    
       padding: 2rem;
       height: clamp(22rem, 80vw, 40rem);
       width: clamp(22rem, 100vw, 31rem);
@@ -263,17 +257,6 @@ margin-bottom: 1.5rem;
   .link {
     gap: 1rem;
   }
-  // .masonry__item {
-  //   padding: 1rem;
-  //   height: clamp(22rem, 60vw, 33rem);
-  //   width: clamp(22rem, 100vw, 31rem);
-  // }
-
-  // .card__border {
-  //   background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
-  //   padding: 0.1px;
-  //   border-radius: 20px;
-  // }
   .img__project {
     position: relative;
     width: 100%;
