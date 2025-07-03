@@ -1,54 +1,54 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 .footer {
-
-margin: 3rem 1rem;
-margin-bottom: 0;
-border-top-style: outset;
-border-width: .1rem;
-margin-top: 10rem;
-border-color: $third-grey;
-&__logo{
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  z-index: 999;
-  margin: 3rem 0;
-}
-&_icon {
+  margin: 3rem 1rem;
+  margin-bottom: 0;
+  border-top-style: outset;
+  border-width: 0.1rem;
+  margin-top: 10rem;
+  border-color: $third-grey;
+  &__logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    z-index: 999;
+    margin: 3rem 0;
+  }
+  &_icon {
     width: 2rem;
     height: 2rem;
   }
-  &__list{
+  &__list {
     list-style: none;
     padding-bottom: 2rem;
-    &-links{
+    &-links {
       text-decoration: none;
       color: $third-grey;
       padding-left: 0;
       cursor: pointer;
     }
-    &-links:hover{
+    &-links:hover {
       color: $primary-white;
     }
   }
-  &__title{
-    color:    $primary-white;
+  &__title {
+    color: $primary-white;
   }
 }
-li>ul{
-   padding-left: 0;
+li > ul {
+  padding-left: 0;
 }
-li>a{
+li > a {
   text-decoration: none;
 }
 
-
-.portfolio, .projects, .connect{
+.portfolio,
+.projects,
+.connect {
   height: fit-content;
 }
 
-.copy-right{
+.copy-right {
   @include mobile-footer-copy;
   color: $third-grey;
   text-align: center;
@@ -56,30 +56,28 @@ li>a{
   padding-bottom: 1rem;
 }
 @include tablet {
-  .footer{
+  .footer {
     @include flex(row, space-between, flex-start);
     margin: 0 3rem;
     margin-top: 5rem;
     padding: 3rem;
     &_icon {
       margin-top: 0;
-    width: 3rem;
-    height: 3rem;
-  }
-  &__list-links{
-    @include tablet-desktop-body-copy-light;
-   
-  }
+      width: 3rem;
+      height: 3rem;
+    }
+    &__list-links {
+      @include tablet-desktop-body-copy-light;
+    }
 
-  &__section{
-    @include flex(row, flex-end, flex-end);
-    gap: 3rem;
+    &__section {
+      @include flex(row, flex-end, flex-end);
+      gap: 3rem;
+    }
   }
-
-}
-ul{
-  font-size: 0rem;
-}
+  ul {
+    font-size: 0rem;
+  }
 }
 
 @include desktop {

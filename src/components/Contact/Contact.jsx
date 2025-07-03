@@ -68,7 +68,6 @@ function Contact() {
             text: "Thank you. I will get back to you as soon as possible.",
           });
           handleReset();
-          // console.log("Contact");
         },
         (error) => {
           setLoading(false);
