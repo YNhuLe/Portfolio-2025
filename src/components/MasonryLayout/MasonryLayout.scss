@@ -115,10 +115,15 @@
     font-weight: 800;
   }
 }
+
+.icon{
+  height: .75rem;
+  width: .75rem;
+}
 .arrow-icon:hover {
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
   transform: scale3d(1.2, 1.2, 1.2);
-  color: #0c1372;
+  color: rgb(124, 144, 233);
 }
 // .masonry__item:hover .project__img {
 //   top: -10rem;
@@ -247,7 +252,7 @@
     }
     &__item {
       padding: 2rem;
-      height: clamp(22rem, 80vw, 40rem);
+      height: clamp(22rem, 83vw, 40rem);
       width: clamp(22rem, 100vw, 31rem);
       margin-bottom: 2rem;
     }
@@ -266,8 +271,20 @@
     height: 100%;
     @include flex(row, center, center);
   }
+
+.arrow{
+  &-details{
+  @include tablet-desktop-body-copy-medium;
+font-weight: 800;
 }
 
+&-icon{
+gap:.75rem;
+}}
+.icon{
+  height: 1.5rem;
+  width: 1.5rem;
+}}
 @include desktop {
   .img__project {
     position: relative;
