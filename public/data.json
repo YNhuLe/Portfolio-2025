@@ -113,8 +113,8 @@
     "id": "4",
     "title": "Blogs-Life",
     "slug": "bloglife-web",
-    "concept": "Blogs-Life — a chill space to share your thoughts, ideas, and stories. From tech to daily vibes, whatever’s on your mind, this is your place to be heard. 💬✨",
-    "tech_stack": ["Python", "Flask", "PostgreSQL", "REST API"],
+    "concept": "Blogs-Life — a chill space to share your thoughts, ideas, and stories. From tech to daily vibes, whatever’s on your mind, this is your place to be heard. Where you make your story come to life. 💬",
+    "tech_stack": ["Python", "Flask", "PostgreSQL", "REST API", "Docker"],
     "img_url": "/images/blogs.png",
     "git_url": "https://github.com/YNhuLe/Blogging_Life_Out",
     "info": [
