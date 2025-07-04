@@ -231,6 +231,9 @@
       margin: 3rem 0;
       margin-bottom: 1.5rem;
     }
+    &__img{
+      object-fit: fill;
+    }
 
     &__concept {
       @include tablet-desktop-body-copy-medium;
