@@ -228,3 +228,19 @@ gap:.75rem;
     margin-top: 2rem;
   }
 }
+
+
+@include desktop-xxl{
+  .masonry__layout {
+    column-count: 2;
+    gap: 4rem;
+
+  }
+}
+
+@include desktop-ultra{
+  .masonry__layout {
+    column-count: 2;
+   
+  }
+}

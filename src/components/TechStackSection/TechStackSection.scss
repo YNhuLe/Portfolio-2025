@@ -44,8 +44,30 @@ margin-top: 8rem;
 }}
 
 @include desktop {
+  .stack__title{
+    @include tablet-desktop-heading-medium;
+    font-weight: 500;
+  }
  .tech {
   &__title{
 
   }
 }}
+
+
+@include desktop-xxl{
+.stack__title{
+  @include tablet-desktop-wordmark-regular;
+  font-weight: 500;
+}
+
+}
+
+
+@include desktop-ultra{
+  .stack__title{
+    @include tablet-desktop-heading-medium;
+    font-weight: 500;
+  }
+  
+  }
