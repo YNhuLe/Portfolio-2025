@@ -39,9 +39,8 @@
 .project {
   &__img {
     width: 100%;
-    height: auto;
-    max-height: 18rem;
-    object-fit: cover;
+    height: clamp(10rem, 83vw, 12rem);
+    object-fit: fill;
     border-radius: 1rem;
     transition: transform 0.3s ease;
   }
@@ -62,43 +61,6 @@
     margin-bottom: 0;
   }
 }
-// .masonry__item {
-//   position: relative;
-//   overflow: hidden;
-//   // position: relative;
-//   @include flex(column, center, center);
-//   flex-grow: 1;
-
-//   width: auto;
-//   break-inside: avoid;
-//   box-sizing: border-box;
-//   height: clamp(27rem, 60vw, 28rem);
-//   width: clamp(17rem, 60vw, 25rem);
-//   // width: 100%;
-//   margin: 1rem;
-//   margin-bottom: 2rem;
-//   backdrop-filter: blur(0.625rem);
-//   -webkit-backdrop-filter: blur(10px);
-//   background: rgb(33 27 80 / 45%);
-//   border: 1px solid rgba(31, 11, 11, 0.2);
-//   color: $primary-white;
-//   text-align: center;
-//   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-//   border-radius: 1.25rem;
-// }
-// .img__project {
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
-//   @include flex(row, center, center);
-// }
-
-// .masonry__item:hover {
-//   background: rgb(33 27 80 / 25%);
-// }
-// article:hover {
-//   background: rgb(33 27 80 / 25%);
-// }
 .arrow {
   &-icon {
     @include flex(row, center, center);
@@ -107,7 +69,7 @@
     top: 0.2rem;
     right: 1.5rem;
     z-index: 100;
-    color: rgb(41 38 38);
+    color: rgb(7, 48, 102);
   }
 
   &-details {
@@ -125,69 +87,7 @@
   transform: scale3d(1.2, 1.2, 1.2);
   color: rgb(124, 144, 233);
 }
-// .masonry__item:hover .project__img {
-//   top: -10rem;
-//   transform: scale3d(1.5px, 1.5px, 1.5px);
-// }
 
-// .project__img {
-
-//   // object-fit: contain;
-//   top: 0;
-//   left: 0;
-
-//   // position: absolute;
-//   position: fixed;
-//   // height: -webkit-fill-available;
-//   // width: -webkit-fill-available;
-//   width: 100%;
-//   // height: calc(100% - 10.5rem);
-//   // height: clamp(15rem , 30vh, 45rem);
-//   height: clamp(200px, calc(30vw + 50px), 800px);
-//   // height: 20rem;
-//   padding: 1rem;
-
-//   // transition: top 0.5s ease-in-out;
-//   border-radius:2rem;
-// }
-
-// .project__title {
-//   // position: absolute;
-//   position: fixed;
-//   @include mobile-section-header;
-//   text-transform: uppercase;
-//   color: $primary-white;
-//   // bottom: 0.35rem;
-//   // transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-//   // margin: 3rem 0;
-//   font-size: 1.1rem;
-// top: 15rem;
-//   left: 1rem;
-//   font-weight: bold;
-// margin-bottom: 0
-// }
-
-// // .masonry__item:hover .project__title {
-// //   transform: translateY(3rem);
-// //   opacity: 0;
-// // }
-// .project__concept {
-//   @include mobile-body-copy;
-//   font-size: .85rem;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   padding: 0 0.2875rem;
-//   position: fixed;
-// top: 17rem;
-//   color: $card-shadow;
-//   margin-left: 1rem;
-//   // margin-top: 1rem;
-//   // opacity: 0;
-//   // transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-//   text-align: left;
-//   // background-color: rgb(9 9 9 / 35%);
-// }
 .github-icon {
   color: $primary-white;
   transition: color 0.3s ease;
@@ -238,6 +138,7 @@
     }
     &__img{
       object-fit: fill;
+      height: clamp(15rem, 83vw, 20rem);
     }
 
     &__concept {
@@ -301,7 +202,7 @@ gap:.75rem;
   .project {
     &__img {
       width: clamp(22rem, 60vw, 38rem);
-      height: clamp(22rem, 60vw, 25rem);
+      height: clamp(20rem, 60vw, 22rem);
       max-width: 100%;
       position: relative;
     }
@@ -311,12 +212,12 @@ gap:.75rem;
     }
 
     &__title {
-      margin: 7.5rem 0;
+      margin: 2rem 0;
     }
   }
   .masonry__item {
     margin-bottom: 5rem;
-    height: clamp(22rem, 60vw, 38rem);
+    height: clamp(22rem, 60vw, 45rem);
     width: clamp(30rem, 60vw, 31.5rem);
     @include flex(column, center, center);
     display: flex;
