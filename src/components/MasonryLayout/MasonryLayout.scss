@@ -133,12 +133,12 @@
     &__title {
       @include tablet-desktop-heading-medium;
 
-      margin: 3rem 0;
+      margin: 1rem 0 2rem 0;
       margin-bottom: 1.5rem;
     }
     &__img{
       object-fit: fill;
-      height: clamp(15rem, 83vw, 20rem);
+      height: clamp(15rem, 83vw, 23rem);
     }
 
     &__concept {
@@ -181,11 +181,15 @@ font-weight: 800;
 
 &-icon{
 gap:.75rem;
+top:2rem;
 }}
 .icon{
   height: 1.5rem;
   width: 1.5rem;
-}}
+}
+
+
+}
 @include desktop {
   .img__project {
     position: relative;
