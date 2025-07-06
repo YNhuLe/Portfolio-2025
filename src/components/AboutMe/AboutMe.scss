@@ -47,10 +47,11 @@
     }
 
     &__text {
-      @include tablet-desktop-body-copy-medium;
+      margin-top: 1rem;
+      @include tablet-desktop-heading-medium;
     }
     &__para {
-      @include tablet-desktop-body-copy-light;
+      @include tablet-desktop-body-copy-medium;
       margin: 1.5rem 3rem;
     }
   }

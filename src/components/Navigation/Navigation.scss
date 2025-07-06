@@ -28,12 +28,13 @@ position: fixed;
 .nav__list{
   @include flex(row, center, center);
   gap: .2rem;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   width: 30rem;
 }
   .desktop-link{
   cursor: pointer;
    @include tablet-desktop-body-copy-medium;
+   @include flex(row, center, center);
 
   }
 }
