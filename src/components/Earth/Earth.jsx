@@ -1,23 +1,9 @@
 import React, { Suspense, useMemo, useState, useEffect } from "react";
-import { Canvas, useThree, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader/Loader";
 
 const Earth = () => {
-  // const { viewport } = useThree();
-  // const [vpWidth, setVpWidth] = useState(viewport.width);
-  // useFrame(() => {
-  //   // setVpWidth(viewport.width);
-  //   if (vpWidth !== viewport.width) {
-  //     setVpWidth(viewport.width);
-  //   }
-  // });
-  // const scale = useMemo(() => {
-  //   if (vpWidth < 6) return 2.5;
-  //   else if (vpWidth < 10) return 7.5;
-  //   return 8.5;
-  // }, [vpWidth]);
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -29,7 +15,6 @@ const Earth = () => {
   const scale = useMemo(() => {
     if (windowWidth < 768) return 8.5;
     else if (windowWidth < 1280) return 12.5;
-    // else if (windowWidth < 2560) return 9.5;
     return 13;
   }, [windowWidth]);
   const earth = useGLTF("/planet/scene.gltf");
@@ -44,15 +29,6 @@ const EarthCanvas = () => {
       style={{
         width: "100%",
         height: "100%",
-        //   width: "50rem",
-        //   // maxWidth: "40rem",
-        //   // width: "100%",
-        //   height: "calc(100vh - 10rem)",
-        //   // maxHeight: "100%",
-        //   maxWidth: "100%",
-        //   margin: "auto",
-        //   justifyContent: "center",
-        //   border: "2px solid red",
       }}
       shadows
       frameloop="demand"

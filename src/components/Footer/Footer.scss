@@ -86,3 +86,25 @@ li > a {
     height: 5rem;
   }
 }
+
+
+@include desktop-xxl{
+
+  .footer{
+    &__list-links {
+      @include tablet-desktop-body-copy-medium;
+    }
+  }
+
+  .copy-right{
+    @include tablet-desktop-body-copy-light;
+  }
+}
+
+@include desktop-ultra{
+  .footer{
+    &__list-links {
+      @include tablet-desktop-body-copy-medium;
+    } 
+  }
+}
