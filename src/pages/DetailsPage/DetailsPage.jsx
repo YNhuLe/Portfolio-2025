@@ -40,7 +40,7 @@ function DetailsPage() {
         <img src={pro.img_url} alt={pro.title} className="pro__img" />
         {pro.info.map((project, index) => (
           <div key={index}>
-            <DetailSection project={project} />
+            <DetailSection project={project} key={index} index={index} />
           </div>
         ))}
 

@@ -37,3 +37,15 @@
 @include desktop{
     
 }
+
+@include desktop-xxl{
+    .project__section{
+
+    }
+}
+
+@include desktop-ultra{
+    .project__section{
+        padding-top: 5rem;
+    }
+}

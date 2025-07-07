@@ -9,6 +9,7 @@
   &__title {
     @include mobile-page-header;
     font-weight: 400;
+    font-style: italic;
   }
   &__text {
     @include mobile-subheader-header;

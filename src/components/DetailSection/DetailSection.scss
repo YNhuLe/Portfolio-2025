@@ -24,7 +24,10 @@
 
 @include tablet{
     .info__card{
+        margin: 0 auto;
         margin-bottom: 3rem;
+        width: calc(100% - 4rem);
+        
         &-title{
             @include tablet-desktop-heading-medium;
             font-weight: 700;
@@ -36,27 +39,40 @@
 
         }
         &-img{
-            // width: calc(100% - 10rem);
-            width: 50%;
-// margin: 3rem 5rem;
+            // width: 50%;
+            width: clamp(12rem, 40vw, 20rem);
+            height: clamp(15rem, 40vw, 20rem);
         }
+&-text{
+    @include flex(column,  center, flex-start);
+}
 
-
-        @include flex(row, center, center);
+        @include flex(row, center, space-between);
+gap: 1rem;
+        &.reverse {
+            flex-direction: row-reverse;
+          }
     }
 
 }
 
 @include desktop{
     .info__card{
+        width:calc(100% - 15rem);
         &-title{
-// @include
+            font-weight: 700;
         }
-      
+        &-img{
+            width: clamp(12rem, 40vw, 40rem);
+            height: clamp(15rem, 40vw, 40rem);
+        }
     }
 
+   
+
     .pro__img{
-        width: calc(100% - 10rem);
+        width: calc(100% - 12rem);
+        margin: 5rem 6rem;
     }
     .back-img{
         width: 10rem;
@@ -66,12 +82,24 @@
 
 @include desktop-xxl{
   .info__card{
+    width: calc(100% - 40rem);
         &-title{
 margin-bottom: 2rem;
         }
     }
 }
 
+.info__card{
+    
+    &-title{
+    @include tablet-desktop-heading-medium;
+    font-weight: 700;
+}
+&-content{
+
+}
+
+}
 @include desktop-ultra{
       .info__card{
         &-title{
