@@ -2,8 +2,11 @@ import "./DetailSection.scss";
 function DetailSection({ project }) {
   return (
     <div className="info__card">
-      <h2 className="info__card-title">{project.title} </h2>
-      <p className="info__card-content">{project.content}</p>
+      <div className="info__card-section">
+        <h2 className="info__card-title">{project.title} </h2>
+        <p className="info__card-content">{project.content}</p>
+      </div>
+
       <img
         src={project.image}
         alt={project.title}

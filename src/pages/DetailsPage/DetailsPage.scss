@@ -80,7 +80,8 @@ transform: scale(.9);
 
 @include tablet{
 .back-img{
-  width: 4rem; height: 4rem;
+  width: 4rem; 
+  height: 4rem;
 }
   .pro{
     &__title{
@@ -112,5 +113,10 @@ margin-bottom: 1rem;
 }
 
 @include desktop{
+.back-img{
+  width: 5rem;
+  height: 5rem;
+}
+
 
 }
