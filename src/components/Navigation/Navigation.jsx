@@ -2,7 +2,6 @@ import { useState } from "react";
 import MenuItem from "../MenuItem/MenuItem";
 import "./Navigation.scss";
 import { motion } from "framer-motion";
-// import { Link } from "react-router-dom";
 import { Link } from "react-scroll";
 const navVariants = {
   open: {

@@ -53,3 +53,17 @@ color:$primary-white
       margin-right: 5rem;
   }
 }
+
+@include desktop-xxl{
+  .nav__list{
+    margin-right: 10rem;
+    gap: 4.5rem;
+  }
+}
+
+@include desktop-ultra{
+  .nav__list{
+    margin-right: 10rem;
+    gap: 4.5rem;
+  }
+}

@@ -245,8 +245,14 @@ top:2rem;
 }
 
 @include desktop-ultra{
-  .masonry__layout {
+  .masonry{
+    
+    &__layout {
     column-count: 2;
    
   }
-}
+
+  &__item{
+    height: clamp(22rem, 60vw, 55rem);
+  }
+}}
