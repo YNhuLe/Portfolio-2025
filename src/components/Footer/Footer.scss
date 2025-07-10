@@ -94,6 +94,11 @@ li > a {
     &__list-links {
       @include tablet-desktop-body-copy-medium;
     }
+    
+    &__logo{
+      width: 5rem;
+      height: 5rem;
+    }
   }
 
   .copy-right{
@@ -106,5 +111,10 @@ li > a {
     &__list-links {
       @include tablet-desktop-body-copy-medium;
     } 
+
+    &__logo{
+      width: 5rem;
+      height: 5rem;
+    }
   }
 }
