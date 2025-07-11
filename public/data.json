@@ -25,7 +25,9 @@
       },
       {
         "title": "🚀 Future Improvements",
-        "content": "Migrate dynamic content like comments and horoscopes to a backend (e.g., MySQl, PostgreSQL). The site will support multiple languages, introduce real-time zodiac compatibility quizzes, and be hosted with a mobile-first responsive design focus.",
+
+        "content": "✅ Migrate dynamic content like comments and horoscopes to a backend (e.g., MySQL, PostgreSQL).\n✅ Focus on mobile-first responsiveness.\n✅ Add an AI chatbot for real-time horoscope and flower personality interactions.\n✅ Enable users to upload their own zodiac-related photos or messages.\n✅ Expand multi-language support to reach a wider global audience.",
+
         "image": "/images/zodiac_future.png"
       }
     ],
@@ -178,7 +180,7 @@
     ],
     "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
     "video_demo": {
-      "url": "",
+      "url": "https://github.com/YNhuLe/tralli_server/blob/main/README.md",
       "caption": ""
     }
   }
