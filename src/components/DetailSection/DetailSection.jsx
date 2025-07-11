@@ -6,7 +6,13 @@ function DetailSection({ project, index }) {
     <div className={`info__card ${isEven ? "reverse" : ""}`}>
       <div className="info__card-text">
         <h2 className="info__card-title">{project.title} </h2>
-        <p className="info__card-content">{project.content}</p>
+        {project.content.split("\n").map((line, idx) => (
+          <p className="info__card-content" key={idx}>
+            {line}
+          </p>
+        ))}
+
+        {/* <p className="info__card-content">{project.content}</p> */}
       </div>
 
       <img
