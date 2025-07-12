@@ -7,6 +7,7 @@
     "tech_stack": ["React", "Express", "SCSS", "REST API"],
     "img_url": "/images/zodiac.png",
     "git_url": "https://github.com/YNhuLe/Pair-Programming",
+    "description": "Zodiac Wander is an interactive web app where users can discover their zodiac sign, connect with their unique birth flower, explore personality traits, and share reflections with others on a cosmic journey. \nBuilt with React, Express, SCSS, and a custom REST API, the platform offers a smooth and visually engaging experience that blends astrology, nature, and community.",
     "info": [
       {
         "title": "Challenges.",
@@ -42,10 +43,11 @@
     "title": "Evererdant",
     "slug": "evererdant-web",
     "concept": "Eververdant is a mobile-first web app that connects plant lovers to buy, sell, and share leafy tips with a thriving green-thumbed community.",
-    "tech_stack": ["React", "TypeScript", "Tailwind", "AWS"],
+    "tech_stack": ["React", "TypeScript", "Tailwind", "AWS", "PostgreSQL"],
     "img_url": "/images/evererdant.png",
     "git_url": "https://github.com/YNhuLe/Flower_Love",
     "live_url": "https://main.d36o1v1jm7mlqn.amplifyapp.com/",
+    "description": "Eververdant is a mobile-first web app that connects plant lovers to buy, sell, and share plant care tips within a thriving green-thumbed community.\nBuilt with React, TypeScript, Tailwind CSS, PostgreSQL and AWS, the platform delivers a fast, responsive, and community-driven experience for all things leafy and green. 🌿",
     "info": [
       {
         "title": "Challenges.",
@@ -64,7 +66,9 @@
       },
       {
         "title": "🚀 Future Improvements.",
-        "content": "A future enhancement will include building a backend with custom APIs and integrating a database to store user profiles, listings, and interactions—allowing users to fully engage with the platform in real time.",
+
+        "content": "✅ A future enhancement will include building a backend with custom APIs.\n✅ Integrate a database to store user profiles, listings, and interactions.\n✅ Allow users to fully engage with the platform in real time.",
+
         "image": "/images/ever_future.png"
       }
     ],
@@ -83,6 +87,7 @@
     "tech_stack": ["Express", "React", "SCSS", "Firebase", "APIs", "MySQL"],
     "img_url": "/images/tralli2.png",
     "git_url": "https://github.com/YNhuLe/tralli_client",
+    "description": "Tralli is a web platform that connects users—especially developers and property managers—with trade companies offering services in building maintenance, apartment repairs, condo improvements, and townhome fixes. It acts as a trusted bridge between skilled trade professionals and property owners, streamlining the process of finding reliable, on-demand help for a wide range of construction, renovation, and repair needs.\n Built using React, Express, SCSS, Firebase, MySQL, and RESTful APIs, Tralli is designed to deliver a responsive, scalable, and efficient user experience for both service seekers and providers.",
     "info": [
       {
         "title": "Challenges.",
@@ -101,7 +106,7 @@
       },
       {
         "title": "🚀 Future Improvements.",
-        "content": "Plan: To elevate platform engagement and support scalability, several enhancements will be introduced. Users will be able to favorite preferred providers for faster access, and a direct messaging feature will allow real-time communication with service providers. Additionally, an AI-powered chatbot will be integrated to assist users with common questions, service recommendations, and booking guidance 24/7. This chatbot will leverage user and provider data to offer personalized, context-aware support, reducing the need for manual intervention and improving onboarding and retention.",
+        "content": "✅ Plan: To elevate platform engagement and support scalability, several enhancements will be introduced.\n✅ Users will be able to favorite preferred providers for faster access.\n✅ A direct messaging feature will allow real-time communication with service providers.\n✅ An AI-powered chatbot will be integrated to assist users with common questions, service recommendations, and booking guidance 24/7.\n✅ The chatbot will leverage user and provider data to offer personalized, context-aware support.\n✅ This reduces the need for manual intervention and improves onboarding and retention.",
         "image": "/images/tralli_future.png"
       }
     ],
@@ -119,6 +124,7 @@
     "tech_stack": ["Python", "Flask", "PostgreSQL", "APIs", "Docker"],
     "img_url": "/images/blogs.png",
     "git_url": "https://github.com/YNhuLe/Blogging_Life_Out",
+    "description": "Blogs-Life is a laid-back blogging platform where users can freely share thoughts, ideas, and stories—whether it's tech talk or everyday vibes. It's a space built for expression and connection. 💬\nPowered by Python, Flask, PostgreSQL, RESTful APIs, and Docker, the platform is designed for simplicity, scalability, and smooth content sharing.",
     "info": [
       {
         "title": "Challenges.",
@@ -137,7 +143,7 @@
       },
       {
         "title": "🚀 Future Improvements.",
-        "content": "Plan: To future-proof the frontend, I plan to decouple Bootstrap integration entirely from Flask templating, allowing full control via CDN or bundlers like Vite or Webpack. This will make it easier to adopt future Bootstrap updates, optimize asset loading, and potentially integrate modern component libraries like Tailwind or React-based UIs.",
+        "content": "✅ Plan: To future-proof the frontend, decouple Bootstrap integration entirely from Flask templating.\n✅ Control Bootstrap via CDN or bundlers like Vite or Webpack.\n✅ Lay the groundwork for integrating modern component libraries like Tailwind or React-based UIs.\n✅ Add a dedicated user profile page to personalize the user experience.\n✅ Enable real-time commenting functionality to boost user engagement and interaction.",
         "image": "/images/tralli_future.png"
       }
     ],
@@ -156,6 +162,7 @@
     "tech_stack": ["React", "Express", "SCSS", "Gemini API", "REST API"],
     "img_url": "/images/taskbloom.png",
     "git_url": "https://github.com/YNhuLe/Industry-Project-Team3-Server",
+    "description": "TaskBloom is an intelligent to-do application designed to enhance productivity by leveraging AI to automatically break down complex tasks into manageable, actionable subtasks. This helps users stay organized, maintain focus, and achieve goals more efficiently. With an intuitive interface and smart task management features, TaskBloom supports daily planning and prioritization to keep users on track.\nThe app is built using React for a dynamic frontend, Express for backend services, styled with SCSS, and integrates the powerful Gemini API to deliver AI-driven task breakdowns. A custom REST API handles data communication, ensuring a smooth and responsive user experience.",
     "info": [
       {
         "title": "Challenges.",
@@ -174,7 +181,7 @@
       },
       {
         "title": "🚀 Future Improvements.",
-        "content": "Plan: To elevate platform engagement and support scalability, several enhancements will be introduced. Users will be able to favorite preferred providers for faster access, and a direct messaging feature will allow real-time communication with service providers. Additionally, an AI-powered chatbot will be integrated to assist users with common questions, service recommendations, and booking guidance 24/7. This chatbot will leverage user and provider data to offer personalized, context-aware support, reducing the need for manual intervention and improving onboarding and retention.",
+        "content": "✅ Plan: To elevate platform engagement and support scalability, several enhancements will be introduced.\n✅ Users will be able to favorite preferred providers for faster access.\n✅ A direct messaging feature will allow real-time communication with service providers.\n✅ An AI-powered chatbot will assist users with common questions, service recommendations, and booking guidance 24/7.\n✅ The chatbot will leverage user and provider data to offer personalized, context-aware support.\n✅ A dedicated user profile page will allow users to manage preferences, bookings, and history.\n✅ Real-time commenting functionality will enable users to engage with content and services more interactively.\n✅ These features will reduce manual intervention and improve both onboarding and long-term retention.",
         "image": "/images/tralli_future.png"
       }
     ],

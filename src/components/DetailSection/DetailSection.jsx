@@ -11,8 +11,6 @@ function DetailSection({ project, index }) {
             {line}
           </p>
         ))}
-
-        {/* <p className="info__card-content">{project.content}</p> */}
       </div>
 
       <img
