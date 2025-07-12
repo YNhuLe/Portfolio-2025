@@ -26,9 +26,12 @@ function DetailsPage() {
       </a>
       <div className="pro__details">
         <h1 className="pro__title">{pro.title}</h1>
-        <h2 className="pro__subtitle">
-          A modern case stud on impact and result
-        </h2>
+        {pro.description.split("\n").map((line, idx) => (
+          <p className="pro__subtitle" key={idx}>
+            {line}
+          </p>
+        ))}
+
         <div className="btn-section">
           <a className="button button-dive" href={pro.git_url}>
             Dive deeper
