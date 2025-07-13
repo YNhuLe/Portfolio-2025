@@ -44,10 +44,10 @@
             height: clamp(15rem, 40vw, 20rem);
         }
 &-text{
-    @include flex(column,  center, flex-start);
+    @include flex(column,  flex-start ,center);
 }
 
-        @include flex(row, center, space-between);
+        @include flex(row,  space-between, center);
 gap: 1rem;
         &.reverse {
             flex-direction: row-reverse;

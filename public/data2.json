@@ -1,0 +1,39 @@
+[
+  {
+    "id": "4",
+    "title": "Blogs-Life",
+    "slug": "bloglife-web",
+    "concept": "Blogs-Life — a chill space to share your thoughts, ideas, and stories. From tech to daily vibes, whatever’s on your mind, this is your place to be heard.💬",
+    "tech_stack": ["Python", "Flask", "PostgreSQL", "APIs", "Docker"],
+    "img_url": "/images/blogs.png",
+    "git_url": "https://github.com/YNhuLe/Blogging_Life_Out",
+    "description": "Blogs-Life is a laid-back blogging platform where users can freely share thoughts, ideas, and stories—whether it's tech talk or everyday vibes. It's a space built for expression and connection. 💬\nPowered by Python, Flask, PostgreSQL, RESTful APIs, and Docker, the platform is designed for simplicity, scalability, and smooth content sharing.",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "Challenge: While integrating Bootstrap 5.3.3 into my Flask app, I encountered layout and component issues caused by an outdated or incompatible version of Flask-Bootstrap. Components like the navbar and modals didn’t behave as expected, and newer utility classes were ineffective. This slowed UI development and caused inconsistencies across devices.",
+        "image": "/images/tralli_issue.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "Solution: I identified that the installed Flask-Bootstrap package was not fully compatible with Bootstrap 5.3.3. To fix this, I uninstalled the outdated package and installed the correct `flask-bootstrap5` library. This restored support for the full range of Bootstrap 5 components. I then updated templates to reflect the proper markup and ensured clean integration with Bootstrap 5’s JavaScript modules.",
+        "image": "/images/tralli_solution.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "Result: After switching to the correct version of Flask-Bootstrap, the UI rendered correctly, and all layout components worked smoothly. This reduced development friction, improved responsiveness, and ensured a consistent user experience across browsers and devices.",
+        "image": "/images/tralli_result.png"
+      },
+      {
+        "title": "🚀 Future Improvements.",
+        "content": "✅ Plan: To future-proof the frontend, decouple Bootstrap integration entirely from Flask templating.\n✅ Control Bootstrap via CDN or bundlers like Vite or Webpack.\n✅ Lay the groundwork for integrating modern component libraries like Tailwind or React-based UIs.\n✅ Add a dedicated user profile page to personalize the user experience.\n✅ Enable real-time commenting functionality to boost user engagement and interaction.",
+        "image": "/images/tralli_future.png"
+      }
+    ],
+    "screenshots": ["tralli-dashboard.png", "tralli-ai-subtasks.png"],
+    "video_demo": {
+      "url": "",
+      "caption": ""
+    }
+  }
+]

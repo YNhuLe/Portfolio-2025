@@ -64,27 +64,27 @@ function TechStackSection() {
       <h2 className="contact__text">Tech Stack</h2>
 
       <div className="frontend">
-        <h1 className="stack__title">Front-End:</h1>
+        <h1 className="stack__title">Front-End</h1>
         <TechStack logos={frontendLogos} />
       </div>
 
       <div className="backend">
-        <h1 className="stack__title">Back-End:</h1>
+        <h1 className="stack__title">Back-End</h1>
         <TechStack logos={backendLogos} />
       </div>
 
       <div className="database">
-        <h1 className="stack__title">Database:</h1>
+        <h1 className="stack__title">Database</h1>
         <TechStack logos={databaseLogos} />
       </div>
 
       <div className="devops">
-        <h1 className="stack__title">DevOps:</h1>
+        <h1 className="stack__title">DevOps</h1>
         <TechStack logos={devOpsLogos} />
       </div>
 
       <div className="design">
-        <h1 className="stack__title">Design tech:</h1>
+        <h1 className="stack__title">Design tech</h1>
         <TechStack logos={designLogos} />
       </div>
     </section>
