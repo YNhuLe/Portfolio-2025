@@ -3,7 +3,8 @@
 
 .pro {
   &__details {
-    background-color:$dark-blue;
+    // background-color:$dark-blue;
+      background-color: $background-color
   }
 
   &__title {
@@ -17,12 +18,13 @@
     font-weight: 400;
     text-align: center;
     color: $third-grey;
-    margin: 0.5rem 1rem;
+    margin: 1rem;
   }
 
   &__img {
     width: calc(100% - 2rem);
     margin: 1rem;
+    margin-top: 2.5rem;
     border-radius: 1rem;
     position: relative;
     z-index: 1;
@@ -60,6 +62,7 @@ transform: scale(.9);
   &-dive {
     color: $primary-white;
     background-color: $secondary-black;
+    margin-top: 1.5rem;
   }
   &-dive:hover {
     background-color: $card-shadow;
@@ -87,11 +90,12 @@ transform: scale(.9);
   .pro{
     &__title{
 @include tablet-desktop-title-normal;
-margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
   }
 
 &__subtitle{
-  @include tablet-desktop-heading-medium
+  @include tablet-desktop-heading-medium;
+      margin: 1.5rem 2rem;
 }
 }
 .btn-section{
@@ -105,6 +109,7 @@ margin-bottom: 1rem;
   padding: .6rem 2rem;
   border-radius: 1.5rem;
   @include tablet-desktop-body-copy-medium;
+  margin-top: 2.5rem;
 }
 
 .pro__img{
@@ -119,6 +124,11 @@ margin-bottom: 1rem;
   height: 5rem;
 }
 
+        .pro__subtitle{
+            margin: 2rem 4rem;
+        }
+        
+        
 
 }
 

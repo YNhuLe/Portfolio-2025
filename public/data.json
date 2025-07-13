@@ -21,13 +21,13 @@
       },
       {
         "title": "Results & Impacts.",
-        "content": "Scalable Structure: The clean JSON structure simplified data access and made future backend migration easier.",
+        "content": "The clean and organized JSON structure not only simplified data access and management on the front end, but also laid a solid foundation for future scalability. This made it easier to maintain consistency across components and ensured a smooth transition path for integrating or migrating to a backend system later on.",
         "image": "/images/zodiac_result.png"
       },
       {
         "title": "🚀 Future Improvements",
 
-        "content": "✅ Migrate dynamic content like comments and horoscopes to a backend (e.g., MySQL, PostgreSQL).\n✅ Focus on mobile-first responsiveness.\n✅ Add an AI chatbot for real-time horoscope and flower personality interactions.\n✅ Enable users to upload their own zodiac-related photos or messages.\n✅ Expand multi-language support to reach a wider global audience.",
+        "content": "✅ Migrate dynamic content like comments and horoscopes to a backend PostgreSQL.\n✅ Focus on mobile-first responsiveness.\n✅ Add an AI chatbot for real-time horoscope and flower personality interactions.\n✅ Enable users to upload their own zodiac-related photos or messages.",
 
         "image": "/images/zodiac_future.png"
       }
