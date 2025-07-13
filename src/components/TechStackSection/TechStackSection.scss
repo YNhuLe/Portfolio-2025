@@ -26,6 +26,8 @@ overflow: hidden;
 .stack__title{
 @include mobile-subheader-header;
   color: $third-grey;
+  text-align: center;
+  margin: 3rem 0 1.5rem 0;
 }
 .canvas {
   width: 100%;
