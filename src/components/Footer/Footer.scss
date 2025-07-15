@@ -111,10 +111,13 @@ li > a {
     &__list-links {
       @include tablet-desktop-body-copy-medium;
     } 
+    &__title{
+      margin-bottom: 2rem;
+    }
 
     &__logo{
-      width: 5rem;
-      height: 5rem;
+      width: 7rem;
+      height: 7rem;
     }
   }
 }

@@ -82,7 +82,7 @@ gap: 1rem;
 
 @include desktop-xxl{
   .info__card{
-    width: calc(100% - 40rem);
+    width: calc(100% - 20rem);
         &-title{
 margin-bottom: 2rem;
         }
@@ -102,6 +102,7 @@ margin-bottom: 2rem;
 }
 @include desktop-ultra{
       .info__card{
+             width:calc(100% - 60rem);
         &-title{
 margin-bottom: 2rem;
         }

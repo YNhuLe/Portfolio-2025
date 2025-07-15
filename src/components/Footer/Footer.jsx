@@ -4,7 +4,6 @@ import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import logo from "/images/logo.jpg";
 
-import { Link } from "react-scroll";
 function Footer() {
   const location = useLocation();
   const isMainPage = location.pathname === "/";

@@ -35,5 +35,41 @@
       "url": "",
       "caption": ""
     }
+  },
+
+  {
+    "id": "4",
+    "title": "TaskBloom",
+    "slug": "taskbloom-web",
+    "concept": "TaskBloom is a smart to-do app that uses AI to break tasks into actionable subtasks — helping you stay organized, focused, and productive.",
+    "tech_stack": ["React", "Express", "SCSS", "Gemini API", "REST API"],
+    "img_url": "/images/taskbloom.png",
+    "git_url": "https://github.com/YNhuLe/Industry-Project-Team3-Server",
+    "description": "TaskBloom is an intelligent to-do application designed to enhance productivity by leveraging AI to automatically break down complex tasks into manageable, actionable subtasks. This helps users stay organized, maintain focus, and achieve goals more efficiently. With an intuitive interface and smart task management features, TaskBloom supports daily planning and prioritization to keep users on track.\nThe app is built using React for a dynamic frontend, Express for backend services, styled with SCSS, and integrates the powerful Gemini API to deliver AI-driven task breakdowns. A custom REST API handles data communication, ensuring a smooth and responsive user experience.",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releasesChallenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "Challenge: Manual deployments slowed growth: 80% faster, reliable releases",
+        "image": "/images/zodiac.png"
+      },
+      {
+        "title": "🚀 Future Improvements.",
+        "content": "✅ Plan: To elevate platform engagement and support scalability, several enhancements will be introduced.\n✅ Users will be able to favorite preferred providers for faster access.\n✅ A direct messaging feature will allow real-time communication with service providers.\n✅ An AI-powered chatbot will assist users with common questions, service recommendations, and booking guidance 24/7.\n✅ The chatbot will leverage user and provider data to offer personalized, context-aware support.\n✅ A dedicated user profile page will allow users to manage preferences, bookings, and history.\n✅ Real-time commenting functionality will enable users to engage with content and services more interactively.\n✅ These features will reduce manual intervention and improve both onboarding and long-term retention.",
+        "image": "/images/tralli_future.png"
+      }
+    ],
+    "video_demo": {
+      "url": "https://github.com/YNhuLe/tralli_server/blob/main/README.md"
+    }
   }
 ]
