@@ -128,13 +128,49 @@ transform: scale(.9);
             margin: 2rem 4rem;
         }
         
-        
+.button{ font-weight: 800;}   
 
 }
 
 @include desktop-xxl{
-   .pro__img{
+   .pro{
+    
+    &__img{
     width: calc(100% - 20rem);
     margin: 5rem 10rem;
+    margin-bottom: 10rem;
    }
+
+   &__subtitle{
+    margin:3rem 7.5rem;
+
+}
+
+  }
+}
+
+@include desktop-ultra{
+  .pro{
+    &__title{
+    }
+    &__subtitle{
+      width: calc(100% - 60rem);
+      margin: 5rem 30rem;
+    }
+    &__img{
+      width: calc(100% - 60rem);
+      margin: 10rem 30rem;
+    }
+  }
+  .button{
+  padding: 1.5rem 4rem;
+  border-radius: 2.5rem;
+  font-size: 2rem;
+  }
+  .back-img{
+  width: 7rem;
+  height: 7rem;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
 }

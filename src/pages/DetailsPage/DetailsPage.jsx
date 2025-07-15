@@ -4,7 +4,6 @@ import Navigation from "../../components/Navigation/Navigation";
 import { useProjectContext } from "../../context/ProjectContext";
 import { useParams } from "react-router-dom";
 import goback from "../../assets/icons/goback.png";
-import { div } from "motion/react-client";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import GalaxyParticles from "../../components/GalaxyParticles/GalaxyParticles";
@@ -26,17 +25,16 @@ function DetailsPage() {
       </a>
       <div className="pro__details">
         <h1 className="pro__title">{pro.title}</h1>
-        {pro.description.split("\n").map((line, idx) => (
-          <p className="pro__subtitle" key={idx}>
-            {line}
-          </p>
-        ))}
-
+        <div className="pro__subtitle">
+          {pro.description.split("\n").map((line, idx) => (
+            <p key={idx}>{line}</p>
+          ))}
+        </div>
         <div className="btn-section">
           <a className="button button-dive" href={pro.git_url}>
             Dive deeper
           </a>
-          <a className="button button-demo" href={pro.live_url}>
+          <a className="button button-demo" href={pro.video_demo.url}>
             See demo
           </a>
         </div>
