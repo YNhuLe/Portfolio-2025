@@ -39,7 +39,7 @@ const EarthCanvas = () => {
   const cameraPosition = useMemo(() => {
     if (windowWidth < 768) return [-4, 3, 6.5];
     if (windowWidth < 1280) return [-5, 3.5, 8];
-    if (windowWidth < 1536) return [-6, 4, 9.5];
+    if (windowWidth < 1536) return [-6, 4, 12.5];
     if (windowWidth < 2560) return [-8.5, 7.5, 13];
     return [-10, 8, 12];
   }, [windowWidth]);
