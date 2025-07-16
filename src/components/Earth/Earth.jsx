@@ -3,20 +3,11 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader/Loader";
 
-const Earth = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const scale = useMemo(() => {
-    if (windowWidth < 768) return 8.5;
-    else if (windowWidth < 1280) return 12.5;
-    return 13;
-  }, [windowWidth]);
+function clamp(min, preferred, max) {
+  return Math.max(min, Math.min(preferred, max));
+}
+const Earth = ({ scale }) => {
   const earth = useGLTF("/planet/scene.gltf");
   return (
     <primitive
@@ -29,6 +20,29 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const scale = useMemo(() => {
+    // if (windowWidth < 768) return 3.5;
+    // if (windowWidth < 1280) return 3;
+    // if (windowWidth < 1536) return 3;
+    // if (windowWidth < 2560) return 6.5;
+    // return 3;
+    return clamp(3, windowWidth / 300, 5.5);
+  }, [windowWidth]);
+  const cameraPosition = useMemo(() => {
+    if (windowWidth < 768) return [-4, 3, 6.5];
+    if (windowWidth < 1280) return [-5, 3.5, 8];
+    if (windowWidth < 1536) return [-6, 4, 9.5];
+    if (windowWidth < 2560) return [-8.5, 7.5, 13];
+    return [-10, 8, 12];
+  }, [windowWidth]);
   return (
     <Canvas
       style={{
@@ -43,7 +57,8 @@ const EarthCanvas = () => {
         fov: 45,
         near: 0.1,
         far: 200,
-        position: [-4, 3, 6],
+        // position: [-4, 3, 6],
+        position: cameraPosition,
       }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -52,7 +67,7 @@ const EarthCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Earth />
+        <Earth scale={scale} />
 
         <Preload all />
       </Suspense>
