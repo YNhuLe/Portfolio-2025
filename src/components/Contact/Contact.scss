@@ -7,8 +7,8 @@
   &__text {
     @include mobile-section-header;
     color: $primary-white;
-
     text-align: center;
+    margin-bottom: 4rem;
   }
   &__wrapper {
     background-size: cover;
@@ -81,6 +81,7 @@
     }
     &__text {
       @include tablet-desktop-title-normal;
+      margin-bottom: 8rem;
     }
 
     &__earth {
@@ -126,8 +127,30 @@
       max-width: 55rem;
       margin-left: 5rem;
     }
+      &__text {
+
+      margin-bottom: 8rem;
+    }
     &__wrapper {
       @include flex(row-reverse, center, center);
+    }
+  }
+}
+
+@include desktop-xxl{
+
+  .contact{
+    &__form{
+      max-width: 45rem;
+    }
+  }
+}
+
+@include desktop-ultra{
+
+  .contact{
+    &__form{
+      max-width: 60rem;
     }
   }
 }

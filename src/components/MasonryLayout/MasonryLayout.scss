@@ -1,121 +1,117 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-.masonry__layout {
-  column-count: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 5rem;
+.masonry {
+  &__layout {
+    column-count: 1;
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 5rem;
+    overflow: hidden;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    width: clamp(17rem, 40vw, 25rem);
+    height: auto;
+    backdrop-filter: blur(0.625rem);
+    background: rgb(33 27 80 / 45%);
+    border-radius: 1.25rem;
+    color: $primary-white;
+    text-align: left;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    cursor: pointer;
+  }
 }
 
-.masonry__item {
-  position: relative;
-  @include flex(column, flex-start, center);
-  flex-grow: 1;
-  min-width: 8rem;
-  width: auto;
-  break-inside: avoid;
-  box-sizing: border-box;
-  height: clamp(22rem, 60vw, 28rem);
-  width: clamp(25rem, 100vw, 25rem);
-  margin: 1rem;
-  margin-bottom: 2rem;
-  backdrop-filter: blur(0.625rem);
-  -webkit-backdrop-filter: blur(10px);
-  background: rgb(33 27 80 / 45%);
-  border: 1px solid rgba(31, 11, 11, 0.2);
-  color: $primary-white;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  border-radius: 1.25rem;
-}
 .img__project {
   position: relative;
   width: 100%;
-  height: 100%;
-  @include flex(row, center, center);
-}
-
-.masonry__item:hover {
-  background: rgb(33 27 80 / 25%);
-}
-article:hover {
-  background: rgb(33 27 80 / 25%);
-}
-.masonry__item:hover .project__img {
-  top: -10rem;
-  transform: scale3d(1.5px, 1.5px, 1.5px);
-}
-
-.project__img {
-  width: 100%;
-
-  object-fit: contain;
-  top: 0;
-  left: 0;
-  height: 100%;
-  position: absolute;
-
-  height: -webkit-fill-available;
-  width: -webkit-fill-available;
-  padding: 1rem;
-  padding-bottom: 4rem;
-
-  transition: top 0.5s ease-in-out;
-}
-
-.project__title {
-  position: absolute;
-  @include mobile-section-header;
-  text-transform: uppercase;
-  color: $primary-white;
-  bottom: 0.35rem;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-  margin: 3rem 0;
-}
-
-.masonry__item:hover .project__title {
-  transform: translateY(3rem);
-  opacity: 0;
-}
-.project__concept {
-  @include mobile-body-copy;
+  height: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 0 0.2875rem;
-  position: absolute;
-  bottom: 8rem;
-  color: $primary-white;
-  opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  text-align: center;
-  background-color: rgb(9 9 9 / 35%);
 }
+.project {
+  &__img {
+    width: 100%;
+    height: clamp(10rem, 83vw, 12rem);
+    object-fit: fill;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+  }
+  &__title {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+    text-transform: uppercase;
+    color: $primary-white;
+  }
+
+  &__concept {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    color: $card-shadow;
+    margin-bottom: 1rem;
+  }
+  &__text {
+    margin-bottom: 0;
+  }
+}
+.arrow {
+  &-icon {
+    @include flex(row, center, center);
+    gap: 0.2rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 1.5rem;
+    z-index: 100;
+    color: rgb(7, 48, 102);
+  }
+
+  &-details {
+    @include mobile-body-copy;
+    font-weight: 800;
+  }
+}
+
+.icon{
+  height: .75rem;
+  width: .75rem;
+}
+.arrow-icon:hover {
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  transform: scale3d(1.2, 1.2, 1.2);
+  color: rgb(124, 144, 233);
+}
+
 .github-icon {
   color: $primary-white;
   transition: color 0.3s ease;
 }
-.project__link:hover .github-icon .globe-icon{
+
+.project__link:hover .github-icon .globe-icon {
   color: $primary-black;
 }
-.masonry__item:hover .project__concept {
-  transform: translateY(5.5rem);
-  opacity: 1;
-}
-.link{
-  @include flex(row, center, center);
-  gap: .5rem;
+.link {
+  width: 100%;
+  @include flex(row, flex-start, center);
+  gap: 0.5rem;
 }
 .stack {
+  width: 100%;
   @include mobile-footer-copy;
   &__list {
-    @include flex(row, center, center);
-
+    @include flex(row, flex-start, center);
     flex-wrap: wrap;
     padding-left: 0;
-    width: 100%;
     list-style: none;
+    margin-bottom: 0;
     gap: 0.25rem;
   }
   &__item:nth-child(1),
@@ -133,50 +129,70 @@ article:hover {
     color: rgb(209, 19, 146);
   }
 }
+
 @include tablet {
   .project {
     &__title {
       @include tablet-desktop-heading-medium;
 
-      margin-bottom: 3.75rem;
+      margin: 1rem 0 2rem 0;
+      margin-bottom: 1.5rem;
+    }
+    &__img{
+      object-fit: fill;
+      height: clamp(15rem, 83vw, 23rem);
     }
 
     &__concept {
       @include tablet-desktop-body-copy-medium;
     }
   }
-  .masonry__layout {
-    column-count: 2;
-    margin: 5rem;
-    margin-top: 10rem;
+  .masonry {
+    &__layout {
+      column-count: 2;
+      margin: 5rem;
+      margin-top: 10rem;
+      padding-top: 4rem;
+    }
+    &__item {
+      padding: 2rem;
+      height: clamp(22rem, 83vw, 40rem);
+      width: clamp(22rem, 100vw, 31rem);
+      margin-bottom: 2rem;
+    }
   }
   .stack {
     &__list {
       @include tablet-desktop-label-medium;
     }
   }
-  .link{
+  .link {
     gap: 1rem;
   }
-  .masonry__item {
-    padding: 1rem;
-    height: clamp(22rem, 60vw, 33rem);
-    width: clamp(22rem, 100vw, 31rem);
-  }
-
-  // .card__border {
-  //   background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
-  //   padding: 0.1px;
-  //   border-radius: 20px;
-  // }
   .img__project {
     position: relative;
     width: 100%;
     height: 100%;
     @include flex(row, center, center);
   }
+
+.arrow{
+  &-details{
+  @include tablet-desktop-body-copy-medium;
+font-weight: 800;
 }
 
+&-icon{
+gap:.75rem;
+top:2rem;
+}}
+.icon{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+
+}
 @include desktop {
   .img__project {
     position: relative;
@@ -193,7 +209,7 @@ article:hover {
   .project {
     &__img {
       width: clamp(22rem, 60vw, 38rem);
-      height: clamp(22rem, 60vw, 25rem);
+      height: clamp(20rem, 60vw, 22rem);
       max-width: 100%;
       position: relative;
     }
@@ -203,12 +219,12 @@ article:hover {
     }
 
     &__title {
-      margin: 7.5rem 0;
+      margin: 2rem 0;
     }
   }
   .masonry__item {
     margin-bottom: 5rem;
-    height: clamp(22rem, 60vw, 38rem);
+    height: clamp(22rem, 60vw, 45rem);
     width: clamp(30rem, 60vw, 31.5rem);
     @include flex(column, center, center);
     display: flex;
@@ -219,3 +235,25 @@ article:hover {
     margin-top: 2rem;
   }
 }
+
+
+@include desktop-xxl{
+  .masonry__layout {
+    column-count: 2;
+    gap: 4rem;
+
+  }
+}
+
+@include desktop-ultra{
+  .masonry{
+    
+    &__layout {
+    column-count: 2;
+   
+  }
+
+  &__item{
+    height: clamp(22rem, 60vw, 55rem);
+  }
+}}

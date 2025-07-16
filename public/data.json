@@ -1,66 +1,117 @@
 [
   {
     "id": "1",
-    "width": "20",
     "title": "Zodiac Wander",
-    "concept": "Welcome to Zodiac Wander — a place where the stars meet your story. Discover your zodiac sign, explore personality traits, connect with your birth flower, and share your thoughts with others. It’s more than astrology — it’s a blooming journey through the cosmos.",
-    "gitUrl": "https://github.com/YNhuLe/Pair-Programming",
+    "slug": "zodiac-web",
+    "concept": "Zodiac Wander - Discover your zodiac sign, connect with your birth flower, explore traits, and share thoughts with others on a cosmic journey.",
+    "tech_stack": ["React", "Express", "SCSS", "REST API"],
     "img_url": "/images/zodiac.png",
-    "stack": ["react", "express", "scss", "git", "restapi"]
-  },
+    "git_url": "https://github.com/YNhuLe/Pair-Programming",
+    "description": "Zodiac Wander is an interactive web app where users can discover their zodiac sign, connect with their unique birth flower, explore personality traits, and share reflections with others on a cosmic journey. \nBuilt with React, Express, SCSS, and a custom REST API, the platform offers a smooth and visually engaging experience that blends astrology, nature, and community.",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "Data Structure Complexity: Zodiac content (sign traits, horoscopes, dates, compatibility, icons, comments) required a well-organized but extensible data format. A complicated .json file structure posed readability, maintenance, and scalability issues.",
+        "image": "/images/zodiac_challenges.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "Structured JSON Design: To address the complexity of handling detailed zodiac data, I implemented a JSON tree structure that allowed for logically nested and easily accessible information such as traits, compatibility, horoscopes, and user comments. This approach improved both maintainability and scalability.",
+        "image": "/images/zodiac_solution.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "The clean and organized JSON structure not only simplified data access and management on the front end, but also laid a solid foundation for future scalability. This made it easier to maintain consistency across components and ensured a smooth transition path for integrating or migrating to a backend system later on.",
+        "image": "/images/zodiac_result.png"
+      },
+      {
+        "title": "🚀 Future Improvements",
 
+        "content": "✅ Migrate dynamic content like comments and horoscopes to a backend PostgreSQL.\n✅ Focus on mobile-first responsiveness.\n✅ Add an AI chatbot for real-time horoscope and flower personality interactions.\n✅ Enable users to upload their own zodiac-related photos or messages.",
+
+        "image": "/images/zodiac_future.png"
+      }
+    ],
+    "video_demo": {
+      "url": "https://www.youtube.com/watch?v=N6jknc-Xs4Q"
+    }
+  },
   {
     "id": "2",
-    "width": "20",
     "title": "Evererdant",
+    "slug": "evererdant-web",
     "concept": "Eververdant is a mobile-first web app that connects plant lovers to buy, sell, and share leafy tips with a thriving green-thumbed community.",
-    "gitUrl": "https://github.com/YNhuLe/Flower_Love",
+    "tech_stack": ["React", "TypeScript", "Tailwind", "AWS", "PostgreSQL"],
     "img_url": "/images/evererdant.png",
-    "link": "https://main.d36o1v1jm7mlqn.amplifyapp.com/",
-    "stack": ["react", "express", "typesript", "tailwind", "AWS"]
+    "git_url": "https://github.com/YNhuLe/Flower_Love",
+    "description": "Eververdant is a mobile-first web app that connects plant lovers to buy, sell, and share plant care tips within a thriving green-thumbed community.\nBuilt with React, TypeScript, Tailwind CSS, PostgreSQL and AWS, the platform delivers a fast, responsive, and community-driven experience for all things leafy and green. 🌿",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "With image-rich plant listings and user-generated uploads, Eververdant faced major performance issues—especially on slower mobile networks. The abundance of high-resolution images caused long load times and negatively impacted user experience and Core Web Vitals.",
+        "image": "/images/ever_challenge.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "To address this, lazy loading was implemented for off-screen images. A CDN via AWS Amplify was integrated to ensure faster delivery of assets across geographic locations. Tailwind's utility-first styling helped reduce CSS bloat for leaner rendering.",
+        "image": "/images/ever_solution.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "Page load times improved by over 60%, especially on mobile devices. Bounce rates dropped, and user engagement rose as users experienced a smoother, faster interface. The performance boost directly contributed to better SEO rankings and overall user satisfaction.",
+        "image": "/images/ever_result.png"
+      },
+      {
+        "title": "🚀 Future Improvements.",
+
+        "content": "✅ A future enhancement will include building a backend with custom APIs.\n✅ Integrate a database to store user profiles, listings, and interactions.\n✅ Allow users to fully engage with the platform in real time.",
+
+        "image": "/images/ever_future.png"
+      }
+    ],
+
+    "video_demo": {
+      "url": "https://main.d36o1v1jm7mlqn.amplifyapp.com/"
+    }
   },
   {
     "id": "3",
-    "width": "27",
     "title": "Tralli",
-    "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🛠️💥",
-    "gitUrl": "https://github.com/YNhuLe/TinDog-Start-master",
+    "slug": "tralli-web",
+    "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🔨",
+    "tech_stack": ["Express", "React", "SCSS", "Firebase", "APIs", "MySQL"],
     "img_url": "/images/tralli2.png",
-    "stack": ["express", "react", "scss", "git", "firebase", "restapi"]
-  },
-  {
-    "id": "4",
-    "width": "28",
-    "title": "Blogs-Life",
-    "concept": "Welcome to Blogs-Life — a chill space to share your thoughts, ideas, and stories. From tech to daily vibes, whatever’s on your mind, this is your place to be heard. 💬✨",
-    "gitUrl": "https://github.com/YNhuLe/flask-blog-funtime/tree/master/Blogs",
-    "img_url": "/images/blogs.png",
-    "stack": ["python", "flask", "postgres", "restapi"]
-  },
-  {
-    "id": "5",
-    "width": "26",
-    "title": "TaskBloom",
-    "concept": "TaskBloom is a smart to-do app that combines the simplicity of Microsoft To Do with AI-powered task breakdowns. Just enter a task, and the AI suggests actionable subtasks to help you stay focused and productive.",
-    "gitUrl": "https://github.com/YNhuLe/Industry-Project-Team3-Server",
-    "img_url": "/images/taskbloom.png",
-    "stack": [
-      "react",
-      "express",
-      "scss",
-      "git",
-      "jira",
-      "gemini-api",
-      "restapi"
-    ]
-  },
-  {
-    "id": "6",
-    "width": "28",
-    "title": "Snaps",
-    "concept": "A responsive full-stack photography-sharing platform where photographers can showcase their favorite neighborhood shots in their unique style. 📸✨",
-    "gitUrl": "https://github.com/YNhuLe/jenny-le-snaps",
-    "img_url": "/images/snaps2.png",
-    "stack": ["react", "express", "scss", "git", "restapi"]
+    "git_url": "https://github.com/YNhuLe/tralli_client",
+    "description": "Tralli is a web platform that connects users—especially developers and property managers—with trade companies offering services in building maintenance, apartment repairs, condo improvements, and townhome fixes. It acts as a trusted bridge between skilled trade professionals and property owners, streamlining the process of finding reliable, on-demand help for a wide range of construction, renovation, and repair needs.\n Built using React, Express, SCSS, Firebase, MySQL, and RESTful APIs, Tralli is designed to deliver a responsive, scalable, and efficient user experience for both service seekers and providers.",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "Challenge: Integrating a secure and user-friendly Single Sign-On (SSO) system was complex. It required combining Firebase Authentication with MySQL to securely store user data while ensuring a seamless experience.",
+        "image": "/images/tralli_challenge.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "Solution: Implemented Google Sign-In via Firebase Authentication and securely stored additional user information in a MySQL database. This setup streamlined the sign-up process and improved scalability.",
+        "image": "/images/tralli_solution.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "Result: Created a robust and secure sign-up/sign-in system that significantly enhanced user experience by reducing friction and increasing reliability.",
+        "image": "/images/tralli_result.png"
+      },
+      {
+        "title": "🚀 Future Improvements.",
+        "content": "✅ Plan: To elevate platform engagement and support scalability, several enhancements will be introduced.\n✅ Users will be able to favorite preferred providers for faster access.\n✅ A direct messaging feature will allow real-time communication with service providers.\n✅ An AI-powered chatbot will be integrated to assist users with common questions, service recommendations, and booking guidance 24/7.\n✅ The chatbot will leverage user and provider data to offer personalized, context-aware support.\n✅ This reduces the need for manual intervention and improves onboarding and retention.",
+        "image": "/images/tralli_future.png"
+      }
+    ],
+    "video_demo": {
+      "url": "https://www.youtube.com/shorts/K6x67sXLM9g"
+    }
   }
 ]
+ 
+
+
+
+

@@ -2,7 +2,6 @@ import { useState } from "react";
 import MenuItem from "../MenuItem/MenuItem";
 import "./Navigation.scss";
 import { motion } from "framer-motion";
-// import { Link } from "react-router-dom";
 import { Link } from "react-scroll";
 const navVariants = {
   open: {
@@ -16,7 +15,7 @@ const navVariants = {
 const items = [
   { name: "About", id: "about" },
   { name: "Projects", id: "projects" },
-  { name: "Stacks", id: "tech" },
+  { name: "Stacks", id: "techstack" },
   {
     name: "Contact",
     id: "contact",

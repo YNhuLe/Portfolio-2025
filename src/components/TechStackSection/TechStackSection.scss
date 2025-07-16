@@ -1,5 +1,11 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.stack-icon{
+  width: 100%;
+  height: 12rem;
+  // background-color: aqua;
+}
 .tech {
   min-height: 35rem;
   &__title{
@@ -17,7 +23,12 @@ overflow: hidden;
   // background-color: rgba(28, 27, 29, 0.7); 
 }
 }
-
+.stack__title{
+@include mobile-subheader-header;
+  color: $third-grey;
+  text-align: center;
+  margin: 3rem 0 1.5rem 0;
+}
 .canvas {
   width: 100%;
   height: 35rem;
@@ -35,8 +46,30 @@ margin-top: 8rem;
 }}
 
 @include desktop {
+  .stack__title{
+    @include tablet-desktop-heading-medium;
+    font-weight: 500;
+  }
  .tech {
   &__title{
 
   }
 }}
+
+
+@include desktop-xxl{
+.stack__title{
+  @include tablet-desktop-wordmark-regular;
+  font-weight: 500;
+}
+
+}
+
+
+@include desktop-ultra{
+  .stack__title{
+    @include tablet-desktop-heading-medium;
+    font-weight: 500;
+  }
+  
+  }

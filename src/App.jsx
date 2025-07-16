@@ -1,30 +1,35 @@
-import NavBar from "./components/NavBar/NavBar";
 import "./App.scss";
-
-import AboutMe from "./components/AboutMe/AboutMe";
-import Navigation from "./components/Navigation/Navigation";
-import Project from "./components/Project/Project";
-import Garden from "./components/Garden/Garden";
-import Contact from "./components/Contact/Contact";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Home from "./pages/Home/Home";
-import GalaxyParticles from "./components/GalaxyParticles/GalaxyParticles";
-import TechStackSection from "./components/TechStackSection/TechStackSection";
-import Footer from "./components/Footer/Footer";
+import DetailsPage from "./pages/DetailsPage/DetailsPage";
 function App() {
   return (
-    <>
-      {/* <GalaxyParticles /> */}
-      <section className="app__container">
-        <GalaxyParticles />
-        <NavBar />
-        <AboutMe />
-        <Project />
-        <TechStackSection />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:slug" element={<DetailsPage />} />
+      </Routes>
+    </Router>
 
-        <Contact />
-        <Footer />
-      </section>
-    </>
+    // <>
+    //   {/* <GalaxyParticles /> */}
+    //   <section className="app__container">
+    //     <GalaxyParticles />
+    //     <NavBar />
+    //     <AboutMe />
+    //     <Project />
+    //     {/* <TechStackSection /> */}
+    //     <TechStackSection />
+    //     <DetailsPage />
+    //     <Contact />
+    //     <Footer />
+    //   </section>
+    // </>
   );
 }
 

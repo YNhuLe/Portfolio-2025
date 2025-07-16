@@ -1,0 +1,176 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.pro {
+  &__details {
+    // background-color:$dark-blue;
+      background-color: $background-color
+  }
+
+  &__title {
+    color: $primary-white;
+    padding-top: 8rem;
+    text-align: center;
+    @include mobile-page-header;
+  }
+  &__subtitle {
+    @include mobile-subheader-header;
+    font-weight: 400;
+    text-align: center;
+    color: $third-grey;
+    margin: 1rem;
+  }
+
+  &__img {
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    margin-top: 2.5rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+.galaxy{
+    position: relative;
+    z-index:1;
+}
+.galaxy-particles{
+    position: absolute; z-index: 0;
+}
+.back-icon{
+    position: absolute;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.back-icon:active{
+transform: scale(.9);
+}
+.btn-section {
+  @include flex(column, center, center);
+  gap: 0.5rem;
+}
+.button {
+  font-weight: 500;
+  border-radius: 1rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+
+  &-dive {
+    color: $primary-white;
+    background-color: $secondary-black;
+    margin-top: 1.5rem;
+  }
+  &-dive:hover {
+    background-color: $card-shadow;
+    color: $secondary-black;
+  }
+  &-demo {
+    color: $secondary-black;
+    background-color: $card-shadow;
+  }
+  &-demo:hover {
+    color: $primary-white;
+    background-color: $secondary-black;
+  }
+}
+.button:hover {
+  transform: scale3d(1.0625, 1.0625, 1.0625);
+}
+
+
+@include tablet{
+.back-img{
+  width: 4rem; 
+  height: 4rem;
+}
+  .pro{
+    &__title{
+@include tablet-desktop-title-normal;
+    margin-bottom: 2.5rem;
+  }
+
+&__subtitle{
+  @include tablet-desktop-heading-medium;
+      margin: 1.5rem 2rem;
+}
+}
+.btn-section{
+  @include flex(row, center, center);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+
+}
+.button{
+  padding: .6rem 2rem;
+  border-radius: 1.5rem;
+  @include tablet-desktop-body-copy-medium;
+  margin-top: 2.5rem;
+}
+
+.pro__img{
+  width: calc(100% - 10rem);
+  margin: 5rem;
+}
+}
+
+@include desktop{
+.back-img{
+  width: 5rem;
+  height: 5rem;
+}
+
+        .pro__subtitle{
+            margin: 2rem 4rem;
+        }
+        
+.button{ font-weight: 800;}   
+
+}
+
+@include desktop-xxl{
+   .pro{
+    
+    &__img{
+    width: calc(100% - 20rem);
+    margin: 5rem 10rem;
+    margin-bottom: 10rem;
+   }
+
+   &__subtitle{
+    margin:3rem 7.5rem;
+
+}
+
+  }
+}
+
+@include desktop-ultra{
+  .pro{
+    &__title{
+    }
+    &__subtitle{
+      width: calc(100% - 60rem);
+      margin: 5rem 30rem;
+    }
+    &__img{
+      width: calc(100% - 60rem);
+      margin: 10rem 30rem;
+    }
+  }
+  .button{
+  padding: 1.5rem 4rem;
+  border-radius: 2.5rem;
+  font-size: 2rem;
+  }
+  .back-img{
+  width: 7rem;
+  height: 7rem;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+}
