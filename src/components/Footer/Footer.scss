@@ -87,35 +87,33 @@ li > a {
   }
 }
 
-
-@include desktop-xxl{
-
-  .footer{
+@include desktop-xxl {
+  .footer {
     &__list-links {
       @include tablet-desktop-body-copy-medium;
     }
-    
-    &__logo{
+
+    &__logo {
       width: 5rem;
       height: 5rem;
     }
   }
 
-  .copy-right{
+  .copy-right {
     @include tablet-desktop-body-copy-light;
   }
 }
 
-@include desktop-ultra{
-  .footer{
+@include desktop-ultra {
+  .footer {
     &__list-links {
       @include tablet-desktop-body-copy-medium;
-    } 
-    &__title{
+    }
+    &__title {
       margin-bottom: 2rem;
     }
 
-    &__logo{
+    &__logo {
       width: 7rem;
       height: 7rem;
     }

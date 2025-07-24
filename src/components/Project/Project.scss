@@ -1,51 +1,41 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-.project{
-    width: 100%;
+.project {
+  width: 100%;
 
-        min-height: 100vh;
-        padding-top: 2rem;
-    padding-bottom: 5rem;
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
 
-    &__section{
-        color:$primary-white;
-            @include mobile-section-header;
-            text-align: center;
-            margin-bottom: 3rem;
-    }
+  &__section {
+    color: $primary-white;
+    @include mobile-section-header;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
 }
 
-
-@include tablet{
-
-    .project{
-        &__section{
-            @include tablet-desktop-title-normal;
-        }
+@include tablet {
+  .project {
+    &__section {
+      @include tablet-desktop-title-normal;
     }
-
-    // .masonry{
-    //     &__layout{
-    //     gap: 3.5rem;
-    //     }
-    //     &__item{
-    //         height: clamp(22rem, 60vw, 30rem);
-    //     }
-    // }
+  }
 }
 
-@include desktop{
-    
+@include desktop {
 }
 
-@include desktop-xxl{
-    .project__section{
-
-    }
+@include desktop-xxl {
+  .project {
+    margin-top: 14rem;
+  }
+  .project__section {
+  }
 }
 
-@include desktop-ultra{
-    .project__section{
-        padding-top: 5rem;
-    }
+@include desktop-ultra {
+  .project__section {
+    padding-top: 5rem;
+  }
 }

@@ -1,7 +1,7 @@
 import Tilt from "react-parallax-tilt";
 import "./MasonryLayout.scss";
-import { Navigate, useNavigate } from "react-router-dom";
-import { FaGithub, FaGlobe, FaExternalLinkAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { FaExternalLinkAlt } from "react-icons/fa";
 function MasonryLayout({ items }) {
   console.log("Items: ", items);
 
@@ -20,11 +20,11 @@ function MasonryLayout({ items }) {
           <article
             className="masonry__item"
             onClick={() => navigate(`/${item.slug}`)}>
+            <a href="/" className="arrow-icon">
+              <FaExternalLinkAlt className="icon" />
+              <span className="arrow-details">More details</span>
+            </a>
             <div className="img__project">
-              <a href="/" className="arrow-icon">
-                <FaExternalLinkAlt className="icon" />
-                <span className="arrow-details">More details</span>
-              </a>
               <img
                 src={item.img_url}
                 alt="project-image"
@@ -35,14 +35,6 @@ function MasonryLayout({ items }) {
             <h2 className="project__title">{item.title}</h2>
             <div className="project__concept">
               <p className="project__text"> {item.concept}</p>
-              {/* <div className="link">
-              <a href={item.gitUrl} className="project__link">
-                <FaGithub className="github-icon" size={24} />
-              </a>
-              <a href={item.link} className="project__link">
-                <FaGlobe className="globe-icon" size={24} />
-              </a>
-            </div> */}
             </div>
             <div className="stack">
               <ul className="stack__list">
@@ -55,7 +47,6 @@ function MasonryLayout({ items }) {
             </div>
           </article>
         </Tilt>
-        // </div>
       ))}
     </div>
   );

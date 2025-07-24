@@ -1,4 +1,3 @@
-import "./App.scss";
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,21 +14,6 @@ function App() {
         <Route path="/:slug" element={<DetailsPage />} />
       </Routes>
     </Router>
-
-    // <>
-    //   {/* <GalaxyParticles /> */}
-    //   <section className="app__container">
-    //     <GalaxyParticles />
-    //     <NavBar />
-    //     <AboutMe />
-    //     <Project />
-    //     {/* <TechStackSection /> */}
-    //     <TechStackSection />
-    //     <DetailsPage />
-    //     <Contact />
-    //     <Footer />
-    //   </section>
-    // </>
   );
 }
 

@@ -37,11 +37,17 @@ function AboutMe() {
       <h1 className="about__title">Jenny Le</h1>
       <h2 className="about__text">Full-Stack Software Developer</h2>
       <p className="about__para">
-        I'm a creative and driven Computer Systems Technology student from
-        Sheridan College and BrainStation, with 7+ years in customer-facing
-        roles. I love building things—whether through code, design, or DIY—and
-        enjoy blending tech with creativity while learning and growing with
-        others.
+        I'm a creative and driven Computer Systems Technology graduate from
+        Sheridan College and BrainStation, with over 7+ years of experience in
+        customer-facing roles. I love building things—whether it's through code,
+        design, or DIY projects—and I’m passionate about blending tech with
+        creativity. I’m always learning, growing, and looking to collaborate
+        with others who share a love for innovation.
+      </p>
+      <p className="about__para">
+        If you're working on something exciting, have advice to share, or just
+        want to chat about tech and creativity, feel free to connect with me on
+        LinkedIn or check out my work on Github. I'd love to hear from you!
       </p>
     </section>
   );

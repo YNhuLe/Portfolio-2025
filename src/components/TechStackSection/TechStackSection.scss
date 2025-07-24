@@ -1,30 +1,35 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.stack-icon{
+.stack
+{
+  &-icon {
   width: 100%;
   height: 12rem;
-  // background-color: aqua;
+}
+
+&__text{
+@include mobile-section-header;
+    color: $primary-white;
+    text-align: center;
+}
 }
 .tech {
   min-height: 35rem;
-  &__title{
+  &__title {
     text-align: center;
     @include mobile-section-header;
     color: $primary-white;
     margin-bottom: 3rem;
   }
 
-  &__section{
-overflow: hidden;
-//  position: absolute;
- height: 35rem;
-  // height: 100%;
-  // background-color: rgba(28, 27, 29, 0.7); 
+  &__section {
+    overflow: hidden;
+    height: 35rem;
+  }
 }
-}
-.stack__title{
-@include mobile-subheader-header;
+.stack__title {
+  @include mobile-subheader-header;
   color: $third-grey;
   text-align: center;
   margin: 3rem 0 1.5rem 0;
@@ -32,44 +37,49 @@ overflow: hidden;
 .canvas {
   width: 100%;
   height: 35rem;
-  // max-width: 60rem;
   margin: 0 auto;
   display: block;
-  // background-color: rgba(86, 84, 88, 0.7); 
 }
 @include tablet {
- .tech {
-  &__title{
-@include tablet-desktop-title-normal;
-margin-top: 8rem;
+  .tech {
+    &__title {
+      @include tablet-desktop-title-normal;
+      margin-top: 8rem;
+    }
   }
-}}
+
+  .stack__text {
+    @include tablet-desktop-title-normal;
+  }
+}
 
 @include desktop {
-  .stack__title{
+  .stack__title {
     @include tablet-desktop-heading-medium;
     font-weight: 500;
   }
- .tech {
-  &__title{
-
+  .tech {
+    &__title {
+    }
   }
-}}
-
-
-@include desktop-xxl{
-.stack__title{
-  @include tablet-desktop-wordmark-regular;
-  font-weight: 500;
 }
 
+@include desktop-xxl {
+  .stack__title {
+    @include tablet-desktop-wordmark-regular;
+    font-weight: 500;
+  }
+
+  .stack__text {
+    margin-bottom: 13rem;
+    color: $primary-white;
+    text-align: center;
+  }
 }
 
-
-@include desktop-ultra{
-  .stack__title{
+@include desktop-ultra {
+  .stack__title {
     @include tablet-desktop-heading-medium;
     font-weight: 500;
   }
-  
-  }
+}
