@@ -29,11 +29,6 @@ const EarthCanvas = () => {
   }, []);
 
   const scale = useMemo(() => {
-    // if (windowWidth < 768) return 3.5;
-    // if (windowWidth < 1280) return 3;
-    // if (windowWidth < 1536) return 3;
-    // if (windowWidth < 2560) return 6.5;
-    // return 3;
     return clamp(3, windowWidth / 300, 5.5);
   }, [windowWidth]);
   const cameraPosition = useMemo(() => {
@@ -57,7 +52,6 @@ const EarthCanvas = () => {
         fov: 45,
         near: 0.1,
         far: 200,
-        // position: [-4, 3, 6],
         position: cameraPosition,
       }}>
       <Suspense fallback={<CanvasLoader />}>

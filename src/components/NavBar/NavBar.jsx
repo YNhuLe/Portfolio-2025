@@ -8,52 +8,51 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-useEffect(() => {
-  const handleScreenSize = () => {
-    setIsMobile(window.innerWidth <= 768);
-  };
-  window.addEventListener("resize", handleScreenSize);
-  return () => window.removeEventListener("resize", handleScreenSize);
-}, []);
-return (
-  <div className="body__container">
-    <a href="./" className="logo__link">
-      <img src={logo} alt="logo" className="logo" loading="lazy" />
-    </a>
-    <div className="nav-bar">
-      {isMobile ? (
-        <motion.nav
-          initial={false}
-          animate={isOpen ? "open" : "closed"}
-          custom={height}
-          ref={containerRef}
-          className="nav">
-          <div className="nav_div">
-            <motion.div className="background" variants={sidebarVariants} />
-            <AnimatePresence>
-              <Navigation
-                onClose={() => setIsOpen(false)}
-                isOpen={isOpen}
-                isMobile={true}
-              />
-            </AnimatePresence>
-            <MenuToggle toggle={() => setIsOpen(!isOpen)} />
-          </div>
-        </motion.nav>
-      ) : (
-        <Navigation isMobile={false} />
-      )}
+  useEffect(() => {
+    const handleScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleScreenSize);
+    return () => window.removeEventListener("resize", handleScreenSize);
+  }, []);
+  return (
+    <div className="body__container">
+      <a href="./" className="logo__link">
+        <img src={logo} alt="logo" className="logo" loading="lazy" />
+      </a>
+      <div className="nav-bar">
+        {isMobile ? (
+          <motion.nav
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
+            custom={height}
+            ref={containerRef}
+            className="nav">
+            <div className="nav_div">
+              <motion.div className="background" variants={sidebarVariants} />
+              <AnimatePresence>
+                <Navigation
+                  onClose={() => setIsOpen(false)}
+                  isOpen={isOpen}
+                  isMobile={true}
+                />
+              </AnimatePresence>
+              <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+            </div>
+          </motion.nav>
+        ) : (
+          <Navigation isMobile={false} />
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
 }
 
 const sidebarVariants = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 10}rem at 12rem 3.5rem)`,
-    // clipPath: `circle(8vw at 82vw 2.5vh)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -62,7 +61,6 @@ const sidebarVariants = {
   }),
   closed: {
     clipPath: "circle(.1rem at 16.5rem 3.5rem)",
-    // clipPath: `circle(8vw at 82vw 2.5vh)`,
     transition: {
       delay: 0.2,
       type: "spring",

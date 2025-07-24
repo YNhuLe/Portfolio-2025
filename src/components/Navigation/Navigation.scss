@@ -1,8 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 .list {
-  // position: relative;
-  position:absolute;
+  position: absolute;
 
   @include flex(column, center, center);
   width: 100%;
@@ -10,59 +9,55 @@
   padding-left: 0;
   list-style: none;
   margin: 0;
-z-index : 999;
-position: fixed;
+  z-index: 999;
+  position: fixed;
 
   top: 0;
 
   height: 100vh;
   left: 0;
-
 }
 
-.desktop-link{
+.desktop-link {
   color: rgba(241, 242, 245, 0.5);
 }
 
-@include tablet{
-.nav__list{
-  @include flex(row, center, center);
-  gap: .2rem;
-  margin-right: 1.5rem;
-  width: 30rem;
-}
-  .desktop-link{
-  cursor: pointer;
-   @include tablet-desktop-body-copy-medium;
-   @include flex(row, center, center);
-
+@include tablet {
+  .nav__list {
+    @include flex(row, center, center);
+    gap: 0.2rem;
+    margin-right: 1.5rem;
+    width: 30rem;
+  }
+  .desktop-link {
+    cursor: pointer;
+    @include tablet-desktop-body-copy-medium;
+    @include flex(row, center, center);
   }
 }
-@include desktop{
- 
-  .desktop-link{
-  
-   @include tablet-desktop-body-copy-medium;
-          font-size: 1.5rem;
-          transition: color .3s ease-in;
+@include desktop {
+  .desktop-link {
+    @include tablet-desktop-body-copy-medium;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in;
   }
-   .desktop-link:hover{
-color:$primary-white
-   }
-  .nav__list{
-      margin-right: 5rem;
+  .desktop-link:hover {
+    color: $primary-white;
+  }
+  .nav__list {
+    margin-right: 5rem;
   }
 }
 
-@include desktop-xxl{
-  .nav__list{
+@include desktop-xxl {
+  .nav__list {
     margin-right: 10rem;
     gap: 4.5rem;
   }
 }
 
-@include desktop-ultra{
-  .nav__list{
+@include desktop-ultra {
+  .nav__list {
     margin-right: 10rem;
     gap: 4.5rem;
   }
