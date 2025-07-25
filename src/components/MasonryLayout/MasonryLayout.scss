@@ -225,7 +225,7 @@
     }
 
     &__title {
-      margin: 2rem 0;
+      margin: 1.5rem 0;
     }
   }
   .masonry__item {
@@ -239,7 +239,7 @@
     padding-top: 2rem;
   }
   .stack {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   .arrow-icon{
@@ -266,6 +266,7 @@
 
 .stack{
    margin-top: 0;
+   padding-bottom: 1.5rem;
 }
 }
 @include desktop-ultra {
@@ -279,5 +280,9 @@
         // height: clamp(22rem, 60vw, 42rem);
     width: clamp(30rem, 60vw, 31.5rem);
     }
+  }
+
+  .stack{
+    margin-bottom: 1.5rem;
   }
 }
