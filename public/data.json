@@ -1,28 +1,31 @@
 [
+
   {
     "id": "1",
-    "title": "Zodiac Wander",
-    "slug": "zodiac-web",
-    "concept": "Zodiac Wander - Discover your zodiac sign, connect with your birth flower, explore traits, and share thoughts with others on a cosmic journey.",
-    "tech_stack": ["React", "Express", "SCSS", "REST API"],
-    "img_url": "/images/zodiac.png",
-    "git_url": "https://github.com/YNhuLe/Pair-Programming",
+    "title": "Klear Digital",
+    "slug": "klear-digital",
+    "concept": "Klear Digital - A digital marketing agency specializing in innovative solutions to help businesses grow online.",
+    "tech_stack": ["React", "Tailwind", "Vercel Serverless Functions"],
+    "img_url": "/images/klear.png",
+    "git_url": "https://www.kleardigital.co/",
     "description": "Zodiac Wander is an interactive web app where users can discover their zodiac sign, connect with their unique birth flower, explore personality traits, and share reflections with others on a cosmic journey. \nBuilt with React, Express, SCSS, and a custom REST API, the platform offers a smooth and visually engaging experience that blends astrology, nature, and community.",
     "info": [
       {
-        "title": "Challenges.",
-        "content": "Data Structure Complexity: Zodiac content (sign traits, horoscopes, dates, compatibility, icons, comments) required a well-organized but extensible data format. A complicated .json file structure posed readability, maintenance, and scalability issues.",
-        "image": "/images/zodiac_challenges.png"
+        "title": "🚧 Challenges.",
+        "content":"xThe project was a frontend-only website, but the client still needed a working contact form that actually sends emails. \nThere was no backend in place, the domain was hosted on GoDaddy, and the site was deployed on Vercel, everything had to work smoothly across different services without adding unnecessary complexity.", 
+         "image": "/images/klear-challenge.png"
       },
       {
-        "title": "Solution & Implementations.",
-        "content": "Structured JSON Design: To address the complexity of handling detailed zodiac data, I implemented a JSON tree structure that allowed for logically nested and easily accessible information such as traits, compatibility, horoscopes, and user comments. This approach improved both maintainability and scalability.",
-        "image": "/images/zodiac_solution.png"
+        "title": "🛠️ Solution & Implementations.",
+        "content":"I used Vercel Serverless Functions as a lightweight backend to handle form submissions.\nBy integrating Resend as the email service, I was able to securely send emails without exposing API keys on the frontend.\nI also:\nConnected the GoDaddy domain to Vercel through DNS configuration 🌐\n\nHandled form validation and error states to ensure reliable delivery\n\nKept the setup simple, scalable, and easy to maintain ",
+          "image": "/images/zodiac_solution.png"
       },
       {
-        "title": "Results & Impacts.",
-        "content": "The clean and organized JSON structure not only simplified data access and management on the front end, but also laid a solid foundation for future scalability. This made it easier to maintain consistency across components and ensured a smooth transition path for integrating or migrating to a backend system later on.",
-        "image": "/images/zodiac_result.png"
+        "title": "🎉 Results & Impacts.",
+        "content": 
+
+        "The marketing agency now has a fully working contact form with real-time email delivery 📩\nNo traditional backend was needed, keeping costs and maintenance low. \nThe site feels more professional and trustworthy, helping the client capture more leads. \nThis project shows my ability to go beyond frontend work and use modern serverless tools to solve real-world problems 🚀",
+         "image": "/images/klear-email2.png"
       },
       {
         "title": "🚀 Future Improvements",
@@ -36,6 +39,7 @@
       "url": "https://www.youtube.com/watch?v=N6jknc-Xs4Q"
     }
   },
+  
   {
     "id": "2",
     "title": "Evererdant",
@@ -76,6 +80,43 @@
   },
   {
     "id": "3",
+    "title": "Zodiac Wander",
+    "slug": "zodiac-web",
+    "concept": "Zodiac Wander - Discover your zodiac sign, connect with your birth flower, explore traits, and share thoughts with others on a cosmic journey.",
+    "tech_stack": ["React", "Express", "SCSS", "REST API"],
+    "img_url": "/images/zodiac.png",
+    "git_url": "https://github.com/YNhuLe/Pair-Programming",
+    "description": "Zodiac Wander is an interactive web app where users can discover their zodiac sign, connect with their unique birth flower, explore personality traits, and share reflections with others on a cosmic journey. \nBuilt with React, Express, SCSS, and a custom REST API, the platform offers a smooth and visually engaging experience that blends astrology, nature, and community.",
+    "info": [
+      {
+        "title": "Challenges.",
+        "content": "Data Structure Complexity: Zodiac content (sign traits, horoscopes, dates, compatibility, icons, comments) required a well-organized but extensible data format. A complicated .json file structure posed readability, maintenance, and scalability issues.",
+        "image": "/images/zodiac_challenges.png"
+      },
+      {
+        "title": "Solution & Implementations.",
+        "content": "Structured JSON Design: To address the complexity of handling detailed zodiac data, I implemented a JSON tree structure that allowed for logically nested and easily accessible information such as traits, compatibility, horoscopes, and user comments. This approach improved both maintainability and scalability.",
+        "image": "/images/zodiac_solution.png"
+      },
+      {
+        "title": "Results & Impacts.",
+        "content": "The clean and organized JSON structure not only simplified data access and management on the front end, but also laid a solid foundation for future scalability. This made it easier to maintain consistency across components and ensured a smooth transition path for integrating or migrating to a backend system later on.",
+        "image": "/images/zodiac_result.png"
+      },
+      {
+        "title": "🚀 Future Improvements",
+
+        "content": "✅ Migrate dynamic content like comments and horoscopes to a backend PostgreSQL.\n✅ Focus on mobile-first responsiveness.\n✅ Add an AI chatbot for real-time horoscope and flower personality interactions.\n✅ Enable users to upload their own zodiac-related photos or messages.",
+
+        "image": "/images/zodiac_future.png"
+      }
+    ],
+    "video_demo": {
+      "url": "https://www.youtube.com/watch?v=N6jknc-Xs4Q"
+    }
+  },
+  {
+    "id": "4",
     "title": "Tralli",
     "slug": "tralli-web",
     "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🔨",

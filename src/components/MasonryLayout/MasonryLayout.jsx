@@ -3,7 +3,7 @@ import "./MasonryLayout.scss";
 import { useNavigate } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
 function MasonryLayout({ items }) {
-  console.log("Items: ", items);
+  // console.log("Items: ", items);
 
   const navigate = useNavigate();
   return (
