@@ -8,7 +8,8 @@
     "tech_stack": ["React", "Tailwind", "Vercel Serverless Functions"],
     "img_url": "/images/klear.png",
     "git_url": "https://www.kleardigital.co/",
-    "description": "Zodiac Wander is an interactive web app where users can discover their zodiac sign, connect with their unique birth flower, explore personality traits, and share reflections with others on a cosmic journey. \nBuilt with React, Express, SCSS, and a custom REST API, the platform offers a smooth and visually engaging experience that blends astrology, nature, and community.",
+    "description": 
+  "Klear Digital is a modern marketing agency website built as a portfolio project using React.js and Tailwind CSS for a responsive, component-based UI. The site is deployed on Vercel, with Vercel Serverless Functions powering backend logic and Resend integrated for email handling. The custom domain is managed through GoDaddy, demonstrating a full end-to-end production setup.",
     "info": [
       {
         "title": "🚧 Challenges.",
@@ -18,25 +19,25 @@
       {
         "title": "🛠️ Solution & Implementations.",
         "content":"I used Vercel Serverless Functions as a lightweight backend to handle form submissions.\nBy integrating Resend as the email service, I was able to securely send emails without exposing API keys on the frontend.\nI also:\nConnected the GoDaddy domain to Vercel through DNS configuration 🌐\n\nHandled form validation and error states to ensure reliable delivery\n\nKept the setup simple, scalable, and easy to maintain ",
-          "image": "/images/zodiac_solution.png"
+          "image": "/images/vercel-serverless.png"
       },
       {
         "title": "🎉 Results & Impacts.",
         "content": 
 
-        "The marketing agency now has a fully working contact form with real-time email delivery 📩\nNo traditional backend was needed, keeping costs and maintenance low. \nThe site feels more professional and trustworthy, helping the client capture more leads. \nThis project shows my ability to go beyond frontend work and use modern serverless tools to solve real-world problems 🚀",
+        "The marketing agency now has a fully working contact form with real-time email delivery. 📩\nNo traditional backend was needed, keeping costs and maintenance low. \nThe site feels more professional and trustworthy, helping the client capture more leads. \nThis project shows my ability to go beyond frontend work and use modern serverless tools to solve real-world problems 🚀",
          "image": "/images/klear-email2.png"
       },
       {
         "title": "🚀 Future Improvements",
 
-        "content": "✅ Migrate dynamic content like comments and horoscopes to a backend PostgreSQL.\n✅ Focus on mobile-first responsiveness.\n✅ Add an AI chatbot for real-time horoscope and flower personality interactions.\n✅ Enable users to upload their own zodiac-related photos or messages.",
-
-        "image": "/images/zodiac_future.png"
+        "content":
+         "✅ Add case study pages/sections to showcase the agency's work and results.\n✅ Implement a blog for sharing marketing insights and tips.\n✅ Integrate a chatbot for instant visitor engagement and lead capture.\n✅ Optimize SEO to increase organic traffic and visibility.",
+        "image": "/images/klear-improvement.png"
       }
     ],
     "video_demo": {
-      "url": "https://www.youtube.com/watch?v=N6jknc-Xs4Q"
+      "url": "https://www.kleardigital.co/"
     }
   },
   
