@@ -1,14 +1,64 @@
 import "./AboutMe.scss";
-import headshot from "/images/headshot.png";
+import headshot from "/images/headshot.jpg";
 import Tilt from "react-parallax-tilt";
 import githubIcon from "/logos/git3D.png";
 import linked from "/logos/linked.png";
+import { Github, Linkedin, Mail, Sparkles ,Layers} from "lucide-react";
+ 
+import { Link as ScrollLink } from "react-scroll"; 
 function AboutMe() {
   return (
     <section className="about" id="about">
-      <div className="headshot">
-        <img src={headshot} alt="headhot_img" className="headshot__img" />
+      <div className="about-badge">
+        <span className="about-badge__dot">
+          <span className="about-badge__ping"></span>
+          <span className="about-badge__circle"></span>
+        </span>
+        Ready for new challenges!
       </div>
+
+      <div className="headshot">
+        <img src={headshot} alt="headshot_img" className="headshot__img" />
+      </div>
+
+      <div className="grid-bg"></div>
+      <h1 className="about__title">
+        Jenny <span className="about__last-name">Le</span>
+      </h1>
+      <h2 className="about__text">Full-Stack Software Engineer</h2>
+      <p className="about__para">
+        I'm a Computer Systems Technology grad with 7+ years in customer-facing
+        roles. I love building things—whether it's code, design, or DIY
+        projects—and I'm all about blending tech with creativity. Always
+        learning, always looking to collaborate.
+      </p>
+      <p className="about__para">
+        Working on something cool? Have advice to share? Let's connect on
+        LinkedIn or check out my work on Github. I'd love to chat!
+      </p>
+
+<div className="cta">
+  <ScrollLink to="contact" smooth={true} duration={500}   onClick={() => {
+    window.history.pushState(null, "", `#contact`);
+  }} className="cta__primary">
+    <div className="cta__bg"></div>
+    <div className="cta__glow"></div>
+
+    <span className="cta__icon">
+      <Sparkles />
+    </span>
+    <span className="cta__text">Get in Touch</span>
+  </ScrollLink>
+
+  <ScrollLink to="projects" smooth={true} duration={500}   onClick={() => {
+    window.history.pushState(null, "", `#projects`);
+  }} className="cta__secondary">
+    <span className="cta__icon">
+      <Layers />
+    </span>
+    <span>View Projects</span>
+  </ScrollLink>
+</div>
       <div className="about__icon">
         <Tilt
           glareEnable={true}
@@ -16,9 +66,13 @@ function AboutMe() {
           scale={1.05}
           transitionSpeed={250}
           tiltMaxAngleX={15}
-          tiltMaxAngleY={15}>
+          tiltMaxAngleY={15}
+        >
           <a href="https://github.com/YNhuLe">
-            <img src={githubIcon} alt="github" className="header_icon" />
+            {/* <img src={githubIcon} alt="github" className="header_icon" />
+             */}
+            <Github className="header_icon" />
+            <span className="header__text">Github</span>
           </a>
         </Tilt>
         <Tilt
@@ -27,28 +81,29 @@ function AboutMe() {
           scale={1.05}
           transitionSpeed={250}
           tiltMaxAngleX={15}
-          tiltMaxAngleY={15}>
+          tiltMaxAngleY={15}
+        >
           <a href="https://www.linkedin.com/in/jennynhuyle/">
-            <img src={linked} alt="linked" className="header_icon" />
+            {/* <img src={linked} alt="linked" className="header_icon" /> */}
+            <Linkedin className="header_icon" />
+            <span className="header__text">LinkedIn</span>
+          </a>
+        </Tilt>
+        <Tilt
+          glareEnable={true}
+          glareMaxOpacity={0.2}
+          scale={1.05}
+          transitionSpeed={250}
+          tiltMaxAngleX={15}
+          tiltMaxAngleY={15}
+        >
+          <a href="mailto:jennyle.tech@gmail.com" className="header_links">
+            {/* <img src={linked} alt="linked" className="header_icon" /> */}
+            <Mail className="header_icon" />
+            <span className="header__text">Email</span>
           </a>
         </Tilt>
       </div>
-
-      <h1 className="about__title">Jenny Le</h1>
-      <h2 className="about__text">Full-Stack Software Developer</h2>
-      <p className="about__para">
-        I'm a creative and driven Computer Systems Technology graduate from
-        Sheridan College and BrainStation, with over 7+ years of experience in
-        customer-facing roles. I love building things—whether it's through code,
-        design, or DIY projects—and I’m passionate about blending tech with
-        creativity. I’m always learning, growing, and looking to collaborate
-        with others who share a love for innovation.
-      </p>
-      <p className="about__para">
-        If you're working on something exciting, have advice to share, or just
-        want to chat about tech and creativity, feel free to connect with me on
-        LinkedIn or check out my work on Github. I'd love to hear from you!
-      </p>
     </section>
   );
 }
