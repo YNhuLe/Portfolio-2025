@@ -1,0 +1,48 @@
+import { div } from "motion/react-client";
+import "./ProjectCard.scss";
+import { ExternalLink, ArrowUpRight } from "lucide-react";
+function ProjectCard({ project }) {
+console.log(project);
+  return (
+    <div className="project_card">
+      {/* project images */}
+
+      <div className="project_card-group">
+        <img
+          src={project.img_url}
+          alt={project.title}
+          className="project_card-image"
+        />
+
+        {/* project number */}
+        <div className="project_card-number">{project.id}</div>
+
+        {/* top right icon */}
+
+        <div className="project_card-icon">
+          <ExternalLink className="project_card-icon-external" />
+        </div>
+        <div className="project_card-bottom" />
+      </div>
+      {/* Card content */}
+
+      <div className="project_card-content">
+        <div className="project_card-content-title">
+          <h2 className="project_card-content-header">{project.title}</h2>
+          <ArrowUpRight className="project_card-content-code2" />
+        </div>
+        <div>
+          <p className="project_card-content-concept">{project.concept}</p>
+          <ul className="project_card-content-stack">
+            {project?.tech_stack?.map((tech, index) => (
+              <li className="project_card-content-stack-item" key={index}>
+                {tech}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+export default ProjectCard;
