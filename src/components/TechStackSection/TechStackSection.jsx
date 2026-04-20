@@ -1,5 +1,12 @@
 import "./TechStackSection.scss";
 import TechStack from "../TechStack/TechStack";
+import {
+  SiReact, SiJavascript, SiTypescript, SiHtml5, SiCss,
+  SiTailwindcss, SiFigma, SiVite, SiNodedotjs, SiExpress,
+  SiPython, SiPostgresql, SiSequelize, SiGit, SiGithub,
+  SiNpm, SiVercel,
+} from "react-icons/si";
+import { div } from "motion/react-client";
 const frontendLogos = [
   { name: "REACT", url: "/logos/react.png" },
   { name: "JS", url: "/logos/js.png" },
@@ -35,38 +42,68 @@ const designLogos = [
   { name: "FIGMA", url: "/logos/figma.png" },
   { name: "CANVA", url: "/logos/canva.png" },
 ];
-
+const ROW1 = [
+  { Icon: SiReact,      name: "React",       color: "#61DAFB" },
+  { Icon: SiJavascript, name: "JavaScript",   color: "#F7DF1E" },
+  { Icon: SiTypescript, name: "TypeScript",   color: "#3178C6" },
+  { Icon: SiHtml5,      name: "HTML5",        color: "#E34F26" },
+  { Icon: SiCss,       name: "CSS3",         color: "#1572B6" },
+  { Icon: SiTailwindcss,name: "Tailwind",     color: "#06B6D4" },
+  { Icon: SiFigma,      name: "Figma",        color: "#F24E1E" },
+  { Icon: SiVite,       name: "Vite",         color: "#646CFF" },
+  { Icon: SiNodedotjs,  name: "Node.js",      color: "#339933" },
+];
+const ROW2 = [
+  { Icon: SiExpress,    name: "Express",      color: "#ffffff" },
+  { Icon: SiPython,     name: "Python",       color: "#3776AB" },
+  { Icon: SiPostgresql, name: "PostgreSQL",   color: "#4169E1" },
+  { Icon: SiSequelize,  name: "Sequelize",    color: "#52B0E7" },
+  { Icon: SiGit,        name: "Git",          color: "#F05032" },
+  { Icon: SiGithub,     name: "GitHub",       color: "#ffffff" },
+  { Icon: SiNpm,        name: "npm",          color: "#CB3837" },
+  { Icon: SiVercel,     name: "Vercel",       color: "#ffffff" },
+];
 function TechStackSection() {
+
+  const r1 = [...ROW1, ...ROW1];
+  const r2 = [...ROW2, ...ROW2];
+
   return (
-    <section className="techstack" id="techstack">
-      <h2 className="stack__text">Tech Stack</h2>
-
-      <div className="frontend">
-        <h1 className="stack__title">Front-End</h1>
-        <TechStack logos={frontendLogos} />
+    <section className="stack" id="techstack">
+      <div className="stack__breakline"/>
+      <div className="stack__title-container">
+  <h2 className="stack__title-container-headline"> Stack</h2>
+        <div className="stack__title-container-breakline2"></div>
+        <span className="stack__title-container-stack">{ROW1.length + ROW2.length} Technologies</span>
       </div>
+    <div className="stack__row-left">
 
-      <div className="backend">
-        <h1 className="stack__title">Back-End</h1>
-        <TechStack logos={backendLogos} />
-      </div>
+{r1.map((tech, i) => (
+            <TechIcon key={i} tech={tech} />
+          ))}</div>
 
-      <div className="database">
-        <h1 className="stack__title">Database</h1>
-        <TechStack logos={databaseLogos} />
-      </div>
+           <div className="stack__row-right">
 
-      <div className="devops">
-        <h1 className="stack__title">DevOps</h1>
-        <TechStack logos={devOpsLogos} />
-      </div>
-
-      <div className="design">
-        <h1 className="stack__title">Design tech</h1>
-        <TechStack logos={designLogos} />
-      </div>
+{r2.map((tech, i) => (
+            <TechIcon key={i} tech={tech} />
+          ))}</div>
     </section>
   );
+}
+
+function TechIcon({ tech: { Icon, name, color } }){
+  return (
+<div className="stack__icon group">
+  <Icon className="stack__icon-symbol" color={color} style={{ "--glow": color }}/>
+  <span className="stack__icon-name">{name}</span>
+
+  <div className="stack__tooltip">
+
+    {name}
+  </div>
+</div>
+
+  )
 }
 
 export default TechStackSection;
