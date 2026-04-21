@@ -1,5 +1,4 @@
 import "./TechStack.scss";
-import react from "../../../public/logos/react.png";
 
 
 function TechStack({ logos }) {

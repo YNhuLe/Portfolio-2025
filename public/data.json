@@ -1,11 +1,13 @@
 [
 
   {
-    "id": "1",
+    "id": "01",
     "title": "Klear Digital",
     "slug": "klear-digital",
+    "color": "from-emerald-600/20 to-green-800/20",
+    "glowColor": "from-emerald-400/50 to-green-600/50",
     "concept": "Klear Digital - A digital marketing agency specializing in innovative solutions to help businesses grow online.",
-    "tech_stack": ["React", "Tailwind", "Vercel Serverless Functions"],
+    "tech_stack": ["React", "Tailwind", "Resend", "GoDaddy", "REST API", "Vercel Serverless Functions"],
     "img_url": "/images/klear.png",
     "git_url": "https://www.kleardigital.co/",
     "description": 
@@ -42,9 +44,11 @@
   },
   
   {
-    "id": "2",
+    "id": "02",
     "title": "Evererdant",
     "slug": "evererdant-web",
+    "color":"from-emerald-600/20 to-green-800/20",
+    "glowColor": "from-emerald-400/50 to-green-600/50",
     "concept": "Eververdant is a mobile-first web app that connects plant lovers to buy, sell, and share leafy tips with a thriving green-thumbed community.",
     "tech_stack": ["React", "TypeScript", "Tailwind", "AWS", "PostgreSQL"],
     "img_url": "/images/evererdant.png",
@@ -80,9 +84,12 @@
     }
   },
   {
-    "id": "3",
+    "id": "03",
     "title": "Zodiac Wander",
     "slug": "zodiac-web",
+    "color": "from-purple-600/20 to-indigo-800/20",
+    "glowColor": "from-purple-400/50 to-indigo-600/50",
+
     "concept": "Zodiac Wander - Discover your zodiac sign, connect with your birth flower, explore traits, and share thoughts with others on a cosmic journey.",
     "tech_stack": ["React", "Express", "SCSS", "REST API"],
     "img_url": "/images/zodiac.png",
@@ -117,9 +124,11 @@
     }
   },
   {
-    "id": "4",
+    "id": "04",
     "title": "Tralli",
     "slug": "tralli-web",
+    "color": "from-emerald-600/20 to-green-800/20",
+    "glowColor": "from-emerald-400/50 to-green-600/50",
     "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🔨",
     "tech_stack": ["Express", "React", "SCSS", "Firebase", "APIs", "MySQL"],
     "img_url": "/images/tralli2.png",

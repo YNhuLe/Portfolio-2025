@@ -27,7 +27,7 @@ function Home() {
   return (
     <>
       <section className="app__container">
-        <GalaxyParticles />
+        {/* <GalaxyParticles /> */}
         <NavBar />
         <AboutMe />
         <Project />

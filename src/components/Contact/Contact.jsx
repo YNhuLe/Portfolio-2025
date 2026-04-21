@@ -5,6 +5,7 @@ import validator from "validator";
 import ContactModal from "../ContactModal/ContactModal";
 import EarthCanvas from "../Earth/Earth";
 import emailjs from "@emailjs/browser";
+import {Mail} from "lucide-react";
 function Contact() {
   const formRef = useRef();
   const [name, setName] = useState("");
@@ -92,7 +93,13 @@ function Contact() {
   };
   return (
     <div className="contact">
+        <div className="contact__feature">
+        <Mail className="contact__feature-icon" />
+        
+        <p className="contact__feature-title">Let's Connect</p>
+      </div>
       <h2 className="contact__text">Get In Touch</h2>
+      <p className="contact__text-subtitle">Have a project in mind or just want to say hi? My inbox is always open.</p>
       <div className="contact__wrapper">
         <div className="contact__earth">
           <EarthCanvas />
@@ -179,7 +186,7 @@ function Contact() {
             </div>
           </div>
           <button type="submit" className="contact__button" disabled={loading}>
-            {loading ? "Sending... " : "Send"}
+            {loading ? "Sending... " : "Send Message"}
           </button>
         </form>
         <ContactModal
