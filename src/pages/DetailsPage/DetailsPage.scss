@@ -143,12 +143,19 @@
       margin: 3rem 7.5rem;
     }
   }
+
+  .icon{
+    &_left {
+      width: 3rem;
+      height: 3rem;
+      color: $primary-white;
+    }
+  }
 }
 
 @include desktop-ultra {
   .pro {
-    &__title {
-    }
+  
     &__subtitle {
       width: calc(100% - 60rem);
       margin: 5rem 30rem;

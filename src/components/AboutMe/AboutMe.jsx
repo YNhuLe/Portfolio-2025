@@ -3,7 +3,7 @@ import headshot from "/images/headshot.jpg";
 import Tilt from "react-parallax-tilt";
 import githubIcon from "/logos/git3D.png";
 import linked from "/logos/linked.png";
-import { Github, Linkedin, Mail, Sparkles ,Layers} from "lucide-react";
+import { Github, Linkedin, Mail, Sparkles ,Layers, MessageCircle} from "lucide-react";
  
 import { Link as ScrollLink } from "react-scroll"; 
 function AboutMe() {
@@ -45,7 +45,7 @@ function AboutMe() {
     <div className="cta__glow"></div>
 
     <span className="cta__icon">
-      <Sparkles />
+      <MessageCircle />
     </span>
     <span className="cta__text">Get in Touch</span>
   </ScrollLink>
@@ -68,9 +68,8 @@ function AboutMe() {
           tiltMaxAngleX={15}
           tiltMaxAngleY={15}
         >
-          <a href="https://github.com/YNhuLe">
-            {/* <img src={githubIcon} alt="github" className="header_icon" />
-             */}
+          <a href="https://github.com/YNhuLe" className="header_links">
+         
             <Github className="header_icon" />
             <span className="header__text">Github</span>
           </a>
@@ -83,8 +82,7 @@ function AboutMe() {
           tiltMaxAngleX={15}
           tiltMaxAngleY={15}
         >
-          <a href="https://www.linkedin.com/in/jennynhuyle/">
-            {/* <img src={linked} alt="linked" className="header_icon" /> */}
+          <a href="https://www.linkedin.com/in/jennynhuyle/" className="header_links">  
             <Linkedin className="header_icon" />
             <span className="header__text">LinkedIn</span>
           </a>
@@ -98,7 +96,6 @@ function AboutMe() {
           tiltMaxAngleY={15}
         >
           <a href="mailto:jennyle.tech@gmail.com" className="header_links">
-            {/* <img src={linked} alt="linked" className="header_icon" /> */}
             <Mail className="header_icon" />
             <span className="header__text">Email</span>
           </a>

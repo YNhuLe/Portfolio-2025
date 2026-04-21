@@ -22,6 +22,7 @@
 
 @include tablet {
   .info__card {
+      @include flex(row, space-between, center); 
     margin: 0 auto;
     margin-bottom: 3rem;
     width: calc(100% - 6rem);
@@ -45,9 +46,6 @@
     &-text {
       @include flex(column, flex-start, flex-start);
     }
-
-    @include flex(row, space-between, center);
-    gap: 1rem;
     &.reverse {
       // flex-direction: row-reverse;
       @include flex(row-reverse, center, center);
@@ -89,7 +87,7 @@
 .info__card {
   &-title {
     @include tablet-desktop-heading-medium;
-    font-weight: 700;
+    // font-weight: 700;
   }
   &-content {
   }

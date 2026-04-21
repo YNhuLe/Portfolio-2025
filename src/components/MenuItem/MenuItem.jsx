@@ -28,12 +28,13 @@ function MenuItem({ itemName, id, onClose, onClick }) {
       <Link
         to={id}
         spy={true}
+        hashSpy={true}
         smooth={true}
         offset={-100}
         duration={500}
         onClick={onClick}
         className="text-placeholder">
-        {itemName}
+       {itemName}
       </Link>
     </motion.li>
   );

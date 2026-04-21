@@ -7,6 +7,7 @@ import goback from "../../assets/icons/goback.png";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import GalaxyParticles from "../../components/GalaxyParticles/GalaxyParticles";
+import { ChevronLeft } from 'lucide-react';
 function DetailsPage() {
   const { project, loading, error } = useProjectContext();
   const { slug } = useParams();
@@ -21,7 +22,7 @@ function DetailsPage() {
         <GalaxyParticles />
       </div>
       <a href="./" className="back-icon">
-        <img src={goback} alt="go-back icon" className="back-img" />
+             <ChevronLeft className="icon_left"/>
       </a>
       <div className="pro__details">
         <h1 className="pro__title">{pro.title}</h1>
