@@ -6,6 +6,7 @@ import ContactModal from "../ContactModal/ContactModal";
 import EarthCanvas from "../Earth/Earth";
 import emailjs from "@emailjs/browser";
 import {Mail} from "lucide-react";
+import ContactSocial from "../ContactSocial/ContactSocial";
 function Contact() {
   const formRef = useRef();
   const [name, setName] = useState("");
@@ -195,6 +196,7 @@ function Contact() {
           response={{ name: modalData.name, text: modalData.text }}
         />
       </div>
+      <ContactSocial />
     </div>
   );
 }

@@ -62,6 +62,7 @@
     @include mobile-body-copy;
     color: $primary-white;
     transition: transform 0.3s ease-in-out;
+    border: none;
   }
 
   &__button:hover {
@@ -71,16 +72,16 @@
 
   &__form {
     min-height: 55vh;
-    background-color: rgba($card-color, 0.05);
+    background-color: rgba($primary-green, 0.05);
     color: $primary-white;
     @include mobile-body-copy;
     @include flex(column, center, center);
     margin: 2rem 1rem;
     row-gap: 1.5rem;
     padding: 1rem;
-    border-radius: 0.7rem;
-    border: 0.0625rem solid rgba($card-color, 0.1);
-    width: 100%;
+    border-radius: 0.9rem;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+
     &-title {
       @include mobile-subheader-header;
       font-size: 1.5rem;
@@ -97,6 +98,7 @@
       background-color: hsla(0, 0%, 7%, 0.2);
       color: $primary-white;
       width: 15rem;
+      border: solid .5px rgba(255, 255, 255, 0.2);
     }
     &-property textarea {
       padding: 4rem 2rem;
