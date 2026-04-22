@@ -1,18 +1,30 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 .footer {
-  margin: 3rem 1rem;
-  margin-bottom: 0;
-  border-top-style: outset;
-  border-width: 0.1rem;
-  margin-top: 10rem;
+  gap: 0.5rem;
+  margin-top: 5rem;
+  margin-bottom: .5rem;
   border-color: $third-grey;
+  @include flex(row, center, center);
+  &__section {
+    @include flex(row, center, center);
+    gap: 0.5rem;
+     margin-bottom: 2rem;
+    &-icon {
+      color: $secondary-grey;
+      width: 0.8rem;
+      height: 0.8rem;
+      @include flex(inline-flex, center, center);
+    }
+
+
+  }
   &__logo {
-    width: 3rem;
-    height: 3rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     z-index: 999;
-    margin: 3rem 0;
+    margin: 0;
   }
   &_icon {
     width: 2rem;
@@ -50,10 +62,9 @@ li > a {
 
 .copy-right {
   @include mobile-footer-copy;
-  color: $third-grey;
+  color: rgba($third-grey, 0.5);
   text-align: center;
   margin-bottom: 0;
-  padding-bottom: 1rem;
 }
 @include tablet {
   .footer {
