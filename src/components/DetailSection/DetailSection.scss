@@ -20,9 +20,84 @@
   }
 }
 
+.fea {
+  margin-bottom: 2rem;
+  &__id {
+    color: rgba($secondary-grey, 0.7);
+    @include mobile-body-copy;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    @include mobile-card-header-details;
+
+    font-weight: 400;
+    color: $third-grey;
+    margin-bottom: 0;
+  }
+
+  &__description {
+    @include mobile-body-copy;
+    color: rgba($secondary-grey, 0.7);
+  }
+}
+
+.system {
+  width: 100%;
+  // height: fit-content;
+  position: relative;
+  
+  &__card {
+    @include flex(row,flex-start , flex-start);
+    gap: 1rem;
+    &-marker{
+      @include flex(row, center, center);
+      gap: 1rem;
+      position: relative;
+    }
+    &-id {
+      color: rgba($primary-green, 0.7);
+      @include mobile-body-copy;
+      text-transform: uppercase;
+      margin-bottom: 0;
+margin-top: 1rem;
+      padding: 0.35rem 0.5rem;
+      border: solid 1px $primary-green;
+      border-radius: 0.5rem;
+    
+      background-color: rgba($primary-green, 0.1);
+    }
+&-line {
+  position: absolute;
+   top:0;
+ bottom: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba($primary-green, 0.3);
+
+    left: 50%;
+ top:0;
+ bottom: 0;
+  }
+    &-title {
+      @include mobile-card-header-details;
+
+    margin-top: 1rem;
+      color: $third-grey;
+ 
+    }
+
+    &-description {
+      @include mobile-body-copy;
+      color: rgba($secondary-grey, 0.7);
+      margin-top: 1rem;
+    }
+  }
+}
 @include tablet {
   .info__card {
-      @include flex(row, space-between, center); 
+    @include flex(row, space-between, center);
     margin: 0 auto;
     margin-bottom: 3rem;
     width: calc(100% - 6rem);
