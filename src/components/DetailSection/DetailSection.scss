@@ -4,19 +4,23 @@
 .info__card {
   margin: 1rem;
   margin-top: 4rem;
-  &-img {
-    border-radius: 1rem;
-    width: 100%;
-    position: relative;
-    z-index: 1;
+  @include flex(row, center, flex-start);
+  &-header {
+    @include mobile-card-header-details;
+
+    color: $primary-white;
   }
-  &-content {
-    color: $third-grey;
+  &-id {
+    @include mobile-card-number;
+    opacity: 0.45;
+
+    color: rgba($third-grey, 0.3);
   }
 
-  &-title {
-    font-weight: 700;
-    color: $primary-white;
+  &-content {
+    @include mobile-subheader-header;
+    color: rgba($third-grey, 0.5);
+    @include flex(column, center, center);
   }
 }
 
@@ -45,47 +49,44 @@
 
 .system {
   width: 100%;
-  // height: fit-content;
+  height: 100%;
   position: relative;
-  
+
   &__card {
-    @include flex(row,flex-start , flex-start);
+    @include flex(row, flex-start, flex-start);
     gap: 1rem;
-    &-marker{
+    &-marker {
       @include flex(row, center, center);
       gap: 1rem;
-      position: relative;
+      // position: relative;
+    }
+
+    &-border {
+      border: solid 1px;
+      border-radius: 0.5rem;
     }
     &-id {
-      color: rgba($primary-green, 0.7);
       @include mobile-body-copy;
       text-transform: uppercase;
       margin-bottom: 0;
-margin-top: 1rem;
-      padding: 0.35rem 0.5rem;
-      border: solid 1px $primary-green;
-      border-radius: 0.5rem;
-    
-      background-color: rgba($primary-green, 0.1);
-    }
-&-line {
-  position: absolute;
-   top:0;
- bottom: 0;
-    width: 1px;
-    height: 100%;
-    background-color: rgba($primary-green, 0.3);
 
-    left: 50%;
- top:0;
- bottom: 0;
-  }
+      padding: 0.35rem 0.5rem;
+    }
+    &-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      height: 100%;
+
+      // left: 50%;
+      top: 0;
+      bottom: 0;
+    }
     &-title {
       @include mobile-card-header-details;
 
-    margin-top: 1rem;
       color: $third-grey;
- 
     }
 
     &-description {
@@ -163,8 +164,6 @@ margin-top: 1rem;
   &-title {
     @include tablet-desktop-heading-medium;
     // font-weight: 700;
-  }
-  &-content {
   }
 }
 @include desktop-ultra {
