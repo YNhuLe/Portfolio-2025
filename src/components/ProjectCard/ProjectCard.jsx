@@ -1,10 +1,15 @@
 import { div } from "motion/react-client";
 import "./ProjectCard.scss";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 function ProjectCard({ project }) {
-console.log(project);
+const navigate = useNavigate();
+console.log("ProjectCard: ", project);
   return (
-    <div className="project_card">
+    <div className="project_card"
+    onClick={() => navigate(`/${project.slug}`)}
+    
+    >
       {/* project images */}
 
       <div className="project_card-group">
