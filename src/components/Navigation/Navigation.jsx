@@ -1,5 +1,3 @@
-// 
-
 import { useState } from "react";
 import MenuItem from "../MenuItem/MenuItem";
 import "./Navigation.scss";
@@ -32,14 +30,13 @@ function Navigation({ onClose, isOpen, isMobile }) {
   };
 
   if (isMobile) {
-    if (!isOpen) return null;
-
     return (
       <motion.ul
         initial="closed"
         className="list"
         variants={navVariants}
-        animate={isOpen ? "open" : "closed"}>
+        animate="open"
+        exit="closed">
         {items.map(({ name, id }) => (
           <MenuItem
             itemName={name}
