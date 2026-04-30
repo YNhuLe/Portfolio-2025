@@ -13,11 +13,12 @@ console.log("ProjectCard: ", project);
       {/* project images */}
 
       <div className="project_card-group">
+          <div className="project_card-image-wrapper">
         <img
           src={project.img_url}
           alt={project.title}
           className="project_card-image"
-        />
+        /></div>
 
         {/* project number */}
         <div className="project_card-number">{project.id}</div>
