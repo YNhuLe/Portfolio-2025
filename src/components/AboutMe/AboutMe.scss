@@ -1,8 +1,7 @@
-@use "../../styles/partials/mixins" as *;
+// @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/mixins-news" as *;
 @use "../../styles/partials/variables" as *;
 .about {
-  // margin: 1rem;
-
   margin-bottom: 5rem;
   text-align: center;
   color: $primary-white;
@@ -66,8 +65,7 @@
   }
   &__text {
     @include mobile-subheader-header;
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     color: $primary-green;
   }
@@ -84,39 +82,40 @@
   }
   &__last-name {
     font-family: "Syne", sans-serif;
-    background: linear-gradient(135deg, #34d399 0%, #059669 50%, #106f1d 100%);
+    background: linear-gradient(135deg, #37ad16 0%, #095d42 50%, #57c122 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
+
+    &__last-name {
+      margin-bottom: 0;
+      width: auto;
+    }
   }
 }
-.header{
-
-  &_links{
+.header {
+  &_links {
     @include flex(row, center, center);
     gap: 0.3rem;
     text-decoration: none;
-    
   }
   &_icon {
+    color: $secondary-grey;
+    width: 1rem;
+    height: 1rem;
+    @include flex(row, center, center);
+    transition: all 0.3s ease;
+    &:hover {
+      color: $primary-green;
+    }
+  }
 
-  color: $secondary-grey;
-  width: 1rem;
-  height: 1rem;
-   @include flex(row, center, center);
+  &__text {
+    @include mobile-subheader-header;
 
-}
-
-&__text {
-  font-family: "Inter", sans-serif;
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  font-weight: 400;
- 
-  color: $secondary-grey;
-
-}
+    color: $secondary-grey;
+  }
 }
 .grid-bg {
   position: absolute;
@@ -125,12 +124,9 @@
   opacity: 0.15;
   background-color: rgba(74, 114, 69, 0.45);
   background-image:
-
-  
     linear-gradient(rgba(234, 230, 231, 0.35) 1px, transparent 1px),
     linear-gradient(90deg, rgba(218, 208, 206, 0.15) 1px, transparent 1px);
   background-size: 60px 60px;
-  
 
   width: 100%;
   height: 100%;
@@ -162,50 +158,52 @@
     align-items: center;
     gap: 0.5rem;
 
-    padding: 0.75rem 1.75rem; // py-3 px-7
+    padding: 0.75rem 1.75rem;
     border-radius: 0.75rem;
     overflow: hidden;
 
-    color: white;
+    color: $primary-white;
     text-decoration: none;
 
     // background gradient layer
     .cta__bg {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, #059669, #16a34a); // emerald-600 → green-600
+      background: linear-gradient(to right, #059669, #16a34a);
       transition: all 0.3s ease;
-    }}
-   .cta__glow {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      box-shadow: inset 0 0 20px rgba(52, 211, 153, 0.3);
     }
-
-    // content above layers
-    .cta__icon,
-    .cta__text {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta__icon {
-      width: 1.5rem;
-      height: 1.5rem; 
-      display: inline-flex;
-      align-items: center;
-    }
-  &:hover {
+    &:hover {
       .cta__bg {
-        background: linear-gradient(to right, #10b981, #22c55e); // lighter
+        background: linear-gradient(to right, #10b981, #22c55e);
       }
 
+      cursor: pointer;
       .cta__glow {
         opacity: 1;
       }
     }
+  }
+  .cta__glow {
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: inset 0 0 20px rgba(52, 211, 153, 0.3);
+  }
+
+  // content above layers
+  .cta__icon,
+  .cta__text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
   &__secondary {
     display: inline-flex;
     align-items: center;
@@ -215,7 +213,7 @@
     border-radius: 0.75rem;
 
     border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #d1d5db; // gray-300
+    color: $primary-white;
     text-decoration: none;
 
     transition: all 0.3s ease;
@@ -229,9 +227,10 @@
     }
 
     &:hover {
-      color: white;
+      color: $primary-white;
       border-color: rgba(255, 255, 255, 0.2);
       background-color: rgba(255, 255, 255, 0.05);
+      cursor: pointer;
     }
   }
 }
@@ -249,6 +248,25 @@
       @include tablet-desktop-body-copy-medium;
       margin: 1.5rem 3rem;
     }
+
+    &__last-name {
+      margin-bottom: 0;
+      width: auto;
+    }
+  }
+  .cta {
+    @include flex(row, center, center);
+    gap: 2rem;
+  }
+
+  .header {
+    &__text {
+      @include tablet-desktop-body-copy-medium;
+    }
+    &_icon {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
 
@@ -256,12 +274,13 @@
   .about {
     margin-left: 5rem;
     margin-right: 5rem;
-    &__title {
-      @include tablet-desktop-title-italic;
+    &__last-name {
+      padding: 0 5px;
     }
 
     &__text {
-      @include tablet-desktop-title-normal;
+      @include tablet-desktop-heading-medium;
+      margin-top: 0;
       margin-bottom: 2rem;
     }
     &__para {
@@ -281,6 +300,12 @@
 
   .desktop-link {
     width: 100px;
+  }
+  .about {
+    &__last-name {
+      margin-bottom: 0;
+      width: auto;
+    }
   }
 }
 
