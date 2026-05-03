@@ -42,7 +42,7 @@ function AboutMe() {
     window.history.pushState(null, "", `#contact`);
   }} className="cta__primary">
     <div className="cta__bg"></div>
-    <div className="cta__glow"></div>
+    {/* <div className="cta__glow"></div> */}
 
     <span className="cta__icon">
       <MessageCircle />
@@ -60,46 +60,23 @@ function AboutMe() {
   </ScrollLink>
 </div>
       <div className="about__icon">
-        <Tilt
-          glareEnable={true}
-          glareMaxOpacity={0.2}
-          scale={1.05}
-          transitionSpeed={250}
-          tiltMaxAngleX={15}
-          tiltMaxAngleY={15}
-        >
+     
           <a href="https://github.com/YNhuLe" className="header_links">
          
             <Github className="header_icon" />
             <span className="header__text">Github</span>
           </a>
-        </Tilt>
-        <Tilt
-          glareEnable={true}
-          glareMaxOpacity={0.2}
-          scale={1.05}
-          transitionSpeed={250}
-          tiltMaxAngleX={15}
-          tiltMaxAngleY={15}
-        >
+      
           <a href="https://www.linkedin.com/in/jennynhuyle/" className="header_links">  
             <Linkedin className="header_icon" />
             <span className="header__text">LinkedIn</span>
           </a>
-        </Tilt>
-        <Tilt
-          glareEnable={true}
-          glareMaxOpacity={0.2}
-          scale={1.05}
-          transitionSpeed={250}
-          tiltMaxAngleX={15}
-          tiltMaxAngleY={15}
-        >
+    
           <a href="mailto:jennyle.tech@gmail.com" className="header_links">
             <Mail className="header_icon" />
             <span className="header__text">Email</span>
           </a>
-        </Tilt>
+  
       </div>
     </section>
   );
