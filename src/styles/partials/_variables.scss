@@ -1,12 +1,10 @@
-
 // ====================
 // Breakpoints
 // ====================
-$tablet-breakpoint: 48rem;
-$desktop-breakpoint: 80rem;
-$desktop-breakpoint-xxl: 96rem;
-$desktop-breakpoint-ultra: 160rem;
-
+$tablet-breakpoint: 48rem; //768
+$desktop-breakpoint: 64rem; //1024
+$desktop-breakpoint-xxl: 96rem; //1536
+$desktop-breakpoint-ultra: 160rem; //2560
 
 // ====================
 // Primary Colors
@@ -15,15 +13,13 @@ $primary-black: #000000;
 $primary-white: #fff;
 $primary-green: rgb(52, 211, 153);
 
-
 // ====================
 // Secondary Colors
 // ====================
 $secondary-grey: #656060;
 $secondary-black: #2b2929;
 $third-grey: #ccc6c6;
-$text-grey: #4B5563;
-
+$text-grey: #4b5563;
 
 // ====================
 // UI / Surface
@@ -32,7 +28,6 @@ $background-color: #070d09;
 $card-color: rgba(16, 185, 129, 0.3);
 $card-shadow: #ccc;
 $dark-blue: rgb(2, 2, 24);
-
 
 // ====================
 // Feedback
