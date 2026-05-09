@@ -227,6 +227,16 @@
       @include tablet-desktop-heading-medium;
       margin: 1.5rem 2rem;
     }
+    &__links-section-icon{
+     
+      width: 1.5rem;
+      height: 1.5rem;
+    
+    }
+
+    &__features{
+@include flex(row, flex-start, center);
+    }
   }
   .btn-section {
     @include flex(row, center, center);
