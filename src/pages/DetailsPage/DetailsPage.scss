@@ -5,8 +5,11 @@
 .pro {
   padding: 1rem;
   background-color: $background-color;
+  &__nav {
+    @include flex(row, space-between, center);
+  }
   &__icon-left {
-    position: absolute;
+    // position: absolute;
     cursor: pointer;
     margin: 1rem;
     color: rgba($primary-white, 0.5);
@@ -15,6 +18,13 @@
     &:hover {
       color: $primary-white;
     }
+  }
+
+  &__logo-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    @include flex(row, center, center);
   }
   &__num {
     @include mobile-body-copy;
@@ -106,7 +116,7 @@
       rgba($primary-white, 0.3),
       transparent
     );
-    margin: 2rem auto;
+    margin: 4rem auto;
   }
   &__subtitle {
     @include mobile-subheader-header;
@@ -114,6 +124,7 @@
     text-align: left;
     color: $third-grey;
     margin-top: 3rem;
+    margin-left: unset;
     &-head {
       @include mobile-footer-copy;
       color: rgba($secondary-grey, 0.5);
@@ -128,13 +139,23 @@
       @include mobile-body-details-copy;
     }
   }
+  &__img-container {
+    overflow: hidden;
 
+    aspect-ratio: 3/2;
+
+    max-width: clamp(20rem, 85vw, 50rem);
+    margin: 0 auto;
+    border-radius: 1rem;
+  }
   &__img {
     width: 100%;
 
-    border-radius: 1rem;
     position: relative;
     z-index: 1;
+    height: 100%;
+
+    display: block;
   }
 
   &__techstack {
@@ -218,6 +239,25 @@
     height: 4rem;
   }
   .pro {
+    padding-inline: clamp(2rem, 4vw, 5rem);
+    &__img-container {
+      width: 100%;
+      max-width: clamp(40rem, 15vw, 45rem);
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 1rem;
+      margin: 0 auto;
+    }
+
+    &__img {
+      margin-top: unset;
+      margin-bottom: unset;
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     &__title {
       @include tablet-desktop-title-normal;
       margin-bottom: 2.5rem;
@@ -227,15 +267,25 @@
       @include tablet-desktop-heading-medium;
       margin: 1.5rem 2rem;
     }
-    &__links-section-icon{
-     
+    &__links-section-icon {
       width: 1.5rem;
       height: 1.5rem;
-    
     }
 
-    &__features{
-@include flex(row, flex-start, center);
+    &__fea {
+      @include flex(row, flex-start, flex-start);
+
+      &-item {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-top: 1px solid rgba($secondary-grey, 0.15);
+        border-right: 1px solid rgba($secondary-grey, 0.15);
+        &:last-child {
+          border-right: none;
+        }
+      }
     }
   }
   .btn-section {
@@ -250,21 +300,38 @@
     @include tablet-desktop-body-copy-medium;
     margin-top: 2.5rem;
   }
-
-  .pro__img {
-    width: calc(100% - 10rem);
-    margin: 5rem;
-  }
 }
 
 @include desktop {
-  .back-img {
-    width: 5rem;
-    height: 5rem;
-  }
+  //1024px - 1,535px
 
-  .pro__subtitle {
-    margin: 2rem 4rem;
+  .pro {
+    padding-inline: clamp(3rem, 15vw, 15rem);
+    &__img-container {
+      width: 100%;
+      max-width: clamp(65rem, 15vw, 65rem);
+      aspect-ratio: 9/5;
+      overflow: hidden;
+      border-radius: 1rem;
+      margin: 0 auto;
+    }
+
+    &__img {
+      margin-top: unset;
+      margin-bottom: unset;
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__subtitle {
+      margin: 2rem 4rem;
+    }
+
+    &__overview {
+      @include flex(row, space-between, flex-start);
+    }
   }
 
   .button {
@@ -273,15 +340,26 @@
 }
 
 @include desktop-xxl {
+  //1536px - 2,559px
   .pro {
-    &__img {
-      width: calc(100% - 20rem);
-      margin: 5rem 10rem;
-      margin-bottom: 10rem;
-    }
+    padding-inline: clamp(3rem, 25vw, 25rem);
 
     &__subtitle {
       margin: 3rem 7.5rem;
+    }
+
+    &__img-container {
+      max-width: clamp(85rem, 15vw, 85rem);
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 1rem;
+      margin: 0 auto;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
   }
 
@@ -296,12 +374,12 @@
 
 @include desktop-ultra {
   .pro {
+    padding-inline: clamp(15rem, 18vw, 30rem);
     &__subtitle {
       width: calc(100% - 60rem);
       margin: 5rem 30rem;
     }
     &__img {
-      width: calc(100% - 60rem);
       margin: 10rem 30rem;
     }
   }
