@@ -2,6 +2,7 @@ import "./DetailsPage.scss";
 import Navigation from "../../components/Navigation/Navigation";
 import { useProjectContext } from "../../context/ProjectContext";
 import { useParams } from "react-router-dom";
+import logo from "/images/logo.jpg";
 import goback from "../../assets/icons/goback.png";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
@@ -32,9 +33,15 @@ function DetailsPage() {
   if (!pro) return <p>Project not found..</p>;
   return (
     <section className="pro">
-      <a href="./" className="pro__icon">
-        <ChevronLeft className="pro__icon-left" />
-      </a>
+      <div className="pro__nav">
+        <a href="./" className="pro__icon">
+          <ChevronLeft className="pro__icon-left" />
+        </a>
+
+        <a href="./" className="pro__logo">
+          <img src={logo} alt="logo" className="pro__logo-img" loading="lazy" />
+        </a>
+      </div>
       <div className="pro__details">
         <p className="pro__num" style={{ color: pro.accentText }}>
           {" "}
@@ -71,25 +78,28 @@ function DetailsPage() {
           </a>
         </div>
         <div className="pro__breakline" />
+      <div className="pro__img-container">
         <img src={pro.img_url} alt={pro.title} className="pro__img" />
-
-        <div className="pro__subtitle">
-          <span className="pro__subtitle-head">Overview</span>
-          {pro.description.split("\n").map((line, idx) => (
-            <p className="pro__subtitle-text" key={idx}>
-              {line}
-            </p>
-          ))}
         </div>
+        <div className="pro__overview">
+          <div className="pro__subtitle">
+            <span className="pro__subtitle-head">Overview</span>
+            {pro.description.split("\n").map((line, idx) => (
+              <p className="pro__subtitle-text" key={idx}>
+                {line}
+              </p>
+            ))}
+          </div>
 
-        <div>
-          <p className="pro__subtitle-head"> Stack</p>
-          <div className="pro__techstack"></div>
-          {pro.tech_stack.map((tech, idx) => (
-            <span key={idx} className="pro__techstack-item">
-              {tech}
-            </span>
-          ))}
+          <div>
+            <p className="pro__subtitle-head"> Stack</p>
+            <div className="pro__techstack"></div>
+            {pro.tech_stack.map((tech, idx) => (
+              <span key={idx} className="pro__techstack-item">
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -98,9 +108,9 @@ function DetailsPage() {
       <section>
         <p className="pro__subtitle-head">Key Features</p>
         {/* FEATURES section */}
-        <div>
+        <div className="pro__fea">
           {pro.features?.map((feature, idx) => (
-            <div key={idx} className="features">
+            <div key={idx} className="pro__fea-item">
               <FeatureSections project={feature} index={idx} />
             </div>
           ))}
