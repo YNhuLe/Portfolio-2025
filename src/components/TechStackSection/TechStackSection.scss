@@ -1,4 +1,5 @@
-@use "../../styles/partials/mixins" as *;
+// @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/mixins-news" as *;
 @use "../../styles/partials/variables" as *;
 
 .stack {
@@ -46,19 +47,35 @@
       font-size: 0.75rem;
     }
   }
+&__mask{
+  -webkit-mask-image: linear-gradient(
+  to right,
+  transparent,
+  black 10%,
+  black 90%,
+  transparent
+);
 
+mask-image: linear-gradient(
+  to right,
+  transparent,
+  black 10%,
+  black 90%,
+  transparent
+);
+  
+}
   &__row {
     &-left {
       width: max-content;
       @include flex(row, center, center);
-
       animation: marquee-left 30s linear infinite;
-    }
+      }
     &-right {
       width: max-content;
       @include flex(row, center, center);
-
       animation: marquee-right 30s linear infinite;
+        margin-bottom: 4rem;;
     }
   }
 }
@@ -131,28 +148,33 @@
 }
 
 @include desktop {
-  .stack__title {
+  .stack{
+    &__title {
     @include tablet-desktop-heading-medium;
     font-weight: 500;
-  }
-  .tech {
-    &__title {
+    &-container{
+         padding-inline: clamp(4rem, 10vw, 18rem);
     }
   }
 }
 
+}
+
 @include desktop-xxl {
-  .stack__title {
+  .stack{
+ 
+    &__title {
     @include tablet-desktop-wordmark-regular;
     font-weight: 500;
   }
 
-  .stack__text {
+  &__text {
     margin-bottom: 13rem;
     color: $primary-white;
     text-align: center;
   }
-}
+
+}}
 
 @include desktop-ultra {
   .stack__title {
