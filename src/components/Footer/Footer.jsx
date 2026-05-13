@@ -27,6 +27,8 @@ function Footer() {
   ];
   return (
     <>
+      <div className="footer__breakline"/>
+      <section className="footer__container">
       <div className="footer">
         <a href="./" className="logo__link">
           <img src={logo} alt="logo" className="footer__logo" loading="lazy" />
@@ -45,7 +47,7 @@ function Footer() {
             {link.icon}
           </a>
         ))}
-      </div>
+      </div></section>
     </>
   );
 }
