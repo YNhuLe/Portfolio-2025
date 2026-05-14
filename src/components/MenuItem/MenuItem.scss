@@ -1,4 +1,5 @@
-@use "../../styles/partials/mixins" as *;
+// @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/mixins-news" as *;
 @use "../../styles/partials/variables" as *;
 .text-placeholder {
   @include mobile-navigation-header;

@@ -1,5 +1,4 @@
 @use "../../styles/partials/variables" as *;
-// @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/mixins-news" as *;
 
 .project_card {
@@ -8,9 +7,10 @@
   overflow: hidden;
   border: 1px solid $secondary-grey;
   transition: all 0.5s ease;
-  margin: 1.5rem auto;
-  width: clamp(10rem, 85%, 30rem);
-cursor: pointer;
+  width: 100%;
+  margin: 0;
+  // width: clamp(10rem,100%, 30rem);
+  cursor: pointer;
   &:hover {
     border-color: $card-color;
     transform: translateY(-0.25rem);
@@ -19,13 +19,12 @@ cursor: pointer;
     &.hover-shadow-xl:hover {
       box-shadow:
         0 20px 25px -5px rgba(0, 0, 0, 0.1),
-        0 10px 10px -5px rgba(0, 0, 0, 0.04); // shadow-xl
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
   }
   &-group:hover & {
     opacity: 0.5;
-      transform: scale(1.05);
-
+    transform: scale(1.05);
   }
 
   &-image {
@@ -38,18 +37,17 @@ cursor: pointer;
     object-position: center;
     opacity: 0.3;
     transition: all 0.7s ease;
-    &-wrapper{
-       position: relative;
-    width: 100%;
-    aspect-ratio:4/3;
-    overflow: hidden;
-    background-color: $secondary-black; 
+    &-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 5/2;
+      overflow: hidden;
+      background-color: $secondary-black;
     }
   }
   &:hover &-image {
     opacity: 0.5;
     transform: scale(1.05);
-   
   }
   &-number {
     @include mobile-card-number;
@@ -79,7 +77,6 @@ cursor: pointer;
     .project_card:hover & {
       opacity: 1;
       transform: translateY(0);
-    
     }
     &-external {
       width: 1rem;
@@ -93,30 +90,28 @@ cursor: pointer;
     overflow: hidden;
     &:hover &-content {
       opacity: 1;
-      
-color: $primary-green;
+
+      color: $primary-green;
     }
   }
 
   &-bottom {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 0;
     right: 0;
     height: 6rem;
     background: linear-gradient(
       to top,
-    #0b1410,  rgba(#0b1410, 0.8),transparent
+      #0b1410,
+      rgba(#0b1410, 0.8),
+      transparent
     );
   }
 
   &-content {
-    // background-color: rgba(2, 7, 57, 0.4);
     background-color: #0b1410;
-     background-image: linear-gradient(
-      to top,
-    #0b1410,transparent
-    );
+    background-image: linear-gradient(to top, #0b1410, transparent);
     &-title {
       margin: 1rem;
       margin-top: 0rem;
@@ -132,24 +127,24 @@ color: $primary-green;
       margin: 0;
     }
     &-code2 {
-           color:$text-grey;
-   width: 1rem ;
-    height: 1rem;
-       transform: translateY(0.5rem);
-    transition: all 0.3s ease;
- .project_card:hover & {
-      opacity: 1;
-      transform: translate(0.15rem);
-          color: $primary-white;
-    }
+      color: $text-grey;
+      width: 1rem;
+      height: 1rem;
+      transform: translateY(0.5rem);
+      transition: all 0.3s ease;
+      .project_card:hover & {
+        opacity: 1;
+        transform: translate(0.15rem);
+        color: $primary-white;
+      }
     }
     &-concept {
       @include mobile-body-copy;
-     margin: 1rem;
+      margin: 1rem;
       height: 100%;
       left: 1rem;
-      color:$text-grey;
-       &-title {
+      color: $text-grey;
+      &-title {
         @include mobile-section-header;
         margin-bottom: 0.25rem;
       }
@@ -159,79 +154,64 @@ color: $primary-green;
       margin-bottom: 0rem;
       padding-bottom: 1rem;
       padding-left: 1rem;
-      &-item{
+      &-item {
         display: inline-block;
         margin: 0.25rem;
-         @include mobile-body-copy;
-         color: $text-grey;
+        @include mobile-body-copy;
+        color: $text-grey;
         font-size: 0.65rem;
         border: solid 0.5px $secondary-grey;
         border-radius: 0.35rem;
         padding: 0.05rem 0.35rem;
-    
       }
     }
   }
 }
 
 @include tablet {
-
-  .project_card{
+  .project_card {
     height: stretch;
-   &-content{
-     height: stretch;
-     &-header{
-      // @include tablet-desktop-heading-medium-card-header;
-
+    &-content {
+      height: stretch;
     }
-   }
-    &-image{
-   
-      &-wrapper{
+    &-image {
+      &-wrapper {
         aspect-ratio: 4/3;
       }
     }
 
     &-bottom {
       height: 8rem;
-      background: linear-gradient(to top, #0b1410, rgba(11, 20, 16, 0.9), transparent);
+      background: linear-gradient(
+        to top,
+        #0b1410,
+        rgba(11, 20, 16, 0.9),
+        transparent
+      );
     }
   }
-
 }
 
-@include desktop{
-.project_card{
-  &-content{
-    &-header{
-      @include tablet-desktop-heading-medium-card-header;
+@include desktop {
+  .project_card {
+    &-content {
+      &-header {
+        @include tablet-desktop-heading-medium-card-header;
+      }
+    }
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      &-wrapper {
+        width: 100%;
+        aspect-ratio: 7/3;
+        overflow: hidden;
+      }
     }
   }
-   &-image {
-    width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures image fills the space */
-  object-position: center;
-//  position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//     object-position: center;
-//     opacity: 0.3;
-//     transition: all 0.7s ease;
-    &-wrapper{
-       width: 100%;
-  aspect-ratio: 10 / 9; /* Adjust ratio to your preference */
-  overflow: hidden;
-    //    position: relative;
-    // width: 100%;
-    // aspect-ratio:4/3;
-    // overflow: hidden;
-    // background-color: $secondary-black; 
-    }
-   }
 }
 
+@include desktop-xxl {
 }

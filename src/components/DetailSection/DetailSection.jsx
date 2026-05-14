@@ -30,7 +30,7 @@ function FeatureSections({ project }) {
 }
 
 function SystemDesignSections({ project, pro }) {
-  console.log("system info: ", project);
+
   return (
     <div className="system">
       <div className="system__card">

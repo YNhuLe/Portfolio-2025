@@ -1,5 +1,4 @@
 @use "../../styles/partials/variables" as *;
-// @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/mixins-news" as *;
 
 .contact__social {
@@ -7,31 +6,29 @@
   width: 100%;
   padding: 1rem;
   @include flex(row, center, center);
-  gap: .5rem;
+  gap: 0.5rem;
   &-container {
     @include flex(column, center, center);
-    flex:1;
+    flex: 1;
     min-width: 0;
     border: solid 0.5px rgba(255, 255, 255, 0.2);
     border-radius: 0.7rem;
-        background-color: rgba($primary-green, 0.05);
+    background-color: rgba($primary-green, 0.05);
 
-        &:hover{
-    
-                border-color: rgba($primary-green, 0.5);
-               .contact__social-icon{
-                color: $primary-green;
-               }
-            }
-        }
-  
-  
+    &:hover {
+      border-color: rgba($primary-green, 0.5);
+      .contact__social-icon {
+        color: $primary-green;
+      }
+    }
+  }
+
   &-link {
     text-decoration: none;
     color: $secondary-grey;
     @include mobile-body-copy;
-  width: 100%; 
-  min-width: 0; 
+    width: 100%;
+    min-width: 0;
   }
   &-icon {
     color: $secondary-grey;
@@ -39,12 +36,13 @@
 
     width: 18px;
     height: 18px;
-    margin:  .5rem auto;
+    margin: 0.5rem auto;
     margin-bottom: 0;
   }
 
   &-text {
-    @include flex(column, center, center);  min-width: 0;
+    @include flex(column, center, center);
+    min-width: 0;
   }
   &-textname {
     @include mobile-body-copy;
@@ -54,21 +52,36 @@
   &-texturl {
     color: $secondary-grey;
     @include mobile-footer-copy;
-    max-width:80%;
+    max-width: 80%;
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: 300;
- margin-left: .25rem;
-    margin-right: .25rem;
-    margin-bottom: .5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 }
-
 
 @include desktop {
   .contact {
     &__social {
+      // width: clamp(15.5rem, 90%, 25rem);
+              width: clamp(20rem, 90%, 34rem);
       margin: unset;
-  }}}
+      padding-inline: unset;
+    }
+  }
+}
+
+
+@include desktop-xxl{
+  .contact {
+    &__social {
+      // width: clamp(16rem, 90%, 60rem);
+        width: clamp(40rem, 90%, 45rem);
+      margin: unset;
+      padding-inline: unset;
+    }}
+}

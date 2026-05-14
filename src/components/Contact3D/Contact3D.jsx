@@ -54,11 +54,7 @@ function Contact3D() {
         alt="3D robot illustration"
         className="contact__3D-robot"
       />
-      {/* <img
-        src={images.cloud}
-        alt="3D cloud illustration"
-        className="contact__3D-cloud"
-      /> */}
+ 
     </div>
   );
 }
