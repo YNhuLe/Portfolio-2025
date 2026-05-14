@@ -4,7 +4,6 @@ import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 function ProjectCard({ project }) {
 const navigate = useNavigate();
-console.log("ProjectCard: ", project);
   return (
     <div className="project_card"
     onClick={() => navigate(`/${project.slug}`)}

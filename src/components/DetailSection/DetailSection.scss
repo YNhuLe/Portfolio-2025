@@ -1,6 +1,6 @@
-@use "../../styles/partials/mixins" as *;
-@use "../../styles/partials/variables" as *;
 
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins-news" as *;
 .info__card {
   margin: 1rem;
   margin-top: 4rem;
@@ -18,7 +18,7 @@
   }
 
   &-content {
-    @include mobile-subheader-header;
+    @include mobile-body-copy;
     color: rgba($third-grey, 0.5);
     @include flex(column, center, center);
   }
@@ -96,9 +96,11 @@
     }
   }
 }
+
+
 @include tablet {
   .info__card {
-    @include flex(row, space-between, center);
+    @include flex(row,flex-start, center);
     margin: 0 auto;
     margin-bottom: 3rem;
     width: calc(100% - 6rem);
@@ -112,10 +114,10 @@
     }
     &-content {
       margin-left: 2rem;
-      @include tablet-desktop-body-copy-medium;
+      @include mobile-body-copy;
+          color: rgba($secondary-grey, 0.7);
     }
     &-img {
-      // width: 50%;
       width: clamp(12rem, 40vw, 20rem);
       height: clamp(15rem, 40vw, 20rem);
     }
@@ -123,15 +125,17 @@
       @include flex(column, flex-start, flex-start);
     }
     &.reverse {
-      // flex-direction: row-reverse;
       @include flex(row-reverse, center, center);
     }
   }
+
+
+
 }
 
 @include desktop {
   .info__card {
-    width: calc(100% - 15rem);
+    // width: calc(100% - 15rem);
     &-title {
       font-weight: 700;
     }
@@ -141,10 +145,6 @@
     }
   }
 
-  .pro__img {
-    width: calc(100% - 12rem);
-    margin: 5rem 6rem;
-  }
   .back-img {
     width: 10rem;
     height: 10rem;
@@ -153,7 +153,7 @@
 
 @include desktop-xxl {
   .info__card {
-    width: calc(100% - 20rem);
+
     &-title {
       margin-bottom: 2rem;
     }
@@ -163,7 +163,6 @@
 .info__card {
   &-title {
     @include tablet-desktop-heading-medium;
-    // font-weight: 700;
   }
 }
 @include desktop-ultra {
@@ -174,3 +173,4 @@
     }
   }
 }
+

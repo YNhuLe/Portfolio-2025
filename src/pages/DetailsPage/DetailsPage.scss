@@ -1,4 +1,4 @@
-// @use "../../styles/partials/mixins" as *;
+
 @use "../../styles/partials/mixins-news" as *;
 @use "../../styles/partials/variables" as *;
 
@@ -327,6 +327,7 @@
 
     &__subtitle {
       margin: 2rem 4rem;
+          margin-left: unset;
     }
 
     &__overview {
@@ -346,6 +347,7 @@
 
     &__subtitle {
       margin: 3rem 7.5rem;
+      margin-left: unset;
     }
 
     &__img-container {
