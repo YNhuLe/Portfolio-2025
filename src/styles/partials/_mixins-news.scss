@@ -1,0 +1,292 @@
+@use "./variables" as *;
+@use "./typography";
+
+@mixin mobile-page-header {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2.5rem, 8vw + 1rem, 3.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+@mixin mobile-card-number {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2.25rem, 6vw + 1rem, 3rem);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+@mixin mobile-section-header {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(1.75rem, 5vw + 0.5rem, 2.5rem);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+@mixin mobile-subheader-header {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.875rem, 2vw + 0.5rem, 1.5rem);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@mixin mobile-navigation-header {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.5rem, 3vw + 0.75rem, 1.75rem);
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+@mixin mobile-card-header {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(0.9375rem, 2vw + 0.5rem, 2rem);
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+@mixin mobile-card-header-details {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(0.8125rem, 1.5vw + 0.5rem, 0.875rem);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@mixin mobile-body-copy {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 1.5vw + 0.5rem, 0.875rem);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@mixin mobile-body-details-copy {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.9375rem, 2vw + 0.5rem, 1rem);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@mixin mobile-footer-copy {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@mixin mobile-label-button {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1rem);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+// ====================
+// TABLET/DESKTOP TYPOGRAPHY (Enhanced)
+// ====================
+
+@mixin tablet-desktop-wordmark-regular {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(5rem, 5vw + 1rem, 6rem);
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+@mixin tablet-desktop-title-normal {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2.5rem, 3vw + 1.5rem, 4.5rem);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+@mixin tablet-desktop-title-bold {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2.5rem, 3vw + 1.5rem, 6rem);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+@mixin tablet-desktop-heading-medium {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.5rem, 2vw + 0.75rem, 1.75rem);
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+@mixin tablet-desktop-heading-medium-card-header {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(0.5rem, 2vw + 0.75rem, 1.5rem);
+  line-height: 1.4;
+  font-weight: 400;
+}
+@mixin tablet-desktop-body-copy-medium {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.25vw + 0.5rem, 1.5rem);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@mixin tablet-desktop-body-copy-light {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.875rem, 1vw + 0.5rem, 1.5rem);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@mixin tablet-desktop-small-body-copy-medium {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 0.75vw + 0.5rem, 1rem);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@mixin tablet-desktop-label-medium {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.875rem, 1vw + 0.5rem, 1.25rem);
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+@mixin desktop-card-header-details {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.65rem, 1.5vw + 0.5rem, 0.85rem);
+  line-height: 1.5;
+  font-weight: 400;
+}
+// RESPONSIVE BREAKPOINT MIXINS
+
+@mixin mobile-only {
+  @media (max-width: calc($tablet-breakpoint - 0.0625rem)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: $tablet-breakpoint) and (max-width: calc($desktop-breakpoint - 0.0625rem)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: $desktop-breakpoint) and (max-width: calc($desktop-breakpoint-xxl - 0.0625rem)) {
+    @content;
+  }
+}
+
+@mixin desktop-xxl {
+  @media (min-width: $desktop-breakpoint-xxl) {
+    @content;
+  }
+}
+
+@mixin desktop-xxl-only {
+  @media (min-width: $desktop-breakpoint-xxl) and (max-width: calc($desktop-breakpoint-ultra - 0.0625rem)) {
+    @content;
+  }
+}
+
+@mixin desktop-ultra {
+  @media (min-width: $desktop-breakpoint-ultra) {
+    @content;
+  }
+}
+
+@mixin focus-visible {
+  outline: 2px solid $primary-green;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+@mixin focus-styles {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-visible;
+  }
+}
+
+@mixin screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@mixin high-contrast-text {
+  color: $primary-white;
+
+  @media (prefers-contrast: more) {
+    font-weight: 500;
+    text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin container($max-width: $desktop-breakpoint) {
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+}
+
+@mixin grid-auto-fit($min-width: 15rem, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+}
+
+@mixin transition($properties: all, $duration: 0.3s, $easing: ease-in-out) {
+  transition: $properties $duration $easing;
+
+  @include reduced-motion {
+    transition-duration: 0.01ms;
+  }
+}
+
+@mixin hover-lift {
+  transition: transform 0.2s ease-in-out;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-0.25rem);
+    }
+  }
+
+  @include reduced-motion {
+    &:hover {
+      transform: none;
+    }
+  }
+}
