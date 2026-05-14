@@ -1,15 +1,50 @@
-@use "../../styles/partials/mixins" as *;
+// @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/mixins-news" as *;
 @use "../../styles/partials/variables" as *;
 
 .contact {
-  // height: 100%;
   min-height: 100dvh;
   margin-top: 5rem;
+  &__feature {
+    @include flex(row, center, center);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    background: rgb($card-color, 0.8);
+    border-radius: 2rem;
+    width: fit-content;
+
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background-color: rgba($card-color, 0.1);
+    border: 1px solid $primary-green;
+    &-icon {
+      width: 1rem;
+      height: 1rem;
+      color: $primary-green;
+      animation: bounce 2s infinite;
+    }
+
+    &-title {
+      color: $primary-green;
+      @include mobile-subheader-header;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+  }
+
   &__text {
     @include mobile-section-header;
     color: $primary-white;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
+    &-subtitle {
+      color: $secondary-grey;
+      @include mobile-subheader-header;
+      text-align: center;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 3rem;
+    }
   }
   &__wrapper {
     background-size: cover;
@@ -22,29 +57,35 @@
   &__button {
     padding: 0.5rem 2rem;
     border-radius: 0.7rem;
-    background-color: hsla(0, 0%, 7%, 0.2);
+    background: linear-gradient(to right, #10b981, #22c55e);
     cursor: pointer;
     @include mobile-body-copy;
     color: $primary-white;
     transition: transform 0.3s ease-in-out;
+    border: none;
   }
 
   &__button:hover {
-    background-color: hsla(0, 3%, 31%, 0.5);
+    background: linear-gradient(to right, #22c55e, #10b981);
     transform: scale3d(1.0625, 1.0625, 1.0625);
   }
 
   &__form {
     min-height: 55vh;
-    background-color: hsla(244, 76%, 8%, 0.9);
+    background-color: rgba($primary-green, 0.05);
     color: $primary-white;
     @include mobile-body-copy;
     @include flex(column, center, center);
-    margin: 2rem 1rem;
+    // @include grid-auto-fit(1fr, 1.5rem);
+    // row-gap: 1.5rem;
+    // margin: 2rem 1rem;
     row-gap: 1.5rem;
     padding: 1rem;
-    border-radius: 0.7rem;
+    border-radius: 0.9rem;
     border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+    width: clamp(15.5rem, 90%, 25rem);
+    // max-width: 100%;
+    margin: 2rem auto;
     &-title {
       @include mobile-subheader-header;
       font-size: 1.5rem;
@@ -56,10 +97,17 @@
     &-property input,
     textarea {
       text-align: left;
-      border-radius: 0.5rem;
+      border-radius: 1rem;
       padding: 1rem;
       background-color: hsla(0, 0%, 7%, 0.2);
       color: $primary-white;
+      // width: 100%;
+      width: clamp(15rem, 85%, 30rem);
+      border: solid 0.5px rgba(255, 255, 255, 0.2);
+      &:focus {
+        outline: none;
+        border-color: $primary-green;
+      }
     }
     &-property textarea {
       padding: 4rem 2rem;
@@ -73,16 +121,18 @@
   font-size: 0.7rem;
 }
 
-@include tablet {
+@include tablet { //768px and up
   .contact {
     margin-top: 8rem;
-
+    &-button {
+      width: stretch;
+    }
     &__wrapper {
       @include flex(column, center, center);
     }
     &__text {
       @include tablet-desktop-title-normal;
-      margin-bottom: 8rem;
+      margin-bottom: 1rem;
     }
 
     &__earth {
@@ -96,25 +146,41 @@
       font-size: 3.5rem;
     }
     &__form {
-      @include tablet-desktop-body-copy-medium;
-      width: calc(100vw - 16rem);
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-      margin-top: 5rem;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+      width: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      padding: 5rem 3rem;
       &-property input,
       textarea {
-        width: 25rem;
+        // width: clamp(18rem, 85%, 35rem);
+        width: 100%;
       }
 
       &-property {
         row-gap: 1.5rem;
       }
     }
+    .contact__form-property:nth-child(3),
+    .contact__button {
+      grid-column: 1 / -1;
+    }
     &__button {
-      padding: 1.25rem 3rem;
+      padding: 0.75rem 1.5rem;
       font-size: 1.5rem;
+      width: stretch;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+    }
+    &__3D {
+      display: none;
     }
   }
+
   .contact__form-input::placeholder {
     font-size: 0.95rem;
     text-align: left;
@@ -122,37 +188,76 @@
   }
 }
 
-@include desktop {
+@include desktop { //1024px and up
   .contact {
+    &__wrapper, &__3D{
+      flex: 1;
+   
+    }
     &__form {
-      max-width: 55rem;
-      margin-left: 5rem;
+      // max-width: 55rem;
+       width: clamp(20rem, 90%, 25rem);
+      margin-right: 0;
+      gap: 0.5rem;
+      padding: 2rem;
+      &-property {
+        row-gap: 1rem;
+        textarea {
+          padding: 2rem;
+        }
+      }
     }
-    &__text {
-      margin-top: 15rem;
-      margin-bottom: 13rem;
+
+    &__section {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
+   
     &__wrapper {
-      @include flex(row-reverse, center, center);
+      @include flex(column, center, center);
+    }
+    &__section {
+      @include flex(row, center, center);
+      gap: 2rem;
+    }
+
+    &__button {
+      width: auto;
+      padding: 0.5rem 0.5rem;
+      @include tablet-desktop-label-medium;
+    
+    }
+    &__social {
+      margin: unset;
+    }
+    &__form,
+    &__social {
+      flex: 1;
+
+      margin: unset;
+    }
+    &__feature-icon{
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 }
 
-@include desktop-xxl {
+@include desktop-xxl { //1536px and up
   .contact {
     &__form {
-      max-width: 45rem;
+        width: clamp(40rem, 90%, 45rem);
     }
     &__wrapper {
-      padding-left: 6rem;
+      // padding-left: 6rem;
     }
   }
 }
 
-@include desktop-ultra {
+@include desktop-ultra { //2259px and up
   .contact {
     &__form {
-      max-width: 60rem;
+     width: clamp(16rem, 90%, 60rem);
     }
   }
 }

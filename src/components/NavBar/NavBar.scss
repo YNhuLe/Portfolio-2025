@@ -1,4 +1,5 @@
-@use "../../styles/partials/mixins" as *;
+// @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/mixins-news" as *;
 @use "../../styles/partials/variables" as *;
 .body__container {
   background-color: rgba(43, 41, 44, 0.9);
@@ -56,44 +57,15 @@
 }
 
 .toggle-container {
+ position: relative;
   outline: none;
   border: none;
-
   cursor: pointer;
-  right: 1rem;
-  position: absolute;
-  top: 1.125rem;
   width: 3.125rem;
   height: 3.125rem;
   border-radius: 50%;
   background: transparent;
-  position: fixed;
   z-index: 999;
-}
-
-.list {
-  position: relative;
-  @include flex(column, center, center);
-  width: 100%;
-  text-align: center;
-  padding-left: 0;
-  list-style: none;
-  margin: 0;
-
-  top: 50%;
-
-  height: 100vh;
-
-  &-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    margin-bottom: 1.25rem;
-    cursor: pointer;
-  }
 }
 
 .icon-placeholder {
@@ -107,10 +79,6 @@
 @include tablet {
   .list {
     gap: 3rem;
-  }
-
-  .nav__list{
-    
   }
 }
 
@@ -127,5 +95,3 @@
     }
   }
 }
-
-

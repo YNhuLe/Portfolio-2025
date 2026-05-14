@@ -1,38 +1,92 @@
 [
-
   {
-    "id": "1",
+    "id": "01",
     "title": "Klear Digital",
     "slug": "klear-digital",
-    "concept": "Klear Digital - A digital marketing agency specializing in innovative solutions to help businesses grow online.",
-    "tech_stack": ["React", "Tailwind", "Vercel Serverless Functions"],
+    "color": "from-[rgba(5,150,105,0.2)] to-[rgba(6,95,70,0.2)]",
+    "glowColor": "group-hover:shadow-[rgba(16,185,129,0.7)]",
+    "accentFrom": "rgb(16, 185, 129)",
+    "accentTo": "rgb(5, 150, 105)",
+    "accentText": "rgb(52,211,153)",
+    "accentBg": "rgba(16,185,129,0.1)",
+    "accentBorder": "rgba(16, 185, 129, 0.6)",
+    "accentGlow": "rgba(5,150,105,0.75)",
+    "concept": "Digital marketing agency specializing in innovative solutions for business growth, building data-driven digital experiences for start-ups that are looking to resonate, scale and drive impact online.",
+    "tech_stack": [
+      "React",
+      "Tailwind",
+      "Resend",
+      "GoDaddy",
+      "REST API",
+      "Vercel Serverless Functions"
+    ],
     "img_url": "/images/klear.png",
     "git_url": "https://www.kleardigital.co/",
-    "description": 
-  "Klear Digital is a modern marketing agency website built as a portfolio project using React.js and Tailwind CSS for a responsive, component-based UI. The site is deployed on Vercel, with Vercel Serverless Functions powering backend logic and Resend integrated for email handling. The custom domain is managed through GoDaddy, demonstrating a full end-to-end production setup.",
+    "role": "Full Stack Developer",
+    "description": "Modern marketing agency website built with React and Tailwind CSS. Deployed on Vercel with serverless functions handling backend logic and Resend for email. Custom domain managed through GoDaddy.",
+    "features": [
+      {
+        "fea_id": "01",
+        "fea_title": "Responsive Design",
+        "fea_description": "Fully responsive across all devices using Tailwind CSS for an adaptive, visually appealing layout."
+      },
+      {
+        "fea_id": "02",
+        "fea_title": "Contact Form",
+        "fea_description": "Working contact form with real-time email delivery via Vercel Serverless Functions and Resend."
+      },
+      {
+        "fea_id": "03",
+        "fea_title": "Professional UI",
+        "fea_description": "Clean, modern interface designed to capture leads and build trust with potential clients."
+      }
+    ],
+    "system_design_description": "Lightweight serverless architecture using Vercel Functions for backend operations, Resend for email delivery, and GoDaddy for domain management. This setup keeps costs low while maintaining reliability and scalability.",
+    "system_design": [
+      {
+        "system_id": "01",
+        "system_title": "Serverless Backend",
+        "system_description": "Vercel Functions handle form submissions without a traditional server, keeping architecture simple and cost-effective."
+      },
+      {
+        "system_id": "02",
+        "system_title": "Email Integration",
+        "system_description": "Resend API integrated for secure email delivery without exposing API keys on the frontend."
+      },
+      {
+        "system_id": "03",
+        "system_title": "Domain Configuration",
+        "system_description": "GoDaddy domain connected to Vercel through DNS configuration for seamless deployment."
+      },
+      {
+        "system_id": "04",
+        "system_title": "Form Validation",
+        "system_description": "Client-side validation with error states ensures reliable form submission and delivery."
+      }
+    ],
     "info": [
       {
-        "title": "🚧 Challenges.",
-        "content":"xThe project was a frontend-only website, but the client still needed a working contact form that actually sends emails. \nThere was no backend in place, the domain was hosted on GoDaddy, and the site was deployed on Vercel, everything had to work smoothly across different services without adding unnecessary complexity.", 
-         "image": "/images/klear-challenge.png"
+        "id": "01",
+        "title": "🚧 Challenges",
+        "content": "Frontend-only site needed a working contact form without a backend. Had to integrate email delivery across GoDaddy hosting and Vercel deployment seamlessly.",
+        "image": "/images/klear-challenge.png"
       },
       {
-        "title": "🛠️ Solution & Implementations.",
-        "content":"I used Vercel Serverless Functions as a lightweight backend to handle form submissions.\nBy integrating Resend as the email service, I was able to securely send emails without exposing API keys on the frontend.\nI also:\nConnected the GoDaddy domain to Vercel through DNS configuration 🌐\n\nHandled form validation and error states to ensure reliable delivery\n\nKept the setup simple, scalable, and easy to maintain ",
-          "image": "/images/vercel-serverless.png"
+        "id": "02",
+        "title": "🛠️ Solution",
+        "content": "Implemented Vercel Serverless Functions as lightweight backend. Integrated Resend for secure email delivery. Connected GoDaddy domain via DNS with proper validation and error handling.",
+        "image": "/images/vercel-serverless.png"
       },
       {
-        "title": "🎉 Results & Impacts.",
-        "content": 
-
-        "The marketing agency now has a fully working contact form with real-time email delivery. 📩\nNo traditional backend was needed, keeping costs and maintenance low. \nThe site feels more professional and trustworthy, helping the client capture more leads. \nThis project shows my ability to go beyond frontend work and use modern serverless tools to solve real-world problems 🚀",
-         "image": "/images/klear-email2.png"
+        "id": "03",
+        "title": "🎉 Results",
+        "content": "Fully functional contact form with real-time email delivery. Low maintenance costs with no traditional backend. Professional experience that captures more leads.",
+        "image": "/images/klear-email2.png"
       },
       {
+        "id": "04",
         "title": "🚀 Future Improvements",
-
-        "content":
-         "✅ Add case study pages/sections to showcase the agency's work and results.\n✅ Implement a blog for sharing marketing insights and tips.\n✅ Integrate a chatbot for instant visitor engagement and lead capture.\n✅ Optimize SEO to increase organic traffic and visibility.",
+        "content": "Add case studies showcasing agency work. Implement blog for marketing insights. Integrate chatbot for instant engagement. Optimize SEO for better visibility.",
         "image": "/images/klear-improvement.png"
       }
     ],
@@ -40,75 +94,175 @@
       "url": "https://www.kleardigital.co/"
     }
   },
-  
   {
-    "id": "2",
+    "id": "02",
     "title": "Evererdant",
     "slug": "evererdant-web",
-    "concept": "Eververdant is a mobile-first web app that connects plant lovers to buy, sell, and share leafy tips with a thriving green-thumbed community.",
-    "tech_stack": ["React", "TypeScript", "Tailwind", "AWS", "PostgreSQL"],
+    "color": "linear-gradient(to right, rgba(34, 197, 94, 0.2), rgba(22, 101, 52, 0.2))",
+    "glowColor": "linear-gradient(to right, rgba(74, 222, 128, 0.5), rgba(22, 163, 74, 0.5))",
+    "accentFrom": "rgb(34, 197, 94)",
+    "accentTo": "rgb(22, 163, 74)",
+    "accentText": "rgb(74, 222, 128)",
+    "accentBg": "rgba(34, 197, 94, 0.1)",
+    "accentBorder": "rgba(34, 197, 94, 0.2)",
+    "accentGlow": "rgba(22, 163, 74, 0.75)",
+    "concept": "Mobile-first platform connecting plant lovers to buy, sell, trade and share care tips. Seamlessly adopt and care for new plants using AI-powered recommendations and plantmates.",
+    "tech_stack": ["React", "TypeScript", "Tailwind", "AWS", "PostgreSQL", "Gemini AI", "Anthropic API"],
     "img_url": "/images/evererdant.png",
     "git_url": "https://github.com/YNhuLe/Flower_Love",
-    "description": "Eververdant is a mobile-first web app that connects plant lovers to buy, sell, and share plant care tips within a thriving green-thumbed community.\nBuilt with React, TypeScript, Tailwind CSS, PostgreSQL and AWS, the platform delivers a fast, responsive, and community-driven experience for all things leafy and green. 🌿",
+    "role": "Full Stack Developer",
+    "description": "Mobile-first community platform for plant enthusiasts. Built with React, TypeScript, and Tailwind CSS, delivering a fast, responsive experience for buying, selling, and sharing plant care knowledge.",
+    "features": [
+      {
+        "fea_id": "01",
+        "fea_title": "Plant quiz + Plant mate",
+        "fea_description": "Short quiz to give the best plant recommendations based on user preferences with the chatbot powered by Gemini AI and Anthropic API."
+      },
+      {
+        "fea_id": "02",
+        "fea_title": "Community Features",
+        "fea_description": "Share tips, ask questions, and connect with fellow plant enthusiasts."
+      },
+      {
+        "fea_id": "03",
+        "fea_title": "Mobile Optimized",
+        "fea_description": "Designed mobile-first with fast loading and smooth interactions on all devices."
+      }
+    ],
+    "system_design_description": "Mobile-first architecture using React and TypeScript for type-safe development. AWS Amplify provides CDN and hosting, while Tailwind CSS keeps styling lean and performant.",
+    "system_design": [
+      {
+        "system_id": "01",
+        "system_title": "Frontend Architecture",
+        "system_description": "React with TypeScript ensures type safety and maintainable code as the app scales."
+      },
+      {
+        "system_id": "02",
+        "system_title": "Performance Optimization",
+        "system_description": "Implemented lazy loading for images and integrated Cloudinary for fast global asset delivery."
+      },
+      {
+        "system_id": "03",
+        "system_title": "Responsive Design",
+        "system_description": "Tailwind utility classes enable mobile-first design with minimal CSS overhead."
+      },
+      {
+        "system_id": "04",
+        "system_title": "Asset Management",
+        "system_description": "AWS Amplify handles image uploads and serves optimized assets through CDN."
+      }
+    ],
     "info": [
       {
-        "title": "Challenges.",
-        "content": "With image-rich plant listings and user-generated uploads, Eververdant faced major performance issues—especially on slower mobile networks. The abundance of high-resolution images caused long load times and negatively impacted user experience and Core Web Vitals.",
+        "id": "01",
+        "title": "🚧 Challenges",
+        "content": "Image-heavy plant listings caused slow load times on mobile networks, hurting user experience and Core Web Vitals.",
         "image": "/images/ever_challenge.png"
       },
       {
-        "title": "Solution & Implementations.",
-        "content": "To address this, lazy loading was implemented for off-screen images. A CDN via AWS Amplify was integrated to ensure faster delivery of assets across geographic locations. Tailwind's utility-first styling helped reduce CSS bloat for leaner rendering.",
+        "id": "02",
+        "title": "🛠️ Solution",
+        "content": "Implemented lazy loading for off-screen images. Integrated AWS Amplify CDN for faster global delivery. Used Tailwind for lean, efficient styling.",
         "image": "/images/ever_solution.png"
       },
       {
-        "title": "Results & Impacts.",
-        "content": "Page load times improved by over 60%, especially on mobile devices. Bounce rates dropped, and user engagement rose as users experienced a smoother, faster interface. The performance boost directly contributed to better SEO rankings and overall user satisfaction.",
+        "id": "03",
+        "title": "🎉 Results",
+        "content": "60% faster page loads on mobile. Lower bounce rates and higher engagement. Better SEO rankings from improved performance.",
         "image": "/images/ever_result.png"
       },
       {
-        "title": "🚀 Future Improvements.",
-
-        "content": "✅ A future enhancement will include building a backend with custom APIs.\n✅ Integrate a database to store user profiles, listings, and interactions.\n✅ Allow users to fully engage with the platform in real time.",
-
+        "id": "04",
+        "title": "🚀 Future Improvements",
+        "content": "Build custom backend APIs. Add database for user profiles and listings. Enable real-time interactions and notifications.",
         "image": "/images/ever_future.png"
       }
     ],
-
     "video_demo": {
       "url": "https://main.d36o1v1jm7mlqn.amplifyapp.com/"
     }
   },
   {
-    "id": "3",
+    "id": "03",
     "title": "Zodiac Wander",
     "slug": "zodiac-web",
-    "concept": "Zodiac Wander - Discover your zodiac sign, connect with your birth flower, explore traits, and share thoughts with others on a cosmic journey.",
-    "tech_stack": ["React", "Express", "SCSS", "REST API"],
+    "color": "linear-gradient(to right, rgba(147, 51, 234, 0.2), rgba(55, 48, 163, 0.2))",
+    "glowColor": "linear-gradient(to right, rgba(192, 132, 252, 0.5), rgba(79, 70, 229, 0.5))",
+    "accentFrom": "rgb(147, 51, 234)",
+    "accentTo": "rgb(126, 34, 206)",
+    "accentText": "rgb(192, 132, 252)",
+    "accentBg": "rgba(168, 85, 247, 0.1)",
+    "accentBorder": "rgba(168, 85, 247, 0.2)",
+    "accentGlow": "rgba(147, 51, 234, 0.75)",
+    "concept": "Discover your zodiac sign, birth flower, personality traits, and share thoughts with the community.",
+    "tech_stack": ["React", "Express", "SCSS", "RESTful APIs", "Figma"],
     "img_url": "/images/zodiac.png",
     "git_url": "https://github.com/YNhuLe/Pair-Programming",
-    "description": "Zodiac Wander is an interactive web app where users can discover their zodiac sign, connect with their unique birth flower, explore personality traits, and share reflections with others on a cosmic journey. \nBuilt with React, Express, SCSS, and a custom REST API, the platform offers a smooth and visually engaging experience that blends astrology, nature, and community.",
+    "role": "Full Stack Developer",
+    "description": "Interactive platform blending astrology and nature. Explore zodiac signs, birth flowers, and personality traits while connecting with a cosmic community. Built with React, Express, and custom REST API.",
+    "features": [
+      {
+        "fea_id": "01",
+        "fea_title": "Zodiac Exploration",
+        "fea_description": "Discover detailed zodiac traits, compatibility, and daily horoscopes."
+      },
+      {
+        "fea_id": "02",
+        "fea_title": "Birth Flowers",
+        "fea_description": "Connect your zodiac with unique birth flowers and their meanings."
+      },
+      {
+        "fea_id": "03",
+        "fea_title": "Community Sharing",
+        "fea_description": "Share reflections and connect with others on your cosmic journey."
+      }
+    ],
+    "system_design_description": "Full-stack architecture with React frontend and Express backend. Structured JSON manages complex zodiac data including traits, compatibility, and user comments via REST API.",
+    "system_design": [
+      {
+        "system_id": "01",
+        "system_title": "Data Architecture",
+        "system_description": "Nested JSON structure organizes zodiac content logically for easy access and maintenance."
+      },
+      {
+        "system_id": "02",
+        "system_title": "REST API",
+        "system_description": "Express backend serves zodiac data, horoscopes, and manages user comments."
+      },
+      {
+        "system_id": "03",
+        "system_title": "Component Design",
+        "system_description": "React components consume structured data for consistent rendering across features."
+      },
+      {
+        "system_id": "04",
+        "system_title": "Scalable Structure",
+        "system_description": "JSON design allows easy migration to database system for future growth."
+      }
+    ],
     "info": [
       {
-        "title": "Challenges.",
-        "content": "Data Structure Complexity: Zodiac content (sign traits, horoscopes, dates, compatibility, icons, comments) required a well-organized but extensible data format. A complicated .json file structure posed readability, maintenance, and scalability issues.",
+        "id": "01",
+        "title": "🚧 Challenges",
+        "content": "Complex zodiac data (traits, horoscopes, compatibility, comments) needed organized structure. Complicated JSON posed readability and scalability issues.",
         "image": "/images/zodiac_challenges.png"
       },
       {
-        "title": "Solution & Implementations.",
-        "content": "Structured JSON Design: To address the complexity of handling detailed zodiac data, I implemented a JSON tree structure that allowed for logically nested and easily accessible information such as traits, compatibility, horoscopes, and user comments. This approach improved both maintainability and scalability.",
+        "id": "02",
+        "title": "🛠️ Solution",
+        "content": "Designed nested JSON tree for logical, accessible data structure. Improved maintainability and set foundation for database migration.",
         "image": "/images/zodiac_solution.png"
       },
       {
-        "title": "Results & Impacts.",
-        "content": "The clean and organized JSON structure not only simplified data access and management on the front end, but also laid a solid foundation for future scalability. This made it easier to maintain consistency across components and ensured a smooth transition path for integrating or migrating to a backend system later on.",
+        "id": "03",
+        "title": "🎉 Results",
+        "content": "Clean structure simplified data management and component consistency. Easy path for future backend integration and scaling.",
         "image": "/images/zodiac_result.png"
       },
       {
+        "id": "04",
         "title": "🚀 Future Improvements",
-
-        "content": "✅ Migrate dynamic content like comments and horoscopes to a backend PostgreSQL.\n✅ Focus on mobile-first responsiveness.\n✅ Add an AI chatbot for real-time horoscope and flower personality interactions.\n✅ Enable users to upload their own zodiac-related photos or messages.",
-
+        "content": "Migrate to PostgreSQL backend. Improve mobile responsiveness. Add AI chatbot for horoscope interactions. Enable user photo uploads.",
         "image": "/images/zodiac_future.png"
       }
     ],
@@ -117,33 +271,86 @@
     }
   },
   {
-    "id": "4",
+    "id": "04",
     "title": "Tralli",
     "slug": "tralli-web",
-    "concept": "Tralli connects homeowners and property managers with skilled trade pros—fast! From leaks to repairs, get trusted help when you need it most. 🔨",
-    "tech_stack": ["Express", "React", "SCSS", "Firebase", "APIs", "MySQL"],
+    "color": "linear-gradient(to right, rgba(20, 184, 166, 0.2), rgba(13, 148, 136, 0.2))",
+    "glowColor": "linear-gradient(to right, rgba(45, 212, 191, 0.5), rgba(17, 94, 89, 0.5))",
+    "accentFrom": "rgb(20, 184, 166)",
+    "accentTo": "rgb(13, 148, 136)",
+    "accentText": "rgb(94, 234, 212)",
+    "accentBg": "rgba(20, 184, 166, 0.1)",
+    "accentBorder": "rgba(20, 184, 166, 0.2)",
+    "accentGlow": "rgba(13, 148, 136, 0.75)",
+    "concept": "Mobile-first platform that connects homeowners and property managers with skilled trade professionals for repairs and maintenance.",
+    "tech_stack": ["Express", "React", "SCSS", "Firebase", "APIs", "MySQL", "Figma"],
     "img_url": "/images/tralli2.png",
     "git_url": "https://github.com/YNhuLe/tralli_client",
-    "description": "Tralli is a web platform that connects users—especially developers and property managers—with trade companies offering services in building maintenance, apartment repairs, condo improvements, and townhome fixes. It acts as a trusted bridge between skilled trade professionals and property owners, streamlining the process of finding reliable, on-demand help for a wide range of construction, renovation, and repair needs.\n Built using React, Express, SCSS, Firebase, MySQL, and RESTful APIs, Tralli is designed to deliver a responsive, scalable, and efficient user experience for both service seekers and providers.",
+    "role": "Full Stack Developer",
+    "description": "Platform connecting property owners with trade professionals for building maintenance, repairs, and improvements. Built with React, Express, Firebase Auth, and MySQL for secure, scalable service matching.",
+    "features": [
+      {
+        "fea_id": "01",
+        "fea_title": "Service Matching",
+        "fea_description": "Find trusted trade professionals for maintenance, repairs, and improvements."
+      },
+      {
+        "fea_id": "02",
+        "fea_title": "Secure Authentication",
+        "fea_description": "Google Sign-In via Firebase with additional data stored in MySQL."
+      },
+      {
+        "fea_id": "03",
+        "fea_title": "User Dashboard",
+        "fea_description": "Manage service requests, view provider details, and track job status."
+      }
+    ],
+    "system_design_description": "Full-stack platform with React frontend and Express backend. Firebase handles authentication while MySQL stores user profiles and service listings. RESTful APIs ensure smooth data flow between components.",
+    "system_design": [
+      {
+        "system_id": "01",
+        "system_title": "Authentication System",
+        "system_description": "Firebase Auth for Google Sign-In with MySQL storing extended user profiles."
+      },
+      {
+        "system_id": "02",
+        "system_title": "Backend API",
+        "system_description": "Express server handles business logic and serves data via REST endpoints."
+      },
+      {
+        "system_id": "03",
+        "system_title": "Database Design",
+        "system_description": "MySQL stores users, service listings, and relationships for scalable growth."
+      },
+      {
+        "system_id": "04",
+        "system_title": "Frontend Architecture",
+        "system_description": "React components consume API data for responsive, intuitive interface."
+      }
+    ],
     "info": [
       {
-        "title": "Challenges.",
-        "content": "Challenge: Integrating a secure and user-friendly Single Sign-On (SSO) system was complex. It required combining Firebase Authentication with MySQL to securely store user data while ensuring a seamless experience.",
+        "id": "01",
+        "title": "🚧 Challenges",
+        "content": "Integrating secure SSO required combining Firebase Authentication with MySQL while maintaining seamless user experience.",
         "image": "/images/tralli_challenge.png"
       },
       {
-        "title": "Solution & Implementations.",
-        "content": "Solution: Implemented Google Sign-In via Firebase Authentication and securely stored additional user information in a MySQL database. This setup streamlined the sign-up process and improved scalability.",
+        "id": "02",
+        "title": "🛠️ Solution",
+        "content": "Implemented Google Sign-In via Firebase with additional user data in MySQL. Streamlined signup process and improved scalability.",
         "image": "/images/tralli_solution.png"
       },
       {
-        "title": "Results & Impacts.",
-        "content": "Result: Created a robust and secure sign-up/sign-in system that significantly enhanced user experience by reducing friction and increasing reliability.",
+        "id": "03",
+        "title": "🎉 Results",
+        "content": "Robust authentication system reduced friction and increased reliability. Better user experience with secure, scalable foundation.",
         "image": "/images/tralli_result.png"
       },
       {
-        "title": "🚀 Future Improvements.",
-        "content": "✅ A direct messaging feature will allow real-time communication with service providers.\n✅ An AI-powered chatbot will be integrated to assist users with common questions, service recommendations, and booking guidance 24/7.\n✅ The chatbot will leverage user and provider data to offer personalized, context-aware support.\n✅ This reduces the need for manual intervention and improves onboarding and retention.",
+        "id": "04",
+        "title": "🚀 Future Improvements",
+        "content": "Add direct messaging for real-time communication. Integrate AI chatbot for 24/7 support and booking guidance. Personalized recommendations based on user data.",
         "image": "/images/tralli_future.png"
       }
     ],
@@ -152,8 +359,3 @@
     }
   }
 ]
- 
-
-
-
-

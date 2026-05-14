@@ -1,92 +1,263 @@
-@use "../../styles/partials/mixins" as *;
+
+@use "../../styles/partials/mixins-news" as *;
 @use "../../styles/partials/variables" as *;
 
 .pro {
-  &__details {
-    background-color: $background-color;
+  padding: 1rem;
+  background-color: $background-color;
+  &__nav {
+    @include flex(row, space-between, center);
+  }
+  &__icon-left {
+    // position: absolute;
+    cursor: pointer;
+    margin: 1rem;
+    color: rgba($primary-white, 0.5);
+    width: 1.5rem;
+    height: 1.5rem;
+    &:hover {
+      color: $primary-white;
+    }
+  }
+
+  &__logo-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    @include flex(row, center, center);
+  }
+  &__num {
+    @include mobile-body-copy;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 5rem;
+    margin-bottom: 0;
   }
 
   &__title {
     color: $primary-white;
-    padding-top: 8rem;
-    text-align: center;
-    @include mobile-page-header;
+    padding-top: 1rem;
+    text-align: left;
+    @include mobile-section-header;
+  }
+  &__concept {
+    color: rgba($primary-white, 0.3);
+
+    @include mobile-body-copy;
+
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  &__role {
+    color: rgba($primary-white, 0.6);
+    margin-top: 1rem;
+    text-align: left;
+    @include mobile-subheader-header;
+
+    &-head {
+      @include mobile-footer-copy;
+      color: rgba($secondary-grey, 0.5);
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__links {
+    @include flex(row, right, center);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &-section {
+      @include flex(row, center, center);
+      gap: 0.35rem;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover .pro__links-text:not(.demo),
+      &:hover .pro__links-section-icon:not(.demo) {
+        color: $primary-white;
+      }
+
+      &:hover .pro__links-text.demo,
+      &:hover .pro__links-section-icon.demo {
+        color: var(--glow-color);
+      }
+
+      &-icon {
+        color: rgba($primary-white, 0.5);
+        width: 1rem;
+        height: 1rem;
+
+        &.demo {
+          color: var(--accent-text);
+        }
+      }
+    }
+
+    &-text {
+      color: rgba($primary-white, 0.5);
+      @include mobile-body-copy;
+      &.demo {
+        color: var(--accent-text);
+
+        &:hover {
+          color: var(--glow-color);
+        }
+      }
+    }
+  }
+  &__breakline {
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      rgba($primary-white, 0.3),
+      transparent
+    );
+    margin: 4rem auto;
   }
   &__subtitle {
     @include mobile-subheader-header;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
     color: $third-grey;
-    margin: 1rem;
-  }
+    margin-top: 3rem;
+    margin-left: unset;
+    &-head {
+      @include mobile-footer-copy;
+      color: rgba($secondary-grey, 0.5);
+      margin-right: 0.5rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      margin-top: 3rem;
+    }
 
-  &__img {
-    width: calc(100% - 2rem);
-    margin: 1rem;
-    margin-top: 2.5rem;
+    &-text {
+      margin-top: 1rem;
+      @include mobile-body-details-copy;
+    }
+  }
+  &__img-container {
+    overflow: hidden;
+
+    aspect-ratio: 3/2;
+
+    max-width: clamp(20rem, 85vw, 50rem);
+    margin: 0 auto;
     border-radius: 1rem;
+  }
+  &__img {
+    width: 100%;
+
     position: relative;
     z-index: 1;
+    height: 100%;
+
+    display: block;
+  }
+
+  &__techstack {
+    margin-bottom: 0rem;
+
+    &-item {
+      display: inline-block;
+      margin: 0.25rem;
+      @include mobile-body-copy;
+      color: $text-grey;
+      font-size: 0.65rem;
+      border: solid 0.5px $secondary-grey;
+      border-radius: 0.35rem;
+      padding: 0.05rem 0.35rem;
+    }
   }
 }
-.galaxy {
-  position: relative;
-  z-index: 1;
-}
-.galaxy-particles {
-  position: absolute;
-  z-index: 0;
-}
-.back-icon {
-  position: absolute;
-  cursor: pointer;
-  margin: 1rem;
-}
 
-.back-icon:active {
-  transform: scale(0.9);
+.system {
+  &__des {
+    margin-top: 1rem;
+    @include mobile-body-copy;
+    color: rgba($primary-white, 0.5);
+  }
 }
-.btn-section {
-  @include flex(column, center, center);
-  gap: 0.5rem;
-}
-.button {
-  font-weight: 500;
-  border-radius: 1rem;
-  padding: 0.3rem 0.7rem;
-  cursor: pointer;
-
-  text-decoration: none;
-  transition: transform 0.3s ease-in-out;
-
-  &-dive {
+.more__projects {
+  &-section {
+    @include flex(row, flex-start, center);
+    gap: 1rem;
+    &-next {
+      @include flex(row-reverse, flex-start, center);
+      gap: 1rem;
+    }
+  }
+  &-content {
+    @include flex(column, center, flex-start);
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    &-next {
+      margin-bottom: 2rem;
+    }
+  }
+  &-title {
     color: $primary-white;
-    background-color: $secondary-black;
-    margin-top: 1.5rem;
+    @include mobile-card-header-details;
   }
-  &-dive:hover {
-    background-color: $card-shadow;
-    color: $secondary-black;
+  .icon-left,
+  .icon-right {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: rgba($secondary-grey, 0.7);
   }
-  &-demo {
-    color: $secondary-black;
-    background-color: $card-shadow;
+  &-prev,
+  &-next {
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
   }
-  &-demo:hover {
-    color: $primary-white;
-    background-color: $secondary-black;
+  &-prev:hover,
+  &-next:hover {
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    transition: all 0.3s ease;
+    .icon-left,
+    .icon-right {
+      color: $primary-white;
+    }
   }
-}
-.button:hover {
-  transform: scale3d(1.0625, 1.0625, 1.0625);
-}
 
+  &-next {
+    @include flex(row-reverse, flex-start, center);
+    gap: 1rem;
+  }
+}
 @include tablet {
   .back-img {
     width: 4rem;
     height: 4rem;
   }
   .pro {
+    padding-inline: clamp(2rem, 4vw, 5rem);
+    &__img-container {
+      width: 100%;
+      max-width: clamp(40rem, 15vw, 45rem);
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 1rem;
+      margin: 0 auto;
+    }
+
+    &__img {
+      margin-top: unset;
+      margin-bottom: unset;
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     &__title {
       @include tablet-desktop-title-normal;
       margin-bottom: 2.5rem;
@@ -95,6 +266,26 @@
     &__subtitle {
       @include tablet-desktop-heading-medium;
       margin: 1.5rem 2rem;
+    }
+    &__links-section-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    &__fea {
+      @include flex(row, flex-start, flex-start);
+
+      &-item {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-top: 1px solid rgba($secondary-grey, 0.15);
+        border-right: 1px solid rgba($secondary-grey, 0.15);
+        &:last-child {
+          border-right: none;
+        }
+      }
     }
   }
   .btn-section {
@@ -109,21 +300,39 @@
     @include tablet-desktop-body-copy-medium;
     margin-top: 2.5rem;
   }
-
-  .pro__img {
-    width: calc(100% - 10rem);
-    margin: 5rem;
-  }
 }
 
 @include desktop {
-  .back-img {
-    width: 5rem;
-    height: 5rem;
-  }
+  //1024px - 1,535px
 
-  .pro__subtitle {
-    margin: 2rem 4rem;
+  .pro {
+    padding-inline: clamp(3rem, 15vw, 15rem);
+    &__img-container {
+      width: 100%;
+      max-width: clamp(65rem, 15vw, 65rem);
+      aspect-ratio: 9/5;
+      overflow: hidden;
+      border-radius: 1rem;
+      margin: 0 auto;
+    }
+
+    &__img {
+      margin-top: unset;
+      margin-bottom: unset;
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__subtitle {
+      margin: 2rem 4rem;
+          margin-left: unset;
+    }
+
+    &__overview {
+      @include flex(row, space-between, flex-start);
+    }
   }
 
   .button {
@@ -132,29 +341,47 @@
 }
 
 @include desktop-xxl {
+  //1536px - 2,559px
   .pro {
-    &__img {
-      width: calc(100% - 20rem);
-      margin: 5rem 10rem;
-      margin-bottom: 10rem;
-    }
+    padding-inline: clamp(3rem, 25vw, 25rem);
 
     &__subtitle {
       margin: 3rem 7.5rem;
+      margin-left: unset;
+    }
+
+    &__img-container {
+      max-width: clamp(85rem, 15vw, 85rem);
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 1rem;
+      margin: 0 auto;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .icon {
+    &_left {
+      width: 3rem;
+      height: 3rem;
+      color: $primary-white;
     }
   }
 }
 
 @include desktop-ultra {
   .pro {
-    &__title {
-    }
+    padding-inline: clamp(15rem, 18vw, 30rem);
     &__subtitle {
       width: calc(100% - 60rem);
       margin: 5rem 30rem;
     }
     &__img {
-      width: calc(100% - 60rem);
       margin: 10rem 30rem;
     }
   }

@@ -1,3 +1,4 @@
+
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./NavBar.scss";
@@ -6,17 +7,26 @@ import logo from "/images/logo.jpg";
 import { AnimatePresence } from "framer-motion";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const containerRef = useRef(null);
-  const { height } = useDimensions(containerRef);
+  const toggleRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [togglePos, setTogglePos] = useState({ x: window.innerWidth - 41, y: 56 });
+
+  const updateTogglePos = () => {
+    if (toggleRef.current) {
+      const rect = toggleRef.current.getBoundingClientRect();
+      setTogglePos({ x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 });
+    }
+  };
 
   useEffect(() => {
+    updateTogglePos();
     const handleScreenSize = () => {
       setIsMobile(window.innerWidth <= 768);
+      updateTogglePos();
     };
     window.addEventListener("resize", handleScreenSize);
     return () => window.removeEventListener("resize", handleScreenSize);
-  }, []);
+  }, []); 
   return (
     <div className="body__container">
       <a href="./" className="logo__link">
@@ -27,19 +37,24 @@ export default function NavBar() {
           <motion.nav
             initial={false}
             animate={isOpen ? "open" : "closed"}
-            custom={height}
-            ref={containerRef}
             className="nav">
             <div className="nav_div">
-              <motion.div className="background" variants={sidebarVariants} />
+              <motion.div
+                className="background"
+                variants={sidebarVariants}
+                custom={togglePos}
+              />
               <AnimatePresence>
-                <Navigation
-                  onClose={() => setIsOpen(false)}
-                  isOpen={isOpen}
-                  isMobile={true}
-                />
+                {isOpen && (
+                  <Navigation
+                    key="mobile-nav"
+                    onClose={() => setIsOpen(false)}
+                    isOpen={isOpen}
+                    isMobile={true}
+                  />
+                )}
               </AnimatePresence>
-              <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+              <MenuToggle toggleRef={toggleRef} toggle={() => setIsOpen(!isOpen)} />
             </div>
           </motion.nav>
         ) : (
@@ -50,24 +65,27 @@ export default function NavBar() {
   );
 }
 
+const getDiagonal = () =>
+  Math.ceil(Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2)) * 2;
+
 const sidebarVariants = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 10}rem at 12rem 3.5rem)`,
+  open: ({ x = 300, y = 56 } = {}) => ({
+    clipPath: `circle(${getDiagonal()}px at ${x}px ${y}px)`,
     transition: {
       type: "spring",
       stiffness: 20,
       restDelta: 2,
     },
   }),
-  closed: {
-    clipPath: "circle(.1rem at 16.5rem 3.5rem)",
+  closed: ({ x = 300, y = 56 } = {}) => ({
+    clipPath: `circle(1px at ${x}px ${y}px)`,
     transition: {
       delay: 0.2,
       type: "spring",
       stiffness: 400,
       damping: 40,
     },
-  },
+  }),
 };
 
 const Path = (props) => (
@@ -80,8 +98,8 @@ const Path = (props) => (
   />
 );
 
-const MenuToggle = ({ toggle }) => (
-  <button className="toggle-container" onClick={toggle}>
+const MenuToggle = ({ toggle, toggleRef }) => (
+  <button className="toggle-container" ref={toggleRef} onClick={toggle}>
     <svg
       width="23"
       height="23"
@@ -111,16 +129,3 @@ const MenuToggle = ({ toggle }) => (
     </svg>
   </button>
 );
-
-const useDimensions = (ref) => {
-  const dimensions = useRef({ width: 0, height: 0 });
-
-  useEffect(() => {
-    if (ref.current) {
-      dimensions.current.width = ref.current.offsetWidth;
-      dimensions.current.height = ref.current.offsetHeight;
-    }
-  }, [ref]);
-
-  return dimensions.current;
-};

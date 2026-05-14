@@ -1,47 +1,141 @@
-@use "../../styles/partials/mixins" as *;
+// @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/mixins-news" as *;
 @use "../../styles/partials/variables" as *;
 
-.stack
-{
-  &-icon {
+.stack {
   width: 100%;
-  height: 12rem;
-}
-
-&__text{
-@include mobile-section-header;
-    color: $primary-white;
-    text-align: center;
-}
-}
-.tech {
-  min-height: 35rem;
-  &__title {
-    text-align: center;
-    @include mobile-section-header;
-    color: $primary-white;
-    margin-bottom: 3rem;
+  &__breakline {
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      rgba($primary-white, 0.1),
+      transparent
+    );
+    margin: 2rem auto;
   }
 
-  &__section {
+  &__title-container {
+    @include flex(row, space-between, normal);
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    text-align: center;
+    margin-bottom: 4rem;
+
+    &-headline {
+      @include mobile-subheader-header;
+      text-transform: uppercase;
+      color: $text-grey;
+      letter-spacing: 0.2em;
+      margin-right: 0.5rem;
+    }
+    &-breakline2 {
+      width: 100%;
+      height: 1px;
+      background-color: rgba($primary-white, 0.1);
+      margin: 1rem auto;
+    }
+    &-stack {
+      @include mobile-navigation-header;
+      text-transform: uppercase;
+      margin-left: 0.5rem;
+      color: $text-grey;
+      font-weight: 200;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+    }
+  }
+&__mask{
+  -webkit-mask-image: linear-gradient(
+  to right,
+  transparent,
+  black 10%,
+  black 90%,
+  transparent
+);
+
+mask-image: linear-gradient(
+  to right,
+  transparent,
+  black 10%,
+  black 90%,
+  transparent
+);
+  
+}
+  &__row {
+    &-left {
+      width: max-content;
+      @include flex(row, center, center);
+      animation: marquee-left 30s linear infinite;
+      }
+    &-right {
+      width: max-content;
+      @include flex(row, center, center);
+      animation: marquee-right 30s linear infinite;
+        margin-bottom: 4rem;;
+    }
+  }
+}
+
+// Style for the Icontech sub function
+.stack {
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    border: 0.1px solid rgba($primary-white, 0.08);
+    @include flex(column, center, center);
+    background-color: rgba($secondary-black, 0.5);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--glow);
+    position: relative;
     overflow: hidden;
-    height: 35rem;
+    &-symbol {
+      width: 60%;
+      height: 60%;
+    }
+
+    &-name {
+      @include mobile-label-button;
+      color: rgba($primary-white, 0.3);
+      font-size: 0.5rem;
+      height: 0.5rem;
+      margin: 0.05rem;
+      opacity: 0;
+      .stack__icon:hover & {
+        opacity: 1;
+        transform: translateY(-0.15rem);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    bottom: -2rem;
+    background-color: rgba($secondary-black, 0.8);
+    color: $primary-white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition: all 0.3s ease;
+
+    .stack__icon:hover & {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
-.stack__title {
-  @include mobile-subheader-header;
-  color: $third-grey;
-  text-align: center;
-  margin: 3rem 0 1.5rem 0;
-}
-.canvas {
-  width: 100%;
-  height: 35rem;
-  margin: 0 auto;
-  display: block;
-}
+
 @include tablet {
-  .tech {
+  .stack {
     &__title {
       @include tablet-desktop-title-normal;
       margin-top: 8rem;
@@ -54,32 +148,63 @@
 }
 
 @include desktop {
-  .stack__title {
+  .stack{
+    &__title {
     @include tablet-desktop-heading-medium;
     font-weight: 500;
-  }
-  .tech {
-    &__title {
+    &-container{
+         padding-inline: clamp(4rem, 10vw, 18rem);
     }
   }
 }
 
+}
+
 @include desktop-xxl {
-  .stack__title {
+  .stack{
+ 
+    &__title {
     @include tablet-desktop-wordmark-regular;
     font-weight: 500;
   }
 
-  .stack__text {
+  &__text {
     margin-bottom: 13rem;
     color: $primary-white;
     text-align: center;
   }
-}
+
+}}
 
 @include desktop-ultra {
   .stack__title {
     @include tablet-desktop-heading-medium;
     font-weight: 500;
   }
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.marquee-left {
+  animation: marquee-left 28s linear infinite;
+}
+
+.marquee-right {
+  animation: marquee-right 24s linear infinite;
 }

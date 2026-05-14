@@ -8,7 +8,6 @@ import Project from "../../components/Project/Project.jsx";
 import AboutMe from "../../components/AboutMe/AboutMe.jsx";
 import TechStack from "../../components/TechStack/TechStack.jsx";
 import TechStackSection from "../../components/TechStackSection/TechStackSection.jsx";
-import DetailSection from "../../components/DetailSection/DetailSection.jsx";
 import DetailsPage from "../DetailsPage/DetailsPage.jsx";
 import Contact from "../../components/Contact/Contact.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
@@ -27,7 +26,7 @@ function Home() {
   return (
     <>
       <section className="app__container">
-        <GalaxyParticles />
+        {/* <GalaxyParticles /> */}
         <NavBar />
         <AboutMe />
         <Project />
