@@ -97,7 +97,7 @@
 }
 .header {
   &_links {
-    @include flex(row, center, center);
+    @include flex(row, center, flex-start);
     gap: 0.3rem;
     text-decoration: none;
   }

@@ -1,4 +1,4 @@
-// @use "../../styles/partials/mixins" as *;
+
 @use "../../styles/partials/mixins-news" as *;
 @use "../../styles/partials/variables" as *;
 
@@ -48,6 +48,8 @@
   }
   &__wrapper {
     background-size: cover;
+     width: clamp(15.5rem, 90%, 25rem);
+     margin: 0 auto;
   }
 
   &__earth {
@@ -67,25 +69,23 @@
 
   &__button:hover {
     background: linear-gradient(to right, #22c55e, #10b981);
-    transform: scale3d(1.0625, 1.0625, 1.0625);
+    transform: scale3d(1.025, 1.025, 1.025);
   }
 
   &__form {
-    min-height: 55vh;
+    min-height: 45vh;
     background-color: rgba($primary-green, 0.05);
     color: $primary-white;
     @include mobile-body-copy;
     @include flex(column, center, center);
-    // @include grid-auto-fit(1fr, 1.5rem);
-    // row-gap: 1.5rem;
-    // margin: 2rem 1rem;
-    row-gap: 1.5rem;
+
+    row-gap: .5rem;
     padding: 1rem;
     border-radius: 0.9rem;
     border: 0.0625rem solid rgba(255, 255, 255, 0.2);
-    width: clamp(15.5rem, 90%, 25rem);
-    // max-width: 100%;
+
     margin: 2rem auto;
+    margin-bottom: unset;
     &-title {
       @include mobile-subheader-header;
       font-size: 1.5rem;
@@ -99,9 +99,9 @@
       text-align: left;
       border-radius: 1rem;
       padding: 1rem;
-      background-color: hsla(0, 0%, 7%, 0.2);
+      background-color: rgba($background-color, 1);
       color: $primary-white;
-      // width: 100%;
+
       width: clamp(15rem, 85%, 30rem);
       border: solid 0.5px rgba(255, 255, 255, 0.2);
       &:focus {
@@ -129,6 +129,7 @@
     }
     &__wrapper {
       @include flex(column, center, center);
+      width: clamp(30rem, 90%, 40rem);
     }
     &__text {
       @include tablet-desktop-title-normal;
@@ -148,11 +149,11 @@
     &__form {
       grid-template-columns: 1fr 1fr;
       column-gap: 2rem;
-      width: auto;
+      width: 100%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
-      padding: 5rem 3rem;
+      padding: 2rem;
       &-property input,
       textarea {
         // width: clamp(18rem, 85%, 35rem);
@@ -160,7 +161,7 @@
       }
 
       &-property {
-        row-gap: 1.5rem;
+        row-gap: .5rem;
       }
     }
     .contact__form-property:nth-child(3),
@@ -171,6 +172,7 @@
       padding: 0.75rem 1.5rem;
       font-size: 1.5rem;
       width: stretch;
+      border-radius: 1rem;
     }
     label {
       display: flex;
@@ -194,30 +196,28 @@
       flex: 1;
    
     }
+    &__wrapper{
+             width: clamp(20rem, 90%, 25rem);
+    }
     &__form {
-      // max-width: 55rem;
-       width: clamp(20rem, 90%, 25rem);
+  
       margin-right: 0;
-      gap: 0.5rem;
+
+      row-gap: 1rem;
+        column-gap: 1.5rem;
       padding: 2rem;
       &-property {
-        row-gap: 1rem;
+
         textarea {
           padding: 2rem;
         }
       }
     }
-
-    &__section {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
    
-    &__wrapper {
-      @include flex(column, center, center);
-    }
+  
     &__section {
       @include flex(row, center, center);
+         padding-inline: clamp(4rem, 10vw, 18rem);
       gap: 2rem;
     }
 
@@ -233,7 +233,6 @@
     &__form,
     &__social {
       flex: 1;
-
       margin: unset;
     }
     &__feature-icon{

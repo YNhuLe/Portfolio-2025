@@ -3,8 +3,11 @@
 
 .contact__social {
   margin: 1rem auto;
+  margin-top: 0;
   width: 100%;
   padding: 1rem;
+
+  padding-inline: unset;
   @include flex(row, center, center);
   gap: 0.5rem;
   &-container {
@@ -68,7 +71,8 @@
   .contact {
     &__social {
       // width: clamp(15.5rem, 90%, 25rem);
-              width: clamp(20rem, 90%, 34rem);
+              // width: clamp(20rem, 90%, 34rem);
+              width: 100%;
       margin: unset;
       padding-inline: unset;
     }
