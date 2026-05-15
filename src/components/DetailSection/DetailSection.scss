@@ -1,4 +1,3 @@
-
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins-news" as *;
 .info__card {
@@ -78,8 +77,6 @@
       bottom: 0;
       width: 2px;
       height: 100%;
-
-      // left: 50%;
       top: 0;
       bottom: 0;
     }
@@ -135,7 +132,6 @@
 
 @include desktop {
   .info__card {
-    // width: calc(100% - 15rem);
     &-title {
       font-weight: 700;
     }

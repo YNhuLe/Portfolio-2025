@@ -114,7 +114,7 @@ function Contact() {
             className="contact__form"
           >
             <div className="contact__form-property">
-              <label htmlFor="name">Your Name</label>
+              <label htmlFor="name">NAME</label>
               <input
                 id="name"
                 type="text"
@@ -140,7 +140,7 @@ function Contact() {
             </div>
 
             <div className="contact__form-property">
-              <label htmlFor="email">Your Email</label>
+              <label htmlFor="email"> EMAIL</label>
               <input
                 id="email"
                 type="text"
@@ -166,7 +166,7 @@ function Contact() {
             </div>
 
             <div className="contact__form-property">
-              <label htmlFor="message">Your Message</label>
+              <label htmlFor="message">MESSAGE</label>
               <textarea
                 id="message"
                 type="text"
