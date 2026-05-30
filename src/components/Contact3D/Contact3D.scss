@@ -12,9 +12,8 @@
     &__work {
       &-badge {
         position: absolute;
-
-        left: 1rem;
-        bottom: 16rem;
+        left: 10%;
+        bottom: 67%;
         color: $primary-white;
         @include desktop-card-header-details;
         margin-bottom: 2rem;
@@ -70,8 +69,8 @@
     &__available {
       &-badge {
         position: absolute;
-        left: 17rem;
-        bottom: 19rem;
+        left: 70%;
+        bottom: 85%;
         color: $primary-white;
 
         @include desktop-card-header-details;
@@ -97,8 +96,8 @@
     &__email {
       &-badge {
         position: absolute;
-        left: 1rem;
-        top: 16rem;
+        left: 5%;
+        top: 75%;
         color: $primary-white;
         @include desktop-card-header-details;
         display: inline-flex;
@@ -121,13 +120,12 @@
       position: relative;
       display: inline-flex;
       width: clamp(20rem, 90%, 35rem);
-      //  max-width: 30rem;
-
       align-content: center;
       justify-content: center;
       align-items: center;
       &-com {
         width: 100%;
+        min-width: 32rem;
         height: auto;
         object-fit: contain;
       }
@@ -135,8 +133,8 @@
       &-robot {
         position: absolute;
 
-        bottom: clamp(18rem, 4vh, 20rem);
-        left: clamp(1rem, 2vw, 11rem);
+        bottom: 76%;
+        left: 7%;
         width: 8rem;
         height: auto;
         rotate: 12deg;
@@ -157,20 +155,25 @@
   //1536px and above
   .contact {
     &__3D {
-      // width: 40%;
+      width: 100%;
+      max-width: 60rem;
+
+      @include flex(row, center, center);
       &-com {
-        width: 80%;
+        width: 70%;
       }
       &-robot {
         width: 12rem;
         bottom: 24rem;
+        left: 12%;
+        bottom: 90%;
       }
     }
     &__available {
       &-badge {
         position: absolute;
-        left: 25rem;
-        bottom: 27rem;
+        left: 65%;
+        bottom: 85%;
         @include tablet-desktop-label-medium;
       }
       &-star {
@@ -181,8 +184,8 @@
 
     &__email {
       &-badge {
-        left: 5rem;
-        top: 21rem;
+        left: 10%;
+        top: 75%;
         @include tablet-desktop-label-medium;
       }
 
@@ -194,9 +197,8 @@
     &__work {
       &-badge {
         position: absolute;
-
-        left: 1rem;
-        bottom: 22rem;
+        left: 12%;
+        bottom: 82%;
 
         @include tablet-desktop-label-medium;
 
@@ -208,6 +210,24 @@
           width: 1rem;
           height: 1rem;
         }
+      }
+    }
+  }
+}
+
+@include desktop-ultra {
+  //2259px and up
+  .contact {
+    &__3D {
+      width: 100%;
+      max-width: 70rem;
+      @include flex(row, center, center);
+      &-com {
+        width: 80%;
+      }
+      &-robot {
+        width: 12rem;
+        bottom: 24rem;
       }
     }
   }
