@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 import { Mail } from "lucide-react";
 import Contact3D from "../Contact3D/Contact3D";
 import ContactSocial from "../ContactSocial/ContactSocial";
+import {Toaster, toast} from "sonner";
 function Contact() {
   const formRef = useRef();
   const [name, setName] = useState("");
@@ -50,6 +51,7 @@ function Contact() {
     setError(newError);
     if (newError.name || newError.email || newError.message) {
       setLoading(false);
+      toast.error("Please fill in all required fields.");
       return;
     }
 
@@ -64,12 +66,7 @@ function Contact() {
       .then(
         () => {
           setLoading(false);
-
-          setModalData({
-            show: true,
-            name: name,
-            text: "Thank you. I will get back to you as soon as possible.",
-          });
+          toast.success("Message sent successfully!");
           handleReset();
         },
         (error) => {
@@ -96,6 +93,9 @@ function Contact() {
   };
   return (
     <div className="contact">
+      <Toaster richColors position="top-right" 
+      
+      toastOptions={{ duration: 5000 }}/>
       <div className="contact__feature">
         <Mail className="contact__feature-icon" />
 

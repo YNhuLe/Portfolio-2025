@@ -10,9 +10,21 @@ import {
   Sparkles,
   Layers,
   MessageCircle,
+  Plane,
+  Hammer,
+  Sprout,
+  Footprints,
 } from "lucide-react";
 
 import { Link as ScrollLink } from "react-scroll";
+
+const hobbies = [
+  { name: "Traveling", icon: Plane, brief: "Explore & Adventure" },
+
+  { name: "Running", icon: Footprints, brief: "Trail & Road" },
+  { name: "DIY Projects", icon: Hammer, brief: "Build & Create" },
+  { name: "Planting", icon: Sprout, brief: "Grow & Nurture" },
+];
 function AboutMe() {
   return (
     <section className="about" id="about">
@@ -95,6 +107,25 @@ function AboutMe() {
           <Mail className="header_icon" />
           <span className="header__text">Email</span>
         </a>
+      </div>
+
+      {/* Beyond the Coding passion */}
+      <div className="about__hobbies-container">
+        <p className="about__hobbies-title">Beyond the Code</p>
+
+        <div className="about__hobbies">
+          {hobbies.map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+              <div key={index} className="about__hobbies-list">
+                <Icon className="about__hobbies-icon" />
+                <p className="about__hobbies-name">{item.name}</p>
+                <p className="about__hobbies-brief">{item.brief}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
