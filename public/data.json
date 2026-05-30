@@ -194,12 +194,12 @@
     "accentBg": "rgba(168, 85, 247, 0.1)",
     "accentBorder": "rgba(168, 85, 247, 0.2)",
     "accentGlow": "rgba(147, 51, 234, 0.75)",
-    "concept": "Discover your zodiac sign, birth flower, personality traits, and share thoughts with the community.",
-    "tech_stack": ["React", "Express", "SCSS", "RESTful APIs", "Figma"],
+    "concept": "Discover your zodiac sign, birth flower, personality traits, and share thoughts with the community. A cosmic blend of astrology and nature, connecting you to the universe and fellow stargazers on a journey of self-discovery.",
+    "tech_stack": ["React", "Express", "SCSS", "RESTful APIs", "Figma", "JSON"],
     "img_url": "/images/zodiac.png",
     "git_url": "https://github.com/YNhuLe/Pair-Programming",
     "role": "Full Stack Developer",
-    "description": "Interactive platform blending astrology and nature. Explore zodiac signs, birth flowers, and personality traits while connecting with a cosmic community. Built with React, Express, and custom REST API.",
+    "description": "Interactive platform blending astrology and nature. Explore zodiac signs, birth flowers, and personality traits while connecting with a cosmic community. Built with React, Express, and custom REST API. Structured JSON manages complex zodiac data for seamless frontend integration.",
     "features": [
       {
         "fea_id": "01",
