@@ -70,22 +70,29 @@
 @include desktop {
   .contact {
     &__social {
-      // width: clamp(15.5rem, 90%, 25rem);
-              // width: clamp(20rem, 90%, 34rem);
-              width: 100%;
+      width: 100%;
       margin: unset;
       padding-inline: unset;
     }
   }
 }
 
-
-@include desktop-xxl{
+@include desktop-xxl {
   .contact {
     &__social {
-      // width: clamp(16rem, 90%, 60rem);
-        width: clamp(40rem, 90%, 45rem);
+      width: clamp(30rem, 90%, 35rem);
       margin: unset;
       padding-inline: unset;
-    }}
+    }
+  }
+}
+
+@include desktop-xxl {
+  .contact {
+    &__social {
+      width: clamp(30rem, 90%, 35rem);
+      margin: unset;
+      padding-inline: unset;
+    }
+  }
 }
