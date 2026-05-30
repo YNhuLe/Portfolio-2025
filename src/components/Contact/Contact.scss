@@ -1,7 +1,9 @@
 
 @use "../../styles/partials/mixins-news" as *;
 @use "../../styles/partials/variables" as *;
-
+* {
+  box-sizing: border-box;
+}
 .contact {
   min-height: 100dvh;
   margin-top: 5rem;
@@ -47,9 +49,15 @@
     }
   }
   &__wrapper {
-    background-size: cover;
-     width: clamp(15.5rem, 90%, 25rem);
-     margin: 0 auto;
+    // background-size: cover;
+    //  width: clamp(15.5rem, 90%, 25rem);
+    //  margin: 0 auto;
+      width: 90%;
+  max-width: 25rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
 
   &__earth {
@@ -73,6 +81,9 @@
   }
 
   &__form {
+
+    width: 100%;
+    max-width: 30rem;
     min-height: 45vh;
     background-color: rgba($primary-green, 0.05);
     color: $primary-white;
@@ -102,8 +113,13 @@
       background-color: rgba($background-color, 1);
       color: $primary-white;
 
-      width: clamp(15rem, 85%, 30rem);
+      // width: clamp(15rem, 85%, 30rem);
       border: solid 0.5px rgba(255, 255, 255, 0.2);
+
+      width: 100%;
+      max-width: 30rem;
+     min-width: 12rem;
+      box-sizing: border-box;
       &:focus {
         outline: none;
         border-color: $primary-green;
@@ -158,6 +174,7 @@
       textarea {
         // width: clamp(18rem, 85%, 35rem);
         width: 100%;
+        min-width: unset;
       }
 
       &-property {
@@ -197,7 +214,7 @@
    
     }
     &__wrapper{
-             width: clamp(20rem, 90%, 25rem);
+             width: clamp(20rem, 90%, 30rem);
     }
     &__form {
   
@@ -206,10 +223,16 @@
       row-gap: 1rem;
         column-gap: 1.5rem;
       padding: 2rem;
+       &-property input,
+    textarea {
+min-width: unset;
+      }
+    
       &-property {
 
         textarea {
           padding: 2rem;
+       
         }
       }
     }
@@ -244,6 +267,7 @@
 
 @include desktop-xxl { //1536px and up
   .contact {
+
     &__form {
         width: clamp(40rem, 90%, 45rem);
     }
