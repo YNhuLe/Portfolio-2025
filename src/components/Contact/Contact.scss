@@ -236,7 +236,7 @@
     &__section {
       @include flex(row, center, center);
       padding-inline: clamp(4rem, 10vw, 18rem);
-      gap: 2rem;
+      // gap: 2rem;
     }
 
     &__button {
@@ -264,9 +264,6 @@
   .contact {
     &__form {
       width: clamp(40rem, 90%, 45rem);
-    }
-    &__wrapper {
-      // padding-left: 6rem;
     }
   }
 }
