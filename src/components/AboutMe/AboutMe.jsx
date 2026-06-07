@@ -25,6 +25,13 @@ const hobbies = [
   { name: "DIY Projects", icon: Hammer, brief: "Build & Create" },
   { name: "Planting", icon: Sprout, brief: "Grow & Nurture" },
 ];
+
+const icons = [
+  { name: "Github", icon: Github, link: "https://github.com/YNhuLe" },
+  { name: "LinkedIn", icon: Linkedin, link: "https://www.linkedin.com/in/jennynhuyle/" },
+  { name: "Email", icon: Mail, link: "mailto:jennyle.tech@gmail.com" }
+];
+
 function AboutMe() {
   return (
     <section className="about" id="about">
@@ -90,23 +97,17 @@ function AboutMe() {
         </ScrollLink>
       </div>
       <div className="about__icon">
-        <a href="https://github.com/YNhuLe" className="header_links">
-          <Github className="header_icon" />
-          <span className="header__text">Github</span>
-        </a>
+        {icons.map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <a key={index} href={item.link} className="header_links">
+              <Icon className="header_icon" />
+              <span className="header__text">{item.name}</span>
+            </a>
+          );
+        })}
 
-        <a
-          href="https://www.linkedin.com/in/jennynhuyle/"
-          className="header_links"
-        >
-          <Linkedin className="header_icon" />
-          <span className="header__text">LinkedIn</span>
-        </a>
-
-        <a href="mailto:jennyle.tech@gmail.com" className="header_links">
-          <Mail className="header_icon" />
-          <span className="header__text">Email</span>
-        </a>
+    
       </div>
 
       {/* Beyond the Coding passion */}

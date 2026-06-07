@@ -77,7 +77,8 @@
   }
   &__icon {
     position: relative;
-    @include flex(row, space-evenly, center);
+    @include flex(row,center, center);
+    gap: clamp(2rem, 10vw, 6rem);
     padding-bottom: 2rem;
   }
   &__last-name {
@@ -144,8 +145,8 @@
   }
   &_icon {
     color: $secondary-grey;
-    width: 1rem;
-    height: 1rem;
+  width: clamp(.5rem, 5vw, 1.5rem);
+    height: clamp(.5rem, 5vw, 1.5rem);
     @include flex(row, center, center);
     transition: all 0.3s ease;
     &:hover {
