@@ -2,13 +2,12 @@ import { useState, useRef } from "react";
 import errors from "../../assets/icons/error-24px.svg";
 import "./Contact.scss";
 import validator from "validator";
-import ContactModal from "../ContactModal/ContactModal";
 import EarthCanvas from "../Earth/Earth";
 import emailjs from "@emailjs/browser";
 import { Mail } from "lucide-react";
 import Contact3D from "../Contact3D/Contact3D";
 import ContactSocial from "../ContactSocial/ContactSocial";
-import {Toaster, toast} from "sonner";
+import { Toaster, toast } from "sonner";
 function Contact() {
   const formRef = useRef();
   const [name, setName] = useState("");
@@ -71,13 +70,9 @@ function Contact() {
         },
         (error) => {
           setLoading(false);
-          setModalData({
-            show: true,
-            name: name,
-            text: "Something went wrong. Please try again!",
-          });
-          console.log(error);
-          console.log("Sent message: ", { name, email, message });
+          toast.error("Something went wrong. Please try again!");
+          // console.log(error);
+          // console.log("Sent message: ", { name, email, message });
         },
       );
   };
@@ -93,9 +88,11 @@ function Contact() {
   };
   return (
     <div className="contact">
-      <Toaster richColors position="top-right" 
-      
-      toastOptions={{ duration: 5000 }}/>
+      <Toaster
+        richColors
+        position="top-right"
+        toastOptions={{ duration: 5000 }}
+      />
       <div className="contact__feature">
         <Mail className="contact__feature-icon" />
 
@@ -108,11 +105,7 @@ function Contact() {
       <div className="contact__section">
         <Contact3D />
         <div className="contact__wrapper">
-          <form
-      
-            ref={formRef}
-            className="contact__form"
-          >
+          <form ref={formRef} className="contact__form">
             <div className="contact__form-property">
               <label htmlFor="name">NAME</label>
               <input
@@ -203,11 +196,6 @@ function Contact() {
           </form>
           <ContactSocial />
         </div>
-        <ContactModal
-          show={modalData.show}
-          onHide={() => setModalData({ ...modalData, show: false })}
-          response={{ name: modalData.name, text: modalData.text }}
-        />
       </div>
     </div>
   );
