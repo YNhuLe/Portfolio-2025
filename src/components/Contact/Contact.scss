@@ -48,15 +48,12 @@
     }
   }
   &__wrapper {
-    // background-size: cover;
-    //  width: clamp(15.5rem, 90%, 25rem);
-    //  margin: 0 auto;
-    width: 90%;
-    max-width: 25rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 90%;
+  max-width: 25rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
 
   &__earth {
@@ -110,10 +107,7 @@
       padding: 1rem;
       background-color: rgba($background-color, 1);
       color: $primary-white;
-
-      // width: clamp(15rem, 85%, 30rem);
       border: solid 0.5px rgba(255, 255, 255, 0.2);
-
       width: 100%;
       max-width: 30rem;
       min-width: 12rem;
@@ -171,7 +165,6 @@
       padding: 2rem;
       &-property input,
       textarea {
-        // width: clamp(18rem, 85%, 35rem);
         width: 100%;
         min-width: unset;
       }
